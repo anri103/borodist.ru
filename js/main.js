@@ -36,7 +36,7 @@ const heroSwiper = new Swiper('.heroSwiper', {
     },
 });
 
-const productSwiper = new Swiper('.productSwiper', {
+const productCardSwiper = new Swiper('.productCardSwiper', {
     slidesPerView: 2,
     spaceBetween: 10,
     loop: true,
@@ -46,8 +46,8 @@ const productSwiper = new Swiper('.productSwiper', {
         pauseOnMouseEnter: true,
     },
     navigation: {
-        nextEl: '.productSwiper-button-next',
-        prevEl: '.productSwiper-button-prev',
+        nextEl: '.productCardSwiper-next',
+        prevEl: '.productCardSwiper-prev',
     },
     breakpoints: {
         768: {
