@@ -20,10 +20,10 @@
 
 })(jQuery);
 
-// SLIDER
+/*//////////////////////////////////////////////////////////////////
+[ SLIDER ]*/
+
 const heroSwiper = new Swiper('.heroSwiper', {
-    slidesPerView: 1,
-    spaceBetween: 30,
     loop: true,
     autoplay: {
         delay: 3500,
@@ -37,7 +37,7 @@ const heroSwiper = new Swiper('.heroSwiper', {
 });
 
 const productSwiper = new Swiper('.productSwiper', {
-    slidesPerView: 1,
+    slidesPerView: 2,
     spaceBetween: 10,
     loop: true,
     autoplay: {
@@ -50,13 +50,9 @@ const productSwiper = new Swiper('.productSwiper', {
         prevEl: '.productSwiper-button-prev',
     },
     breakpoints: {
-        640: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-        },
-        992: {
+        768: {
             slidesPerView: 4,
-            spaceBetween: 30,
+            spaceBetween: 20,
         },
     },
 });
@@ -75,8 +71,47 @@ const productItemSwiper = new Swiper('.productItemSwiper', {
     },
 });
 
+const promotionSwiper = new Swiper('.promotionSwiper', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    grabCursor: true,
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    breakpoints: {
+        768: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+        },
+    },
+});
 
-// Glightbox
+const testimonialSwiper = new Swiper('.testimonialSwiper', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    grabCursor: true,
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    breakpoints: {
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 15,
+        },
+        992: {
+            slidesPerView: 4,
+            spaceBetween: 30,
+        },
+    },
+});
+
+/*//////////////////////////////////////////////////////////////////
+[ Glightbox ]*/
+
 const lightboxProduct = GLightbox({
     selector: '.glightbox2'
 });
@@ -84,7 +119,3 @@ const lightboxProduct = GLightbox({
 const lightboxVideo = GLightbox({
     selector: '.glightbox3'
 });
-
-
-// SEARCH MODAL
-const toggleSearch = () => document.body.classList.toggle('open-search-modal');
