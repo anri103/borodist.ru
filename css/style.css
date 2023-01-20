@@ -745,6 +745,10 @@ img {
     padding: 3rem 0;
 }
 
+.developer-label img {
+    height: 1.25rem;
+}
+
 .modal {
     --bs-modal-padding: 1.5rem;
     --bs-modal-header-border-width: 0;

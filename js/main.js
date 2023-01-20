@@ -23,8 +23,11 @@
 /*//////////////////////////////////////////////////////////////////
 [ SLIDER ]*/
 
+// На index.html
+
 const heroSwiper = new Swiper('.heroSwiper', {
     loop: true,
+    spaceBetween: 10,
     autoplay: {
         delay: 3500,
         disableOnInteraction: false,
@@ -38,10 +41,12 @@ const heroSwiper = new Swiper('.heroSwiper', {
 
 const productCardSwiper = new Swiper('.productCardSwiper', {
     slidesPerView: 2,
-    spaceBetween: 10,
-    loop: true,
+    grid: {
+        fill: 'row',
+        rows: 2,
+    },
     autoplay: {
-        delay: 2500,
+        delay: 3500,
         disableOnInteraction: false,
         pauseOnMouseEnter: true,
     },
@@ -51,29 +56,23 @@ const productCardSwiper = new Swiper('.productCardSwiper', {
     },
     breakpoints: {
         768: {
-            slidesPerView: 4,
-            spaceBetween: 20,
+            slidesPerView: 2,
+            grid: {
+                rows: 2,
+            },
         },
-    },
-});
-
-const productItemSwiper = new Swiper('.productItemSwiper', {
-    slidesPerView: 1,
-    spaceBetween: 30,
-    loop: false,
-    navigation: {
-        nextEl: '.productItemSwiper-next',
-        prevEl: '.productItemSwiper-prev',
-    },
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
+        992: {
+            slidesPerView: 4,
+            grid: {
+                rows: 2,
+            },
+        },
     },
 });
 
 const promotionSwiper = new Swiper('.promotionSwiper', {
     slidesPerView: 1,
-    spaceBetween: 0,
+    spaceBetween: 10,
     loop: true,
     grabCursor: true,
     pagination: {
@@ -90,7 +89,7 @@ const promotionSwiper = new Swiper('.promotionSwiper', {
 
 const testimonialSwiper = new Swiper('.testimonialSwiper', {
     slidesPerView: 1,
-    spaceBetween: 0,
+    spaceBetween: 10,
     loop: true,
     grabCursor: true,
     pagination: {
@@ -106,6 +105,21 @@ const testimonialSwiper = new Swiper('.testimonialSwiper', {
             slidesPerView: 4,
             spaceBetween: 30,
         },
+    },
+});
+
+// На catalog-item.html
+const productItemSwiper = new Swiper('.productItemSwiper', {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: false,
+    navigation: {
+        nextEl: '.productItemSwiper-next',
+        prevEl: '.productItemSwiper-prev',
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
     },
 });
 
