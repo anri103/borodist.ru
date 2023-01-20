@@ -31,6 +31,7 @@ Version: 1.1
 
 @import url('../fonts/stylesheet.css');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap');
+@import url('../fonts/boxicons/boxicons.min.css');
 
 /*//////////////////////////////////////////////////////////////////
 [ ROOT ]*/
@@ -570,46 +571,6 @@ img {
     background-image: url(../img/icon-login-hover.svg);
 }
 
-.icon-vk {
-    width: 18px;
-    height: 11px;
-    background-image: url(../img/icon-vk-white.svg);
-}
-
-.btn:hover .icon-vk {
-    background-image: url(../img/icon-vk-hover.svg);
-}
-
-.icon-insta {
-    width: 18px;
-    height: 18px;
-    background-image: url(../img/icon-insta-white.svg);
-}
-
-.btn:hover .icon-insta {
-    background-image: url(../img/icon-insta-hover.svg);
-}
-
-.icon-youtube {
-    width: 21px;
-    height: 15px;
-    background-image: url(../img/icon-youtube-white.svg);
-}
-
-.btn:hover .icon-youtube {
-    background-image: url(../img/icon-youtube-hover.svg);
-}
-
-.icon-close {
-    width: 16px;
-    height: 16px;
-    background-image: url(../img/close-svgrepo-com-white.svg);
-}
-
-.btn:hover .icon-close {
-    background-image: url(../img/close-svgrepo-com.svg);
-}
-
 .icon-arrow {
     width: 69px;
     height: 10px;
@@ -745,7 +706,12 @@ img {
     padding: 3rem 0;
 }
 
-.developer-label img {
+.footer .nav {
+    --bs-nav-link-padding-x: 0;
+    --bs-nav-link-padding-y: 0.25rem;
+}
+
+.developer-labels img {
     height: 1.25rem;
 }
 
