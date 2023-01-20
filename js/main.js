@@ -56,7 +56,7 @@ const productCardSwiper = new Swiper('.productCardSwiper', {
     },
     breakpoints: {
         768: {
-            slidesPerView: 2,
+            slidesPerView: 3,
             grid: {
                 rows: 2,
             },
