@@ -108,6 +108,25 @@ const testimonialSwiper = new Swiper('.testimonialSwiper', {
     },
 });
 
+const additionalItemsSwiper = new Swiper('.additionalItemsSwiper', {
+    slidesPerView: 2,
+    grabCursor: true,
+    autoplay: {
+        delay: 3500,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    breakpoints: {
+        768: {
+            slidesPerView: 3,
+        },
+    },
+});
+
 // На catalog-item.html
 const productItemSwiper = new Swiper('.productItemSwiper', {
     slidesPerView: 1,
