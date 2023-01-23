@@ -127,11 +127,12 @@ const additionalItemsSwiper = new Swiper('.additionalItemsSwiper', {
     },
 });
 
-// На catalog-item.html
+// На shop-item.html
 const productItemSwiper = new Swiper('.productItemSwiper', {
     slidesPerView: 1,
     spaceBetween: 30,
     loop: false,
+    grabCursor: true,
     navigation: {
         nextEl: '.productItemSwiper-next',
         prevEl: '.productItemSwiper-prev',

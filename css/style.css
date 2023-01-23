@@ -858,18 +858,6 @@ img {
     background-color: var(--color-white);
 }
 
-.shipping-options {
-    border: 1px solid;
-    border-color: var(--color-grey);
-    border-radius: 35px;
-    padding: 40px 15px;
-    font-size: 14px;
-}
-
-.shipping-options p {
-    margin-bottom: 3px;
-}
-
 .quantity-input {
     width: 110px;
 }
@@ -904,22 +892,18 @@ img {
     transform: scale(1.2);
 }
 
-.productItemSwiper-navigation-box {
-    height: 60px;
-}
-
 .productItemSwiper-next, 
 .productItemSwiper-prev {
     position: absolute;
-    top: 50%;
-    width: 90px;
-    height: auto;
-    margin-top: -9px;
-    z-index: 10;
-    cursor: pointer;
+    top: auto;
+    bottom: 14px;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 90px;
+    height: auto;
+    cursor: pointer;
+    z-index: 15;
 }
 
 .productItemSwiper-next {
@@ -930,26 +914,6 @@ img {
 .productItemSwiper-prev {
     right: auto;
     left: 10px;
-}
-
-.productItemSwiper-navigation-box .swiper-pagination {
-    width: auto;
-    top: 50%;
-    bottom: auto;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.productItemSwiper-navigation-box .swiper-pagination-bullet {
-    width: 16px;
-    height: 16px;
-    border: 2px solid var(--color-grey);
-    opacity: 1;
-    background: transparent;
-}
-
-.productItemSwiper-navigation-box .swiper-pagination-bullet-active {
-    background: var(--color-grey);
 }
 
 .card.card-testimonial {
@@ -965,6 +929,10 @@ img {
     --bs-card-cap-padding-y: 0.5rem;
     --bs-card-cap-padding-x: 0;
     --bs-card-bg: transparent;
+}
+
+.card.card-blog {
+    --bs-card-border-width: 0;
 }
 
 .pagination {
@@ -1056,10 +1024,6 @@ img {
 
     .navbar-nav .nav-link.active {
         border-color: #495469;
-    }
-
-    .shipping-options {
-        padding: 30px 45px;
     }
 
     .logo {

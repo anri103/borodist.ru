@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Borodist catalog-item HTML</title>
+    <title>shop-item</title>
 
     <link rel="shortcut icon" href="img/favicon.png" type="image/png">
 
@@ -17,61 +17,55 @@
 
 <body>
 
-    <!-- Background -->
+    <!-- Фон -->
     <div class="bg-img-main" style="background-image: url(img/fon.png);"></div>
 
+    <!-- Шапка -->
     <header class="header">
-        <div class="top-menu py-3 d-none d-lg-block">
+        <div class="top-menu py-3 d-none d-md-block">
             <div class="container">
                 <div class="row align-items-center">
 
-                    <div class="col-lg-4">
-                        <div class="top-search me-auto">
-                            <button type="button" class="btn btn-secondary btn-icon" onclick="toggleSearch()">
-                                <span class="icon icon-search"></span>
-                            </button>
-                        </div>
+                    <div class="col-md-4">
                     </div>
 
-                    <div class="col-lg-4">
-                        <a class="logo hover-opacity mx-auto" href="#">
-                            <img src="img/logo.svg" alt="Logo">
+                    <div class="col-md-4">
+                        <a class="hover-opacity" href="index.html">
+                            <img class="logo mx-auto" src="img/logo.svg" alt="Logo">
                         </a>
                     </div>
 
-                    <div class="col-lg-4">
-                        <ul class="inline-buttons justify-content-end">
-                            <li class="list-inline-item">
-                                <div class="cart-tool">
-                                    <a class="btn btn-secondary btn-icon me-1" href="#" data-toggle="modal"
-                                        data-target=".login-modal">
-                                        <span class="icon icon-cart"></span>
-                                    </a>
-                                    <div class="cart-tool-text">
-                                        <small>1165 руб.</small>
-                                        3 товара
-                                    </div>
+                    <div class="col-md-4">
+                        <ul class="navbar-button justify-content-end">
+                            <li class="nav-item">
+                                <a class="btn btn-secondary btn-icon me-1" href="cart.html">
+                                    <span class="icon icon-cart"></span>
+                                </a>
+                                <div class="cart-tool-text">
+                                    <span>3 шт.</span>
                                 </div>
                             </li>
-                            <li class="list-inline-item">
-                                <button type="button" class="btn btn-secondary btn-icon">
+                            <li class="nav-item">
+                                <a class="btn btn-secondary btn-icon" href="whishlist.html">
                                     <span class="icon icon-heart"></span>
-                                </button>
+                                </a>
                             </li>
-                            <li class="list-inline-item">
-                                <button type="button" class="btn btn-secondary btn-icon">
+                            <li class="nav-item">
+                                <a class="btn btn-secondary btn-icon" href="login.html">
                                     <span class="icon icon-login"></span>
-                                </button>
+                                </a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
-        <nav class="navbar navbar-expand-lg">
+        <nav class="navbar navbar-expand-md py-4 py-md-2">
             <div class="container">
-                <a class="logo hover-opacity d-lg-none" href="#">
-                    <img src="img/logo.svg" alt="Logo">
+                <!-- Костыль, повторяющий размеры кнопки бургера, это нужно для того, чтобы логотип был по центру на мобиле -->
+                <div class="d-md-none" style="width: 34px; height: 29px;"></div>
+                <a class="logo d-md-none" href="index.html">
+                    <img src="img/logo.svg" alt="Mobile Logo">
                 </a>
                 <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbar-toggle-nav-center" aria-controls="navbar-toggle-nav-center"
@@ -81,90 +75,89 @@
                     <span class="icon-bar bottom-bar"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbar-toggle-nav-center">
-                    <ul class="navbar-nav pt-3 pt-lg-0 text-lowercase text-center mx-auto">
-                        <li class="nav-item active">
-                            <a href="#" class="nav-link">Главная</a>
+                    <ul class="navbar-nav text-center mx-auto mt-3 mt-md-0">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">Главная</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">Каталог</a>
+                            <a href="shop.html" class="nav-link active">Каталог</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">Новинки</a>
+                            <a href="shop.html" class="nav-link">Новинки</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">Акции</a>
+                            <a href="shop.html" class="nav-link">Акции</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">Почитать</a>
+                            <a href="blog.html" class="nav-link">Почитать</a>
                         </li>
                     </ul>
-                    <ul class="navbar-button pt-3 d-lg-none">
+                    <ul class="navbar-button justify-content-center mt-3 d-md-none">
                         <li class="nav-item">
-                            <a href="#" class="btn btn-secondary btn-icon"><span class="icon icon-cart"></span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="btn btn-secondary btn-icon"><span class="icon icon-heart"></span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="btn btn-secondary btn-icon"><span class="icon icon-login"></span></a>
-                        </li>
-                    </ul>
-
-                    <div class="navbar-search pt-3 d-lg-none">
-                        <form class="search-form-mobile" action="#" method="post">
-                            <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Масло для бороды">
-                                <button type="submit" class="btn btn-primary input-group-btn">Поиск</button>
+                            <a class="btn btn-secondary btn-icon me-1" href="cart.html">
+                                <span class="icon icon-cart"></span>
+                            </a>
+                            <div class="cart-tool-text">
+                                <span>3 шт.</span>
                             </div>
-                        </form>
-                    </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn btn-secondary btn-icon" href="whishlist.html">
+                                <span class="icon icon-heart"></span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn btn-secondary btn-icon" href="login.html">
+                                <span class="icon icon-login"></span>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </nav>
     </header>
 
     <main class="main">
-
+        
         <!-- Хлебные крошки -->
-        <section class="section py-sm">
+        <section class="section py-4">
             <div class="container">
-                <div class="d-flex justify-content-center border-top border-1">
-                    <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="/">Главная</a></li>
-                        <li class="breadcrumb-item"><a href="/">Каталог</a></li>
-                        <li class="breadcrumb-item active">Powder</li>
-                    </ul>
-                </div>
+                <nav class="d-flex justify-content-center" aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+                        <li class="breadcrumb-item"><a href="shop.html">Каталог</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">ПУДРА ДЛЯ ПРИКОРНЕВОГО ОБЪЁМА BORODIST "VOLUME BOOSTER"</li>
+                    </ol>
+                </nav>
             </div>
         </section>
 
-        <section class="section py-sm">
+        <!-- Контент -->
+        <section class="section py-4">
             <div class="container">
-                <div class="row g-4">
-                    <div class="col-lg-6">
+                <div class="row gy-4">
+                    <div class="col-md-6">
                         <div class="sticky-top top-30">
                             <!-- Слайдер -->
                             <div class="mb-5">
-                                <div class="swiper productItemSwiper border-radius-50">
-                                    <div class="swiper-wrapper">
+                                <div class="swiper productItemSwiper">
+                                    <div class="swiper-wrapper mb-5">
                                         <div class="swiper-slide">
                                             <a class="glightbox2" href="img/product-item-01.png">
-                                                <img class="w-100" src="img/product-item-01.png" alt="">
+                                                <img class="w-100 b-radius-15 b-radius-md-25 b-radius-lg-50" src="img/product-item-01.png" alt="">
                                             </a>
                                         </div>
                                         <div class="swiper-slide">
                                             <a class="glightbox2" href="img/product-item-01.png">
-                                                <img class="w-100" src="img/product-item-01.png" alt="">
+                                                <img class="w-100 b-radius-15 b-radius-md-25 b-radius-lg-50" src="img/product-item-01.png" alt="">
                                             </a>
                                         </div>
                                         <div class="swiper-slide">
                                             <a class="glightbox2" href="img/product-item-01.png">
-                                                <img class="w-100" src="img/product-item-01.png" alt="">
+                                                <img class="w-100 b-radius-15 b-radius-md-25 b-radius-lg-50" src="img/product-item-01.png" alt="">
                                             </a>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="productItemSwiper-navigation-box position-relative">
                                     <div class="productItemSwiper-next">
                                         <img src="img/swipe-next.svg" alt="">
                                     </div>
@@ -179,7 +172,7 @@
                                 <div class="text-center">
                                     <p class="fz-24 fw-bold">Видеоинструкция</p>
                                 </div>
-                                <div class="position-relative">
+                                <div class="position-relative overflow-hidden b-radius-15 b-radius-md-25 b-radius-lg-50">
                                     <img class="w-100" src="img/product-item-01.png" alt="">
                                     <a class="play-video glightbox3" href="https://www.youtube.com/watch?v=jMIap9i4TAQ">
                                         <img src="img/play-video.svg" alt="">
@@ -188,11 +181,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-md-6">
                         <div class="product-details ms-lg-5">
-                            <h1 class="product-title">Borodist Powder</h1>
+                            <h1 class="product-title">ПУДРА ДЛЯ ПРИКОРНЕВОГО ОБЪЁМА BORODIST "VOLUME BOOSTER"</h1>
                             <div class="mb-4">
-                                <span class="product-price">1 500 Р</span>
+                                <span class="product-price fz-24 fw-semibold">1190 ₽</span>
                             </div>
                             <div class="mb-5">
                                 <span class="product-sku">арт. HRBNDS0001</span>
@@ -204,7 +197,7 @@
                                     <button type="button" class="button-plus btn btn-sm">+</button>
                                 </div>
                             </div>
-                            <div class="inline-buttons mb-5">
+                            <ul class="list-inline mb-5">
                                 <li class="list-inline-item">
                                     <button type="button" class="btn btn-primary"><span class="fz-18">В корзину</span></button>
                                 </li>
@@ -213,12 +206,12 @@
                                         <span class="icon icon-heart"></span>
                                     </button>
                                 </li>
-                            </div>
+                            </ul>
                             <div class="product-description mb-5">
                                 <p>Подкисление интенсивно разъедает имидазол, в итоге возможно появление катионной полимеризации в замкнутой колбе. Температура химически распознает газообразный комплекс рения с саленом. Волокно, как и везде в пределах наблюдаемой вселенной, вступает гидрогенит. Самосогласованная модель предсказывает, что при определенных условиях выпаривание огромно. Белок, на первый взгляд, едко диссоциирует комплекс рения с саленом.</p>
                             </div>
-                            <div class="shipping-options">
-                                <p class="fw-semibold mb-4">Доставка в <span class="fw-bold">г. Москва</span> <a class="text-decoration-underline ms-3" href="#">Изменить</a></p>
+                            <div class="shipping-options border border-1 border-grey b-radius-15 b-radius-md-25 b-radius-lg-50 px-4 px-md-5 py-5">
+                                <p class="fw-semibold mb-4">Доставка в г. Москва <a class="text-decoration-underline ms-3" href="#">Изменить</a></p>
                                 <div class="row justify-content-between">
                                     <div class="col-7">
                                         <p>Срочная платная доставка по Москве и М.О.</p>
@@ -227,7 +220,7 @@
                                         <p class="fw-bold">1000 Р</p>
                                     </div>
                                 </div>
-                                <hr class="my-3">
+                                <hr>
                                 <div class="row justify-content-between">
                                     <div class="col-7">
                                         <p>Самовывоз (Москва)</p>
@@ -236,7 +229,7 @@
                                         <p class="fw-bold">бесплатно</p>
                                     </div>
                                 </div>
-                                <hr class="my-3">
+                                <hr>
                                 <div class="row justify-content-between">
                                     <div class="col-7">
                                         <p>Доставка в пункты выдачи заказов (Бесплатно при заказе от 2 500 р.) Службы: Boxberry, СДЭК или Почта России</p>
@@ -253,235 +246,305 @@
             </div>
         </section>
 
-        <!-- Товары -->
-        <section class="section py-xl position-relative">
+        <!-- Сопутствующие товары -->
+        <section class="section py-4">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="fz-90">С этим товаром так же покупают</h2>
+                    <h2 class="fz-90 mb-4">С этим товаром так же покупают</h2>
                 </div>
-                <div class="swiper productSwiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="card product-card">
-                                <a class="card-img-top d-block overflow-hidden hover-shine" href="#">
-                                    <img class="card-img" src="img/item-01.png" alt="">
+                <div class="swiper additionalItemsSwiper">
+                    <div class="swiper-wrapper mb-5">
+                        <div class="swiper-slide h-auto p-2">
+                            <article class="card product-card h-100">
+                                <a class="hover-shine" href="shop-item.html">
+                                    <img class="card-img-top b-radius-20 b-radius-40" src="img/item-01.png" alt="">
                                 </a>
-                                <div class="card-body text-center">
-                                    <p class="product-name">Бальзам для бороды</p>
-                                    <p class="product-meta"><a href="#">Warrior</a></p>
-                                    <p class="product-price">1200 руб.</p>
+                                <div class="card-body">
+                                    <a class="fz-16 fw-semibold text-uppercase" href="shop-item.html">БАЛЬЗАМ ДЛЯ БОРОДЫ BORODIST "CITRUS SPLASH"</a>
                                 </div>
-                                <div class="text-center">
-                                    <a class="btn btn-primary" href="#">В корзину</a>
+                                <div class="card-footer">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <span class="fz-24 fw-semibold">1190 ₽</span>
+                                        <button type="button" class="btn btn-primary">В корзину</button>
+                                    </div>
                                 </div>
-                            </div>
+                            </article>
                         </div>
-                        <div class="swiper-slide">
-                            <div class="card product-card">
-                                <a class="card-img-top d-block overflow-hidden hover-shine" href="#">
-                                    <img class="card-img" src="img/item-02.png" alt="">
+                        <div class="swiper-slide h-auto p-2">
+                            <article class="card product-card h-100">
+                                <a class="hover-shine" href="shop-item.html">
+                                    <img class="card-img-top b-radius-20 b-radius-40" src="img/item-01.png" alt="">
                                 </a>
-                                <div class="card-body text-center">
-                                    <p class="product-name">Масло для бороды</p>
-                                    <p class="product-meta"><a href="#">Warming</a></p>
-                                    <p class="product-price">800 руб.</p>
+                                <div class="card-body">
+                                    <a class="fz-16 fw-semibold text-uppercase" href="shop-item.html">БАЛЬЗАМ ДЛЯ БОРОДЫ BORODIST "CITRUS SPLASH"</a>
                                 </div>
-                                <div class="text-center">
-                                    <a class="btn btn-primary" href="#">В корзину</a>
+                                <div class="card-footer">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <span class="fz-24 fw-semibold">1190 ₽</span>
+                                        <button type="button" class="btn btn-primary">В корзину</button>
+                                    </div>
                                 </div>
-                            </div>
+                            </article>
                         </div>
-                        <div class="swiper-slide">
-                            <div class="card product-card">
-                                <a class="card-img-top d-block overflow-hidden hover-shine" href="#">
-                                    <img class="card-img" src="img/item-01.png" alt="">
+                        <div class="swiper-slide h-auto p-2">
+                            <article class="card product-card h-100">
+                                <a class="hover-shine" href="shop-item.html">
+                                    <img class="card-img-top b-radius-20 b-radius-40" src="img/item-01.png" alt="">
                                 </a>
-                                <div class="card-body text-center">
-                                    <p class="product-name">Бальзам для бороды</p>
-                                    <p class="product-meta"><a href="#">Warrior</a></p>
-                                    <p class="product-price">1200 руб.</p>
+                                <div class="card-body">
+                                    <a class="fz-16 fw-semibold text-uppercase" href="shop-item.html">БАЛЬЗАМ ДЛЯ БОРОДЫ BORODIST "CITRUS SPLASH"</a>
                                 </div>
-                                <div class="text-center">
-                                    <a class="btn btn-primary" href="#">В корзину</a>
+                                <div class="card-footer">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <span class="fz-24 fw-semibold">1190 ₽</span>
+                                        <button type="button" class="btn btn-primary">В корзину</button>
+                                    </div>
                                 </div>
-                            </div>
+                            </article>
                         </div>
-                        <div class="swiper-slide">
-                            <div class="card product-card">
-                                <a class="card-img-top d-block overflow-hidden hover-shine" href="#">
-                                    <img class="card-img" src="img/item-02.png" alt="">
+                        <div class="swiper-slide h-auto p-2">
+                            <article class="card product-card h-100">
+                                <a class="hover-shine" href="shop-item.html">
+                                    <img class="card-img-top b-radius-20 b-radius-40" src="img/item-01.png" alt="">
                                 </a>
-                                <div class="card-body text-center">
-                                    <p class="product-name">Масло для бороды</p>
-                                    <p class="product-meta"><a href="#">Warming</a></p>
-                                    <p class="product-price">800 руб.</p>
+                                <div class="card-body">
+                                    <a class="fz-16 fw-semibold text-uppercase" href="shop-item.html">БАЛЬЗАМ ДЛЯ БОРОДЫ BORODIST "CITRUS SPLASH"</a>
                                 </div>
-                                <div class="text-center">
-                                    <a class="btn btn-primary" href="#">В корзину</a>
+                                <div class="card-footer">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <span class="fz-24 fw-semibold">1190 ₽</span>
+                                        <button type="button" class="btn btn-primary">В корзину</button>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="card product-card">
-                                <a class="card-img-top d-block overflow-hidden hover-shine" href="#">
-                                    <img class="card-img" src="img/item-01.png" alt="">
-                                </a>
-                                <div class="card-body text-center">
-                                    <p class="product-name">Бальзам для бороды</p>
-                                    <p class="product-meta"><a href="#">Warrior</a></p>
-                                    <p class="product-price">1200 руб.</p>
-                                </div>
-                                <div class="text-center">
-                                    <a class="btn btn-primary" href="#">В корзину</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="card product-card">
-                                <a class="card-img-top d-block overflow-hidden hover-shine" href="#">
-                                    <img class="card-img" src="img/item-02.png" alt="">
-                                </a>
-                                <div class="card-body text-center">
-                                    <p class="product-name">Масло для бороды</p>
-                                    <p class="product-meta"><a href="#">Warming</a></p>
-                                    <p class="product-price">800 руб.</p>
-                                </div>
-                                <div class="text-center">
-                                    <a class="btn btn-primary" href="#">В корзину</a>
-                                </div>
-                            </div>
+                            </article>
                         </div>
                     </div>
+                    <div class="swiper-pagination"></div>
                 </div>
             </div>
-            <!-- <div class="productSwiper-button-next">
-                <img src="img/arrow-tuda.svg" alt="">
-            </div>
-            <div class="productSwiper-button-prev">
-                <img src="img/arrow-suda.svg" alt="">
-            </div> -->
         </section>
 
     </main>
 
+    <!-- Футер -->
     <footer class="footer bg-color-grey color-white">
         <div class="container">
-            <div class="py-3">
-                <ul class="nav justify-content-center text-lowercase">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Главная</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Каталог</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Новинки</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Акции</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Почитать</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="py-3">
-                <ul class="nav justify-content-center">
-                    <li class="nav-item">
-                        <a class="btn" href="#">
-                            <span class="icon icon-vk"></span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="btn" href="#">
-                            <span class="icon icon-insta"></span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="btn" href="#">
-                            <span class="icon icon-youtube"></span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="py-3">
-                <div class="row g-4">
+            <div class="row gy-4">
 
-                    <div class="col-lg-4 order-lg-2">
-                        <img class="logo-footer mx-auto" src="img/footer-logo-white.svg" alt="Logo">
+                <div class="col-md-4 col-lg-2 order-md-2">
+                    <div class="d-flex d-md-none justify-content-center justify-content-md-start mb-3">
+                        <img class="logo" src="img/logo-white.svg" alt="">
                     </div>
-                    <div class="col-lg-4 text-center text-lg-end order-lg-3">
-                        <ul class="list-unstyled">
-                            <li><a class="fz-20 fw-semibold" href="#">+7 (495) 555-33-22</a></li>
-                            <li><a class="fz-20 fw-semibold" href="#">sales@borodist.ru</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-4 text-center text-lg-start order-lg-1">
-                        <p class="fw-semibold">Индивидуальный предприниматель<br>
-                            ХХХ<br>
-                            ОГРНИП: 111222333<br>
-                            ИНН: 111222333
+                    <ul class="nav flex-row flex-md-column justify-content-center mb-3">
+                        <li class="nav-item">
+                            <a class="nav-link fz-20 px-2 px-lg-0" href="index.html">Главная</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fz-20 px-2 px-lg-0" href="shop.html">Каталог</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fz-20 px-2 px-lg-0" href="shop.html">Новинки</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fz-20 px-2 px-lg-0" href="shop.html">Акции</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fz-20 px-2 px-lg-0" href="blog.html">Почитать</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 col-lg-3 order-md-3">
+                    <ul class="nav flex-column align-items-center align-items-md-start mb-3">
+                        <li class="nav-item">
+                            <a class="nav-link fz-20" href="tel:+79254011531">+7 (925) 401-15-31</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fz-20" href="mailto:info@borodist.ru">info@borodist.ru</a>
+                        </li>
+                    </ul>
+                    <ul class="list-inline d-flex justify-content-center justify-content-md-start mb-3">
+                        <li class="list-inline-item">
+                            <a class="fz-32" href="#">
+                                <i class="bx bxl-vk"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="fz-32" href="#">
+                                <i class="bx bxl-youtube"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="fz-32" href="#">
+                                <i class="bx bxl-telegram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 col-lg-3 order-md-4">
+                    <div class="text-center text-md-start">
+                        <p class="fw-medium">ИП Василенко Антон Николаевич<br>
+                            ИНН: 501811848703<br>
+                            ОГРНИП: 322508100291564
                         </p>
                     </div>
+                    <ul class="list-inline d-none d-md-flex justify-content-center justify-content-md-start mb-3 developer-labels">
+                        <li class="list-inline-item">
+                            <a class="hover-opacity" href="#">
+                                <img class="w-100" src="img/logo-cluborg-white.svg" alt="cluborg">
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="hover-opacity" href="#">
+                                <img class="w-100" src="img/logo-amd.svg" alt="amd">
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-            </div>
-            <div class="py-3">
-                <div class="row">
-                    <div class="col-lg-4"></div>
-                    <div class="col-lg-4 text-center">
+
+                <div class="col-md-4 col-lg-4 order-md-1">
+                    <div class="d-none d-md-flex justify-content-center justify-content-md-start mb-3">
+                        <img class="logo" src="img/logo-white.svg" alt="">
+                    </div>
+                    <ul class="nav flex-column align-items-center align-items-md-start mb-3">
+                        <li class="nav-item">
+                            <a class="nav-link" href="policy.html">Политика конфиденциальности</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="dostavka.html">Информация о доставке</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="policy.html">Публичная оферта</a>
+                        </li>
+                    </ul>
+                    <div class="text-center text-md-start">
                         <p>2022 © Borodist</p>
                     </div>
-                    <div class="col-lg-4 text-center text-lg-end">
-                        <style>
-                            .startsite {
-                                display: inline-block;
-                                color: #FFF;
-                                padding-left: 45px;
-                                width: 215px;
-                                height: 30px;
-                                line-height: 15px;
-                                font-size: 14px;
-                                background: url(img/startsite-logo.svg) left center no-repeat;
-                                background-size: contain;
-                            }
-
-                            .startsite:hover {
-                                color: #FFD763;
-                            }
-                        </style>
-                        <div class="made-by">
-                            <a class="startsite" href="https://startsite.studio" target="_blank">Разработка сайта — «СтартСайт»</a>
-                        </div>
-                    </div>
+                    <ul class="list-inline d-flex d-md-none justify-content-center justify-content-md-start mb-3 developer-labels">
+                        <li class="list-inline-item">
+                            <a class="hover-opacity" href="#">
+                                <img class="w-100" src="img/logo-cluborg-white.svg" alt="cluborg">
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="hover-opacity" href="#">
+                                <img class="w-100" src="img/logo-amd.svg" alt="amd">
+                            </a>
+                        </li>
+                    </ul>
                 </div>
+
             </div>
         </div>
     </footer>
 
-    <!-- Поиск попап -->
-    <div class="modal-background-overlay" onclick="toggleSearch()"></div>
-    <div class="modal-search">
-        <div class="modal-search-header py-3">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 text-end">
-                        <button type="button" class="btn btn-secondary btn-icon" onclick="toggleSearch()">
-                            <span class="icon icon-close"></span>
-                        </button>
-                    </div>
+    <!-- Попап "Товар добавлен" -->
+    <div class="modal fade" id="addProduct" tabindex="-1" aria-labelledby="eaddProductLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content b-radius-15 b-radius-md-25 bg-img-top-contain" style="background-image: url(img/fon.png);">
+                <div class="modal-header pb-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-            </div>
-        </div>
-        <div class="modal-search-body">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <form class="search-form" action="#" method="post">
-                            <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Масло для бороды">
-                                <button type="submit" class="btn btn-primary input-group-btn">Поиск</button>
+                <div class="modal-body pt-0">
+                    <p class="h1 fz-64 text-center mb-4">Товар добавлен в корзину</p>
+                    <article class="card card-additional mb-5">
+                        <div class="card-body">
+                            <div class="row gy-2">
+                                <div class="col-md-4">
+                                    <a class="hover-shine" href="shop-item.html">
+                                        <img class="card-img-top b-radius-20 b-radius-40" src="img/item-02.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="d-flex flex-column justify-content-between h-100">
+                                        <div>
+                                            <p><a class="fz-24 fw-semibold text-uppercase" href="shop-item.html">ПУДРА ДЛЯ ПРИКОРНЕВОГО ОБЪЁМА BORODIST "VOLUME BOOSTER"</a></p>
+                                            <p><span class="fz-24 fw-semibold">620 ₽</span></p>
+                                        </div>
+                                        <div class="row gy-2">
+                                            <div class="col-lg-6">
+                                                <button class="btn btn-gray w-100">Продолжить покупки</button>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <button class="btn btn-primary w-100">Перейти в корзину</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </form>
+                        </div>
+                    </article>
+
+                    <p class="h1 fz-64 text-center mb-4">Тебе может пригодиться</p>
+                    <div class="swiper additionalItemsSwiper">
+                        <div class="swiper-wrapper mb-5">
+                            <div class="swiper-slide h-auto p-2">
+                                <article class="card product-card h-100">
+                                    <a class="hover-shine" href="shop-item.html">
+                                        <img class="card-img-top b-radius-20 b-radius-40" src="img/item-01.png" alt="">
+                                    </a>
+                                    <div class="card-body">
+                                        <a class="fz-16 fw-semibold text-uppercase" href="shop-item.html">БАЛЬЗАМ ДЛЯ БОРОДЫ BORODIST "CITRUS SPLASH"</a>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <span class="fz-24 fw-semibold">1190 ₽</span>
+                                            <button type="button" class="btn btn-primary">В корзину</button>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="swiper-slide h-auto p-2">
+                                <article class="card product-card h-100">
+                                    <a class="hover-shine" href="shop-item.html">
+                                        <img class="card-img-top b-radius-20 b-radius-40" src="img/item-01.png" alt="">
+                                    </a>
+                                    <div class="card-body">
+                                        <a class="fz-16 fw-semibold text-uppercase" href="shop-item.html">БАЛЬЗАМ ДЛЯ БОРОДЫ BORODIST "CITRUS SPLASH"</a>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <span class="fz-24 fw-semibold">1190 ₽</span>
+                                            <button type="button" class="btn btn-primary">В корзину</button>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="swiper-slide h-auto p-2">
+                                <article class="card product-card h-100">
+                                    <a class="hover-shine" href="shop-item.html">
+                                        <img class="card-img-top b-radius-20 b-radius-40" src="img/item-01.png" alt="">
+                                    </a>
+                                    <div class="card-body">
+                                        <a class="fz-16 fw-semibold text-uppercase" href="shop-item.html">БАЛЬЗАМ ДЛЯ БОРОДЫ BORODIST "CITRUS SPLASH"</a>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <span class="fz-24 fw-semibold">1190 ₽</span>
+                                            <button type="button" class="btn btn-primary">В корзину</button>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="swiper-slide h-auto p-2">
+                                <article class="card product-card h-100">
+                                    <a class="hover-shine" href="shop-item.html">
+                                        <img class="card-img-top b-radius-20 b-radius-40" src="img/item-01.png" alt="">
+                                    </a>
+                                    <div class="card-body">
+                                        <a class="fz-16 fw-semibold text-uppercase" href="shop-item.html">БАЛЬЗАМ ДЛЯ БОРОДЫ BORODIST "CITRUS SPLASH"</a>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <span class="fz-24 fw-semibold">1190 ₽</span>
+                                            <button type="button" class="btn btn-primary">В корзину</button>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
                     </div>
                 </div>
             </div>
@@ -493,6 +556,7 @@
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/glightbox.min.js"></script>
     <script src="js/main.js"></script>
+
 </body>
 
 </html>
