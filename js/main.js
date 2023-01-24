@@ -43,7 +43,7 @@ const productCardSwiper = new Swiper('.productCardSwiper', {
     slidesPerView: 2,
     grid: {
         fill: 'row',
-        rows: 2,
+        rows: 4,
     },
     autoplay: {
         delay: 3500,
@@ -56,7 +56,7 @@ const productCardSwiper = new Swiper('.productCardSwiper', {
     },
     breakpoints: {
         768: {
-            slidesPerView: 3,
+            slidesPerView: 4,
             grid: {
                 rows: 2,
             },
@@ -73,7 +73,6 @@ const productCardSwiper = new Swiper('.productCardSwiper', {
 const promotionSwiper = new Swiper('.promotionSwiper', {
     slidesPerView: 1,
     spaceBetween: 10,
-    loop: true,
     grabCursor: true,
     pagination: {
         el: '.swiper-pagination',
@@ -98,7 +97,7 @@ const testimonialSwiper = new Swiper('.testimonialSwiper', {
     },
     breakpoints: {
         768: {
-            slidesPerView: 2,
+            slidesPerView: 4,
             spaceBetween: 15,
         },
         992: {
@@ -131,7 +130,6 @@ const additionalItemsSwiper = new Swiper('.additionalItemsSwiper', {
 const productItemSwiper = new Swiper('.productItemSwiper', {
     slidesPerView: 1,
     spaceBetween: 30,
-    loop: false,
     grabCursor: true,
     navigation: {
         nextEl: '.productItemSwiper-next',

@@ -18,7 +18,7 @@
 <body>
 
     <!-- Фон -->
-    <div class="bg-img-main" style="background-image: url(img/fon.png);"></div>
+    <div class="bg-img-main d-none d-lg-block" style="background-image: url(img/fon.png);"></div>
 
     <!-- Шапка -->
     <header class="header">
@@ -62,8 +62,12 @@
         </div>
         <nav class="navbar navbar-expand-md py-4 py-md-2">
             <div class="container">
-                <!-- Костыль, повторяющий размеры кнопки бургера, это нужно для того, чтобы логотип был по центру на мобиле -->
-                <div class="d-md-none" style="width: 34px; height: 29px;"></div>
+                <!-- Дубль кнопки-бургера без функционала для того, чтобы логотип был по центру на мобильном экране -->
+                <button class="navbar-toggler collapsed" type="button">
+                    <span class="icon-bar top-bar bg-transparent"></span>
+                    <span class="icon-bar middle-bar bg-transparent"></span>
+                    <span class="icon-bar bottom-bar bg-transparent"></span>
+                </button>
                 <a class="logo d-md-none" href="index.html">
                     <img src="img/logo.svg" alt="Mobile Logo">
                 </a>
@@ -89,7 +93,7 @@
                             <a href="promotion.html" class="nav-link">Акции</a>
                         </li>
                         <li class="nav-item">
-                            <a href="blog.html" class="nav-link">Почитать</a>
+                            <a href="blog.html" class="nav-link">Новости</a>
                         </li>
                     </ul>
                     <ul class="navbar-button justify-content-center mt-3 d-md-none">
@@ -145,17 +149,17 @@
                     <div class="swiper-wrapper mb-5">
                         <div class="swiper-slide">
                             <a class="slide-item d-block" href="#">
-                                <img class="w-100 b-radius-15 b-radius-md-25 b-radius-lg-50" src="img/hero-01.png" alt="">
+                                <img class="w-100 b-radius-15 b-radius-md-25 b-radius-lg-50" src="img/cat-01.png" alt="">
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <a class="slide-item d-block" href="#">
-                                <img class="w-100 b-radius-15 b-radius-md-25 b-radius-lg-50" src="img/hero-01.png" alt="">
+                                <img class="w-100 b-radius-15 b-radius-md-25 b-radius-lg-50" src="img/cat-02.png" alt="">
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <a class="slide-item d-block" href="#">
-                                <img class="w-100 b-radius-15 b-radius-md-25 b-radius-lg-50" src="img/hero-01.png" alt="">
+                                <img class="w-100 b-radius-15 b-radius-md-25 b-radius-lg-50" src="img/cat-01.png" alt="">
                             </a>
                         </div>
                     </div>
@@ -170,163 +174,196 @@
                 <div class="text-center">
                     <h2 class="fz-90 mb-4">Наши продукты</h2>
                 </div>
+                <!-- Для красивого отображения товаров - выводить строго 12 штук, если будет недостаточно товаров - строчка не заполнится -->
                 <div class="swiper productCardSwiper">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide h-auto p-2 mb-3">
+                        <div class="swiper-slide h-auto p-2 p-lg-3 mb-3">
                             <article class="card product-card h-100">
                                 <a class="hover-shine" href="shop-item.html">
-                                    <img class="card-img-top b-radius-20 b-radius-40" src="img/item-01.png" alt="">
+                                    <img class="card-img-top b-radius-20 b-radius-lg-40" src="img/item-01.png" alt="">
                                 </a>
                                 <div class="card-body">
-                                    <a class="fz-16 fw-semibold text-uppercase" href="shop-item.html">БАЛЬЗАМ ДЛЯ БОРОДЫ BORODIST "CITRUS SPLASH"</a>
+                                    <a class="card-title fw-semibold" href="shop-item.html">Бальзам для бороды borodist "citrus splash"</a>
                                 </div>
                                 <div class="card-footer">
                                     <div class="d-flex align-items-center justify-content-between">
-                                        <span class="fz-24 fw-semibold">1190 ₽</span>
+                                        <span class="card-price fw-semibold">1190 ₽</span>
                                         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addProduct">В корзину</button>
                                     </div>
                                 </div>
                             </article>
                         </div>
-                        <div class="swiper-slide h-auto p-2 mb-3">
+                        <div class="swiper-slide h-auto p-2 p-lg-3 mb-3">
                             <article class="card product-card h-100">
                                 <a class="hover-shine" href="shop-item.html">
-                                    <img class="card-img-top b-radius-20 b-radius-40" src="img/item-02.png" alt="">
+                                    <img class="card-img-top b-radius-20 b-radius-lg-40" src="img/item-02.png" alt="">
                                 </a>
                                 <div class="card-body">
-                                    <a class="fz-16 fw-semibold text-uppercase" href="shop-item.html">ПУДРА ДЛЯ ПРИКОРНЕВОГО ОБЪЁМА BORODIST "VOLUME BOOSTER"</a>
+                                    <a class="card-title fw-semibold" href="shop-item.html">Пудра для прикорневого объёма borodist "volume booster"</a>
                                 </div>
                                 <div class="card-footer">
                                     <div class="d-flex align-items-center justify-content-between">
-                                        <span class="fz-24 fw-semibold">620 ₽</span>
+                                        <span class="card-price fw-semibold">620 ₽</span>
                                         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addProduct">В корзину</button>
                                     </div>
                                 </div>
                             </article>
                         </div>
-                        <div class="swiper-slide h-auto p-2 mb-3">
+                        <div class="swiper-slide h-auto p-2 p-lg-3 mb-3">
                             <article class="card product-card h-100">
                                 <a class="hover-shine" href="shop-item.html">
-                                    <img class="card-img-top b-radius-20 b-radius-40" src="img/item-03.png" alt="">
+                                    <img class="card-img-top b-radius-20 b-radius-lg-40" src="img/item-03.png" alt="">
                                 </a>
                                 <div class="card-body">
-                                    <a class="fz-16 fw-semibold text-uppercase" href="shop-item.html">СОЛЕВОЙ СПРЕЙ ДЛЯ УКЛАДКИ ВОЛОС BORODIST "SURF'S VIBE"</a>
+                                    <a class="card-title fw-semibold" href="shop-item.html">Солевой спрей для укладки волос borodist "surf's vibe"</a>
                                 </div>
                                 <div class="card-footer">
                                     <div class="d-flex align-items-center justify-content-between">
-                                        <span class="fz-24 fw-semibold">620 ₽</span>
+                                        <span class="card-price fw-semibold">620 ₽</span>
                                         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addProduct">В корзину</button>
                                     </div>
                                 </div>
                             </article>
                         </div>
-                        <div class="swiper-slide h-auto p-2 mb-3">
+                        <div class="swiper-slide h-auto p-2 p-lg-3 mb-3">
                             <article class="card product-card h-100">
                                 <a class="hover-shine" href="shop-item.html">
-                                    <img class="card-img-top b-radius-20 b-radius-40" src="img/item-04.png" alt="">
+                                    <img class="card-img-top b-radius-20 b-radius-lg-40" src="img/item-04.png" alt="">
                                 </a>
                                 <div class="card-body">
-                                    <a class="fz-16 fw-semibold text-uppercase" href="shop-item.html">БАЛЬЗАМ ДЛЯ БОРОДЫ BORODIST "CITRUS SPLASH"</a>
+                                    <a class="card-title fw-semibold" href="shop-item.html">Бальзам для бороды borodist "citrus splash"</a>
                                 </div>
                                 <div class="card-footer">
                                     <div class="d-flex align-items-center justify-content-between">
-                                        <span class="fz-24 fw-semibold">620 ₽</span>
+                                        <span class="card-price fw-semibold">620 ₽</span>
                                         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addProduct">В корзину</button>
                                     </div>
                                 </div>
                             </article>
                         </div>
-                        <div class="swiper-slide h-auto p-2 mb-3">
+                        <div class="swiper-slide h-auto p-2 p-lg-3 mb-3">
                             <article class="card product-card h-100">
                                 <a class="hover-shine" href="shop-item.html">
-                                    <img class="card-img-top b-radius-20 b-radius-40" src="img/item-01.png" alt="">
+                                    <img class="card-img-top b-radius-20 b-radius-lg-40" src="img/item-01.png" alt="">
                                 </a>
                                 <div class="card-body">
-                                    <a class="fz-16 fw-semibold text-uppercase" href="shop-item.html">БАЛЬЗАМ ДЛЯ БОРОДЫ BORODIST "CITRUS SPLASH"</a>
+                                    <a class="card-title fw-semibold" href="shop-item.html">Бальзам для бороды borodist "citrus splash"</a>
                                 </div>
                                 <div class="card-footer">
                                     <div class="d-flex align-items-center justify-content-between">
-                                        <span class="fz-24 fw-semibold">620 ₽</span>
+                                        <span class="card-price fw-semibold">620 ₽</span>
                                         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addProduct">В корзину</button>
                                     </div>
                                 </div>
                             </article>
                         </div>
-                        <div class="swiper-slide h-auto p-2 mb-3">
+                        <div class="swiper-slide h-auto p-2 p-lg-3 mb-3">
                             <article class="card product-card h-100">
                                 <a class="hover-shine" href="shop-item.html">
-                                    <img class="card-img-top b-radius-20 b-radius-40" src="img/item-02.png" alt="">
+                                    <img class="card-img-top b-radius-20 b-radius-lg-40" src="img/item-02.png" alt="">
                                 </a>
                                 <div class="card-body">
-                                    <a class="fz-16 fw-semibold text-uppercase" href="shop-item.html">ПУДРА ДЛЯ ПРИКОРНЕВОГО ОБЪЁМА BORODIST "VOLUME BOOSTER"</a>
+                                    <a class="card-title fw-semibold" href="shop-item.html">Пудра для прикорневого объёма borodist "volume booster"</a>
                                 </div>
                                 <div class="card-footer">
                                     <div class="d-flex align-items-center justify-content-between">
-                                        <span class="fz-24 fw-semibold">620 ₽</span>
+                                        <span class="card-price fw-semibold">620 ₽</span>
                                         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addProduct">В корзину</button>
                                     </div>
                                 </div>
                             </article>
                         </div>
-                        <div class="swiper-slide h-auto p-2 mb-3">
+                        <div class="swiper-slide h-auto p-2 p-lg-3 mb-3">
                             <article class="card product-card h-100">
                                 <a class="hover-shine" href="shop-item.html">
-                                    <img class="card-img-top b-radius-20 b-radius-40" src="img/item-03.png" alt="">
+                                    <img class="card-img-top b-radius-20 b-radius-lg-40" src="img/item-02.png" alt="">
                                 </a>
                                 <div class="card-body">
-                                    <a class="fz-16 fw-semibold text-uppercase" href="shop-item.html">СОЛЕВОЙ СПРЕЙ ДЛЯ УКЛАДКИ ВОЛОС BORODIST "SURF'S VIBE"</a>
+                                    <a class="card-title fw-semibold" href="shop-item.html">Пудра для прикорневого объёма borodist "volume booster"</a>
                                 </div>
                                 <div class="card-footer">
                                     <div class="d-flex align-items-center justify-content-between">
-                                        <span class="fz-24 fw-semibold">620 ₽</span>
+                                        <span class="card-price fw-semibold">620 ₽</span>
                                         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addProduct">В корзину</button>
                                     </div>
                                 </div>
                             </article>
                         </div>
-                        <div class="swiper-slide h-auto p-2 mb-3">
+                        <div class="swiper-slide h-auto p-2 p-lg-3 mb-3">
                             <article class="card product-card h-100">
                                 <a class="hover-shine" href="shop-item.html">
-                                    <img class="card-img-top b-radius-20 b-radius-40" src="img/item-04.png" alt="">
+                                    <img class="card-img-top b-radius-20 b-radius-lg-40" src="img/item-03.png" alt="">
                                 </a>
                                 <div class="card-body">
-                                    <a class="fz-16 fw-semibold text-uppercase" href="shop-item.html">БАЛЬЗАМ ДЛЯ БОРОДЫ BORODIST "CITRUS SPLASH"</a>
+                                    <a class="card-title fw-semibold" href="shop-item.html">Солевой спрей для укладки волос borodist "surf's vibe"</a>
                                 </div>
                                 <div class="card-footer">
                                     <div class="d-flex align-items-center justify-content-between">
-                                        <span class="fz-24 fw-semibold">620 ₽</span>
+                                        <span class="card-price fw-semibold">620 ₽</span>
                                         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addProduct">В корзину</button>
                                     </div>
                                 </div>
                             </article>
                         </div>
-                        <div class="swiper-slide h-auto p-2 mb-3">
+                        <div class="swiper-slide h-auto p-2 p-lg-3 mb-3">
                             <article class="card product-card h-100">
                                 <a class="hover-shine" href="shop-item.html">
-                                    <img class="card-img-top b-radius-20 b-radius-40" src="img/item-03.png" alt="">
+                                    <img class="card-img-top b-radius-20 b-radius-lg-40" src="img/item-02.png" alt="">
                                 </a>
                                 <div class="card-body">
-                                    <a class="fz-16 fw-semibold text-uppercase" href="shop-item.html">СОЛЕВОЙ СПРЕЙ ДЛЯ УКЛАДКИ ВОЛОС BORODIST "SURF'S VIBE"</a>
+                                    <a class="card-title fw-semibold" href="shop-item.html">Пудра для прикорневого объёма borodist "volume booster"</a>
                                 </div>
                                 <div class="card-footer">
                                     <div class="d-flex align-items-center justify-content-between">
-                                        <span class="fz-24 fw-semibold">620 ₽</span>
+                                        <span class="card-price fw-semibold">620 ₽</span>
                                         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addProduct">В корзину</button>
                                     </div>
                                 </div>
                             </article>
                         </div>
-                        <div class="swiper-slide h-auto p-2 mb-3">
+                        <div class="swiper-slide h-auto p-2 p-lg-3 mb-3">
                             <article class="card product-card h-100">
                                 <a class="hover-shine" href="shop-item.html">
-                                    <img class="card-img-top b-radius-20 b-radius-40" src="img/item-04.png" alt="">
+                                    <img class="card-img-top b-radius-20 b-radius-lg-40" src="img/item-04.png" alt="">
                                 </a>
                                 <div class="card-body">
-                                    <a class="fz-16 fw-semibold text-uppercase" href="shop-item.html">БАЛЬЗАМ ДЛЯ БОРОДЫ BORODIST "CITRUS SPLASH"</a>
+                                    <a class="card-title fw-semibold" href="shop-item.html">Бальзам для бороды borodist "citrus splash"</a>
                                 </div>
                                 <div class="card-footer">
                                     <div class="d-flex align-items-center justify-content-between">
-                                        <span class="fz-24 fw-semibold">620 ₽</span>
+                                        <span class="card-price fw-semibold">620 ₽</span>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addProduct">В корзину</button>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="swiper-slide h-auto p-2 p-lg-3 mb-3">
+                            <article class="card product-card h-100">
+                                <a class="hover-shine" href="shop-item.html">
+                                    <img class="card-img-top b-radius-20 b-radius-lg-40" src="img/item-03.png" alt="">
+                                </a>
+                                <div class="card-body">
+                                    <a class="card-title fw-semibold" href="shop-item.html">Солевой спрей для укладки волос borodist "surf's vibe"</a>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <span class="card-price fw-semibold">620 ₽</span>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addProduct">В корзину</button>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="swiper-slide h-auto p-2 p-lg-3 mb-3">
+                            <article class="card product-card h-100">
+                                <a class="hover-shine" href="shop-item.html">
+                                    <img class="card-img-top b-radius-20 b-radius-lg-40" src="img/item-04.png" alt="">
+                                </a>
+                                <div class="card-body">
+                                    <a class="card-title fw-semibold" href="shop-item.html">Бальзам для бороды borodist "citrus splash"</a>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <span class="card-price fw-semibold">620 ₽</span>
                                         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addProduct">В корзину</button>
                                     </div>
                                 </div>
@@ -364,7 +401,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="swiper-pagination"></div>
+                    <div class="swiper-pagination d-md-none"></div>
                 </div>
             </div>
         </section>
@@ -422,9 +459,9 @@
                                     <p class="fw-medium">Афигенный воск для усов! Для Питера идеален) Держит усы на манер Дали и в дождь, и на пробежке, и после нее в душе, удивительно) Взял с запахом колы и кайфанул-рекомендую.</p>
                                 </div>
                                 <div class="card-footer">
-                                    <div class="d-flex align-items-center justify-content-between">
+                                    <div class="d-flex align-items-center">
                                         <p class="ff-title fz-24 mb-0">15/09/2022</p>
-                                        <button class="btn">
+                                        <button class="btn read-more p-2">
                                             <span class="icon icon-arrow"></span>
                                         </button>
                                     </div>
@@ -438,9 +475,9 @@
                                     <p class="fw-medium">Заказала шампунь и кондиционер своему бородисту. Спустя неделю начала пользоваться сама!Очень бодрящие и качественные продукты! Мы довольны!</p>
                                 </div>
                                 <div class="card-footer">
-                                    <div class="d-flex align-items-center justify-content-between">
+                                    <div class="d-flex align-items-center">
                                         <p class="ff-title fz-24 mb-0">15/09/2022</p>
-                                        <button class="btn">
+                                        <button class="btn read-more p-2">
                                             <span class="icon icon-arrow"></span>
                                         </button>
                                     </div>
@@ -454,9 +491,9 @@
                                     <p class="fw-medium">Отличный продукт! Воск фиксирует очень хорошо!Бальзам - вещь для ухода за бородой необходимая: мягкость, податливость. Берите, не пожалеете!</p>
                                 </div>
                                 <div class="card-footer">
-                                    <div class="d-flex align-items-center justify-content-between">
+                                    <div class="d-flex align-items-center">
                                         <p class="ff-title fz-24 mb-0">15/09/2022</p>
-                                        <button class="btn">
+                                        <button class="btn read-more p-2">
                                             <span class="icon icon-arrow"></span>
                                         </button>
                                     </div>
@@ -470,9 +507,9 @@
                                     <p class="fw-medium">Порадовало все, быстрота исполнения заказа и дизайн, и отличное качество самого масла варминг. Ждём расширения ассортимента.</p>
                                 </div>
                                 <div class="card-footer">
-                                    <div class="d-flex align-items-center justify-content-between">
+                                    <div class="d-flex align-items-center">
                                         <p class="ff-title fz-24 mb-0">15/09/2022</p>
-                                        <button class="btn">
+                                        <button class="btn read-more p-2">
                                             <span class="icon icon-arrow"></span>
                                         </button>
                                     </div>
@@ -486,9 +523,9 @@
                                     <p class="fw-medium">Заказала шампунь и кондиционер своему бородисту. Спустя неделю начала пользоваться сама!Очень бодрящие и качественные продукты! Мы довольны!</p>
                                 </div>
                                 <div class="card-footer">
-                                    <div class="d-flex align-items-center justify-content-between">
+                                    <div class="d-flex align-items-center">
                                         <p class="ff-title fz-24 mb-0">15/09/2022</p>
-                                        <button class="btn">
+                                        <button class="btn read-more p-2">
                                             <span class="icon icon-arrow"></span>
                                         </button>
                                     </div>
@@ -502,9 +539,9 @@
                                     <p class="fw-medium">Отличный продукт! Воск фиксирует очень хорошо!Бальзам - вещь для ухода за бородой необходимая: мягкость, податливость. Берите, не пожалеете!</p>
                                 </div>
                                 <div class="card-footer">
-                                    <div class="d-flex align-items-center justify-content-between">
+                                    <div class="d-flex align-items-center">
                                         <p class="ff-title fz-24 mb-0">15/09/2022</p>
-                                        <button class="btn">
+                                        <button class="btn read-more p-2">
                                             <span class="icon icon-arrow"></span>
                                         </button>
                                     </div>
@@ -542,7 +579,7 @@
                             <a class="nav-link fz-20 px-2 px-lg-0" href="shop.html">Акции</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link fz-20 px-2 px-lg-0" href="blog.html">Почитать</a>
+                            <a class="nav-link fz-20 px-2 px-lg-0" href="blog.html">Новости</a>
                         </li>
                     </ul>
                 </div>
@@ -646,13 +683,13 @@
                             <div class="row gy-2">
                                 <div class="col-md-4">
                                     <a class="hover-shine" href="shop-item.html">
-                                        <img class="card-img-top b-radius-20 b-radius-40" src="img/item-02.png" alt="">
+                                        <img class="card-img-top b-radius-20 b-radius-lg-40" src="img/item-02.png" alt="">
                                     </a>
                                 </div>
                                 <div class="col-md-8">
                                     <div class="d-flex flex-column justify-content-between h-100">
                                         <div>
-                                            <p><a class="fz-24 fw-semibold text-uppercase" href="shop-item.html">ПУДРА ДЛЯ ПРИКОРНЕВОГО ОБЪЁМА BORODIST "VOLUME BOOSTER"</a></p>
+                                            <p><a class="fz-24 fw-semibold text-uppercase" href="shop-item.html">Пудра для прикорневого объёма borodist "volume booster"</a></p>
                                             <p><span class="fz-24 fw-semibold">620 ₽</span></p>
                                         </div>
                                         <div class="row gy-2">
@@ -675,14 +712,14 @@
                             <div class="swiper-slide h-auto p-2">
                                 <article class="card product-card h-100">
                                     <a class="hover-shine" href="shop-item.html">
-                                        <img class="card-img-top b-radius-20 b-radius-40" src="img/item-01.png" alt="">
+                                        <img class="card-img-top b-radius-20 b-radius-lg-40" src="img/item-01.png" alt="">
                                     </a>
                                     <div class="card-body">
-                                        <a class="fz-16 fw-semibold text-uppercase" href="shop-item.html">БАЛЬЗАМ ДЛЯ БОРОДЫ BORODIST "CITRUS SPLASH"</a>
+                                        <a class="card-title fw-semibold" href="shop-item.html">Бальзам для бороды borodist "citrus splash"</a>
                                     </div>
                                     <div class="card-footer">
                                         <div class="d-flex align-items-center justify-content-between">
-                                            <span class="fz-24 fw-semibold">1190 ₽</span>
+                                            <span class="card-price fw-semibold">1190 ₽</span>
                                             <button type="button" class="btn btn-primary">В корзину</button>
                                         </div>
                                     </div>
@@ -691,14 +728,14 @@
                             <div class="swiper-slide h-auto p-2">
                                 <article class="card product-card h-100">
                                     <a class="hover-shine" href="shop-item.html">
-                                        <img class="card-img-top b-radius-20 b-radius-40" src="img/item-01.png" alt="">
+                                        <img class="card-img-top b-radius-20 b-radius-lg-40" src="img/item-01.png" alt="">
                                     </a>
                                     <div class="card-body">
-                                        <a class="fz-16 fw-semibold text-uppercase" href="shop-item.html">БАЛЬЗАМ ДЛЯ БОРОДЫ BORODIST "CITRUS SPLASH"</a>
+                                        <a class="card-title fw-semibold" href="shop-item.html">Бальзам для бороды borodist "citrus splash"</a>
                                     </div>
                                     <div class="card-footer">
                                         <div class="d-flex align-items-center justify-content-between">
-                                            <span class="fz-24 fw-semibold">1190 ₽</span>
+                                            <span class="card-price fw-semibold">1190 ₽</span>
                                             <button type="button" class="btn btn-primary">В корзину</button>
                                         </div>
                                     </div>
@@ -707,14 +744,14 @@
                             <div class="swiper-slide h-auto p-2">
                                 <article class="card product-card h-100">
                                     <a class="hover-shine" href="shop-item.html">
-                                        <img class="card-img-top b-radius-20 b-radius-40" src="img/item-01.png" alt="">
+                                        <img class="card-img-top b-radius-20 b-radius-lg-40" src="img/item-01.png" alt="">
                                     </a>
                                     <div class="card-body">
-                                        <a class="fz-16 fw-semibold text-uppercase" href="shop-item.html">БАЛЬЗАМ ДЛЯ БОРОДЫ BORODIST "CITRUS SPLASH"</a>
+                                        <a class="card-title fw-semibold" href="shop-item.html">Бальзам для бороды borodist "citrus splash"</a>
                                     </div>
                                     <div class="card-footer">
                                         <div class="d-flex align-items-center justify-content-between">
-                                            <span class="fz-24 fw-semibold">1190 ₽</span>
+                                            <span class="card-price fw-semibold">1190 ₽</span>
                                             <button type="button" class="btn btn-primary">В корзину</button>
                                         </div>
                                     </div>
@@ -723,14 +760,14 @@
                             <div class="swiper-slide h-auto p-2">
                                 <article class="card product-card h-100">
                                     <a class="hover-shine" href="shop-item.html">
-                                        <img class="card-img-top b-radius-20 b-radius-40" src="img/item-01.png" alt="">
+                                        <img class="card-img-top b-radius-20 b-radius-lg-40" src="img/item-01.png" alt="">
                                     </a>
                                     <div class="card-body">
-                                        <a class="fz-16 fw-semibold text-uppercase" href="shop-item.html">БАЛЬЗАМ ДЛЯ БОРОДЫ BORODIST "CITRUS SPLASH"</a>
+                                        <a class="card-title fw-semibold" href="shop-item.html">Бальзам для бороды borodist "citrus splash"</a>
                                     </div>
                                     <div class="card-footer">
                                         <div class="d-flex align-items-center justify-content-between">
-                                            <span class="fz-24 fw-semibold">1190 ₽</span>
+                                            <span class="card-price fw-semibold">1190 ₽</span>
                                             <button type="button" class="btn btn-primary">В корзину</button>
                                         </div>
                                     </div>
