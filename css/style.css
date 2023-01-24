@@ -1,6 +1,6 @@
 /*!
 Theme: Borodist
-Author: STARTSITE - Andrey Galkin
+Author: AMD - Andrey Galkin
 Version: 1.1
  */
 
@@ -660,6 +660,7 @@ img {
     display: flex;
     align-items: center;
     text-align: center;
+    height: var(--btn-icon-size);
     font-size: 14px;
     font-weight: var(--fw-semibold);
     white-space: nowrap;
@@ -681,7 +682,7 @@ img {
     --bs-navbar-nav-link-padding-x: 20px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    box-shadow: 0px 0px 10px 8px rgb(0 0 0 / 5%);
+    box-shadow: 0px 0px 10px 8px rgb(0 0 0 / 3%);
 }
 
 .navbar-nav {
@@ -792,8 +793,8 @@ img {
 [ MAIN CONTENT ]*/
 
 .main {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 .swiper {
@@ -1048,6 +1049,11 @@ img {
 
     .b-radius-md-50 {
         border-radius: 50px;
+    }
+
+    .main {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
     }
 
     .navbar {
