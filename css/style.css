@@ -1443,11 +1443,11 @@ img {
     }
 
     .footer-widget .footer-socials .list-inline-item:not(:last-child) {
-        margin-right: 30px;
+        margin-right: 20px;
     }
 
     .footer-widget .footer-socials a {
-        font-size: 32px;
+        font-size: 42px;
     }
 
     .footer-widget .developer-labels img {
