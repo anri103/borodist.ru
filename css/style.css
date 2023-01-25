@@ -803,6 +803,59 @@ img {
 /*//////////////////////////////////////////////////////////////////
 [ FOOTER ]*/
 
+.footer {
+    padding: 24px 0;
+}
+
+.footer-widget {
+    margin-bottom: 18px;
+}
+
+.footer-widget .logo {
+    width: 140px;
+}
+
+.footer-widget .footer-inn {
+    font-size: 10px;
+}
+
+.footer-widget .footer-main-menu {
+    --bs-nav-link-font-size: 12px;
+    --bs-nav-link-padding-x: 0;
+    --bs-nav-link-padding-y: 4px;
+}
+
+.footer-widget .footer-contacts {
+    --bs-nav-link-font-size: 12px;
+    --bs-nav-link-padding-x: 0;
+    --bs-nav-link-padding-y: 4px;
+}
+
+.footer-widget .footer-socials .list-inline-item:not(:last-child) {
+    margin-right: 17px;
+}
+
+.footer-widget .footer-socials a {
+    font-size: 23px;
+}
+
+.footer-widget .developer-labels img {
+    height: 20px;
+}
+
+.footer-widget .footer-law-menu {
+    --bs-nav-link-font-size: 10px;
+    --bs-nav-link-font-weight: 500;
+    --bs-nav-link-padding-x: 0;
+    --bs-nav-link-padding-y: 4px;
+    --bs-nav-link-color: var(--color-light-gray);
+}
+
+.footer-widget .copyright {
+    color: var(--color-light-gray);
+    font-size: 10px;
+}
+
 .modal {
     --bs-modal-width: 700px;
     --bs-modal-padding: 1rem;
@@ -1167,6 +1220,62 @@ img {
         width: 140px;
     }
 
+    .footer .container {
+        max-width: 650px;
+    }
+
+    .footer-widget {
+        margin-bottom: 8px;
+    }
+
+    .footer-widget .logo {
+        width: 120px;
+    }
+
+    .footer-widget .footer-inn {
+        padding-top: 4px;
+        font-size: 6px;
+    }
+
+    .footer-widget .footer-main-menu {
+        --bs-nav-link-font-size: 8px;
+    }
+
+    .footer-widget-title {
+        padding-top: 4px;
+        font-size: 8px;
+    }
+
+    .footer-widget .footer-contacts {
+        --bs-nav-link-font-size: 8px;
+        --bs-nav-link-padding-y: 2px;
+    }
+
+    .footer-widget .footer-socials .list-inline-item:not(:last-child) {
+        margin-right: 12px;
+    }
+
+    .footer-widget .footer-socials a {
+        font-size: 14px;
+    }
+
+    .footer-widget .developer-labels img {
+        height: 12px;
+    }
+
+    .footer-widget .footer-law-menu {
+        --bs-nav-link-font-size: 6px;
+        --bs-nav-link-font-weight: 500;
+        --bs-nav-link-padding-x: 0;
+        --bs-nav-link-padding-y: 2px;
+        --bs-nav-link-color: var(--color-white);
+    }
+
+    .footer-widget .copyright {
+        color: var(--color-white);
+        font-size: 6px;
+    }
+
     .card.product-card {
         --bs-card-spacer-y: 10px;
     }
@@ -1295,6 +1404,70 @@ img {
         height: 40px;
         font-size: 14px;
         padding: 5px 30px;
+    }
+
+    .footer {
+        padding: 42px 0;
+    }
+
+    .footer .container {
+        max-width: 960px;
+    }
+
+    .footer-widget {
+        margin-bottom: 16px;
+    }
+
+    .footer-widget .logo {
+        width: 300px;
+    }
+
+    .footer-widget .footer-inn {
+        font-size: 16px;
+        padding-top: 10px;
+    }
+
+    .footer-widget .footer-main-menu {
+        --bs-nav-link-font-size: 20px;
+        --bs-nav-link-padding-y: 10px;
+    }
+
+    .footer-widget-title {
+        padding-top: 10px;
+        font-size: 20px;
+    }
+
+    .footer-widget .footer-contacts {
+        --bs-nav-link-font-size: 20px;
+        --bs-nav-link-padding-y: 6px;
+    }
+
+    .footer-widget .footer-socials .list-inline-item:not(:last-child) {
+        margin-right: 30px;
+    }
+
+    .footer-widget .footer-socials a {
+        font-size: 32px;
+    }
+
+    .footer-widget .developer-labels img {
+        height: 30px;
+    }
+
+    .footer-widget .footer-law-menu {
+        --bs-nav-link-font-size: 16px;
+        --bs-nav-link-font-weight: 500;
+        --bs-nav-link-padding-x: 0;
+        --bs-nav-link-padding-y: 6px;
+    }
+
+    .footer-widget .copyright {
+        font-size: 16px;
+    }
+
+    .main {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
     }
 
     .card.product-card .card-title {
@@ -1431,4 +1604,16 @@ img {
     }
 }
 
-@media (min-width: 1400px) {}
+@media (min-width: 1400px) {
+
+    .footer .container {
+        max-width: 1320px;
+    }
+}
+
+@media (min-width: 1600px) {
+
+    .footer .container {
+        max-width: 1400px;
+    }
+}
