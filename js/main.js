@@ -18,6 +18,15 @@
         });
     });
 
+    $('.productCardSwiper-prev1').on('click', function (e) {
+        e.preventDefault()
+        productCardSwiper.slidePrev()
+    })
+    $('.productCardSwiper-next1').on('click', function (e) {
+        e.preventDefault()
+        productCardSwiper.slideNext()
+    })
+
 })(jQuery);
 
 /*//////////////////////////////////////////////////////////////////
@@ -73,6 +82,7 @@ const productCardSwiper = new Swiper('.productCardSwiper', {
 const promotionSwiper = new Swiper('.promotionSwiper', {
     slidesPerView: 1,
     spaceBetween: 10,
+    loop: true,
     grabCursor: true,
     pagination: {
         el: '.swiper-pagination',
@@ -82,6 +92,7 @@ const promotionSwiper = new Swiper('.promotionSwiper', {
         768: {
             slidesPerView: 3,
             spaceBetween: 20,
+            loop: false,
         },
     },
 });
@@ -99,22 +110,20 @@ const testimonialSwiper = new Swiper('.testimonialSwiper', {
         768: {
             slidesPerView: 4,
             spaceBetween: 15,
+            loop: false,
         },
         992: {
             slidesPerView: 4,
             spaceBetween: 30,
+            loop: false,
         },
     },
 });
 
 const additionalItemsSwiper = new Swiper('.additionalItemsSwiper', {
     slidesPerView: 2,
+    loop: true,
     grabCursor: true,
-    autoplay: {
-        delay: 3500,
-        disableOnInteraction: false,
-        pauseOnMouseEnter: true,
-    },
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
@@ -122,6 +131,7 @@ const additionalItemsSwiper = new Swiper('.additionalItemsSwiper', {
     breakpoints: {
         768: {
             slidesPerView: 3,
+            loop: false,
         },
     },
 });
