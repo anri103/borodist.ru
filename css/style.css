@@ -24,22 +24,23 @@ Version: 1.1
 + HEADER
 + MENU
 + FOOTER
-+ CTA SECTION
 + MODAL
++ MODAL ADD ITEM
++ CTA SECTION
 + TESTIMONIAL SECTION
 + PRODUCT CARD
 
 -------------------------------------------------------------------*/
 
 /*//////////////////////////////////////////////////////////////////
-[ IMPORT FONTS ]*/
+[ + IMPORT FONTS ]*/
 
 @import url('../fonts/stylesheet.css');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap');
 @import url('../fonts/boxicons/boxicons.min.css');
 
 /*//////////////////////////////////////////////////////////////////
-[ ROOT ]*/
+[ + ROOT ]*/
 
 :root {
     --color-red: #8C0000;
@@ -78,7 +79,7 @@ body {
 }
 
 /*//////////////////////////////////////////////////////////////////
-[ TYPOGRAPHY ]*/
+[ + TYPOGRAPHY ]*/
 
 h1,
 h2,
@@ -162,7 +163,7 @@ h6,
 }
 
 /*//////////////////////////////////////////////////////////////////
-[ LINKS ]*/
+[ + LINKS ]*/
 
 a {
     text-decoration: none;
@@ -174,7 +175,7 @@ a {
 }
 
 /*//////////////////////////////////////////////////////////////////
-[ FORMS ]*/
+[ + FORMS ]*/
 
 input,
 button,
@@ -260,7 +261,7 @@ textarea {
 }
 
 /*//////////////////////////////////////////////////////////////////
-[ BUTTONS ]*/
+[ + BUTTONS ]*/
 
 .btn {
     --bs-btn-padding-x: 2rem;
@@ -363,7 +364,7 @@ textarea {
 }
 
 /*//////////////////////////////////////////////////////////////////
-[ ANIMATIONS ]*/
+[ + ANIMATIONS ]*/
 
 .hover-shine:hover {
     opacity: 1;
@@ -401,7 +402,7 @@ textarea {
 }
 
 /*//////////////////////////////////////////////////////////////////
-[ BASE STYLES ]*/
+[ + BASE STYLES ]*/
 
 img {
     display: block;
@@ -602,6 +603,10 @@ img {
     border-radius: 25px;
 }
 
+.b-radius-35 {
+    border-radius: 35px;
+}
+
 .b-radius-40 {
     border-radius: 40px;
 }
@@ -619,7 +624,7 @@ img {
 }
 
 /*//////////////////////////////////////////////////////////////////
-[ ICONS ]*/
+[ + ICONS ]*/
 
 .icon {
     display: inline-block;
@@ -679,10 +684,10 @@ img {
 }
 
 /*//////////////////////////////////////////////////////////////////
-[ CONTENT ]*/
+[ + CONTENT ]*/
 
 /*//////////////////////////////////////////////////////////////////
-[ MAIN CONTENT ]*/
+[ + MAIN CONTENT ]*/
 
 .main {
     padding-top: 1rem;
@@ -795,17 +800,6 @@ img {
     left: 10px;
 }
 
-.card.card-additional {
-    --bs-card-spacer-y: 1.25rem;
-    --bs-card-spacer-x: 1.25rem;
-    --bs-card-border-width: 0;
-    --bs-card-border-radius: 0;
-    --bs-card-inner-border-radius: 0;
-    --bs-card-cap-padding-y: 0.5rem;
-    --bs-card-cap-padding-x: 0;
-    --bs-card-bg: transparent;
-}
-
 .card.card-blog {
     --bs-card-border-width: 0;
 }
@@ -855,7 +849,7 @@ img {
 }
 
 /*//////////////////////////////////////////////////////////////////
-[ MEDIA ]*/
+[ + MEDIA ]*/
 
 @media (min-width: 576px) {}
 
@@ -895,6 +889,10 @@ img {
         border-radius: 25px;
     }
 
+    .b-radius-md-35 {
+        border-radius: 35px;
+    }
+
     .b-radius-md-40 {
         border-radius: 40px;
     }
@@ -927,6 +925,10 @@ img {
         border-radius: 25px;
     }
 
+    .b-radius-lg-35 {
+        border-radius: 35px;
+    }
+
     .b-radius-lg-40 {
         border-radius: 40px;
     }
@@ -954,7 +956,7 @@ img {
 }
 
 /*//////////////////////////////////////////////////////////////////
-[ HEADER ]*/
+[ + HEADER ]*/
 
 .bg-img-main {
     position: absolute;
@@ -1013,7 +1015,7 @@ img {
 }
 
 /*//////////////////////////////////////////////////////////////////
-[ MENU ]*/
+[ + MENU ]*/
 
 .navbar {
     --bs-navbar-padding-x: 0;
@@ -1151,7 +1153,7 @@ img {
 }
 
 /*//////////////////////////////////////////////////////////////////
-[ FOOTER ]*/
+[ + FOOTER ]*/
 
 .footer {
     padding: 24px 0;
@@ -1342,7 +1344,316 @@ img {
 }
 
 /*//////////////////////////////////////////////////////////////////
-[ CTA SECTION ]*/
+[ + MODAL ]*/
+
+.modal {
+    --bs-modal-width: 700px;
+    --bs-modal-padding: 1rem;
+    --bs-modal-header-border-width: 0;
+    --bs-modal-header-padding: 1rem;
+    --bs-modal-border-width: 0;
+    --bs-modal-border-radius: 0;
+}
+
+.btn-close:focus {
+    box-shadow: none;
+}
+
+@media (min-width: 992px) {
+
+    .modal-lg,
+    .modal-xl {
+        --bs-modal-width: 900px;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .modal-xl {
+        --bs-modal-width: 1100px;
+    }
+}
+
+/*//////////////////////////////////////////////////////////////////
+[ + MODAL ADD ITEM ]*/
+
+.modal-additem .modal-xl {
+    --bs-modal-width: 300px;
+}
+
+.modal-additem {
+    --bs-modal-padding: 26px 50px;
+}
+
+.modal-additem .btn-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 12px;
+    height: 12px;
+    background-size: 12px;
+    z-index: 5;
+}
+
+.section-additem .section-title {
+    font-size: 23px;
+}
+
+.card.card-additem {
+    --bs-card-spacer-y: 4px;
+    --bs-card-spacer-x: 0;
+    --bs-card-border-width: 0;
+    --bs-card-border-radius: 0;
+    --bs-card-inner-border-radius: 0;
+    --bs-card-cap-padding-y: 0.5rem;
+    --bs-card-cap-padding-x: 0;
+    --bs-card-bg: transparent;
+    padding-bottom: 60px;
+}
+
+.card-additem .additem-title {
+    font-size: 11px;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+
+.card-additem .additem-price {
+    font-size: 10px;
+    margin-bottom: 0;
+}
+
+.card-additem .button-box {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+
+.card-additem .btn {
+    --bs-btn-padding-x: 16px;
+    --bs-btn-padding-y: 4px;
+    --bs-btn-font-size: 8px;
+    --bs-btn-border-radius: 4px;
+    width: 100%;
+    margin-bottom: 4px;
+}
+
+.section-additional .section-title {
+    font-size: 23px;
+}
+
+.modal-additem .card.product-card {
+    --bs-card-spacer-y: 6px;
+}
+
+.modal-additem .card.product-card .card-title {
+    font-size: 8px;
+    text-transform: uppercase;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.modal-additem .card.product-card .card-price {
+    font-size: 8px;
+}
+
+.modal-additem .card.product-card .btn {
+    --bs-btn-padding-x: 6px;
+    --bs-btn-padding-y: 2px;
+    --bs-btn-font-size: 6px;
+    --bs-btn-border-radius: 4px;
+}
+
+@media (min-width: 768px) {
+
+    .modal-additem .modal-xl {
+        --bs-modal-width: 500px;
+    }
+
+    .modal-additem {
+        --bs-modal-padding: 32px 40px;
+    }
+
+    .modal-additem .btn-close {
+        position: absolute;
+        top: 22px;
+        right: 22px;
+        width: 20px;
+        height: 20px;
+        background-size: 20px;
+    }
+
+    .section-additem .section-title {
+        font-size: 39px;
+    }
+
+    .card.card-additem {
+        --bs-card-spacer-y: 8px;
+        --bs-card-spacer-x: 0;
+        --bs-card-border-width: 0;
+        --bs-card-border-radius: 0;
+        --bs-card-inner-border-radius: 0;
+        --bs-card-cap-padding-y: 0.5rem;
+        --bs-card-cap-padding-x: 0;
+        --bs-card-bg: transparent;
+        padding-bottom: 0;
+    }
+
+    .card-additem .additem-title {
+        font-size: 13px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        margin-bottom: 4px;
+    }
+
+    .card-additem .additem-price {
+        font-size: 16px;
+        margin-bottom: 0;
+    }
+
+    .card-additem .button-box {
+        position: static;
+    }
+
+    .card-additem .btn {
+        --bs-btn-padding-x: 16px;
+        --bs-btn-padding-y: 4px;
+        --bs-btn-font-size: 9px;
+        --bs-btn-border-radius: 6px;
+        width: auto;
+        margin-bottom: 0;
+        margin-right: 6px;
+    }
+
+    .section-additional .section-title {
+        font-size: 31px;
+    }
+
+    .modal-additem .card.product-card {
+        --bs-card-spacer-y: 6px;
+    }
+
+    .modal-additem .card.product-card .card-title {
+        font-size: 8px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .modal-additem .card.product-card .card-price {
+        font-size: 12px;
+    }
+
+    .modal-additem .card.product-card .btn {
+        --bs-btn-padding-x: 6px;
+        --bs-btn-padding-y: 2px;
+        --bs-btn-font-size: 8px;
+        --bs-btn-border-radius: 6px;
+    }
+}
+
+@media (min-width: 992px) {
+
+    .modal-additem .modal-xl {
+        --bs-modal-width: 900px;
+    }
+
+    .modal-additem {
+        --bs-modal-padding: 65px 70px;
+    }
+
+    .modal-additem .btn-close {
+        position: absolute;
+        top: 32px;
+        right: 32px;
+        width: 30px;
+        height: 30px;
+        background-size: 30px;
+    }
+
+    .section-additem .section-title {
+        font-size: 70px;
+    }
+
+    .card.card-additem {
+        --bs-card-spacer-y: 8px;
+        --bs-card-spacer-x: 30px;
+        --bs-card-border-width: 0;
+        --bs-card-border-radius: 0;
+        --bs-card-inner-border-radius: 0;
+        --bs-card-cap-padding-y: 0.5rem;
+        --bs-card-cap-padding-x: 0;
+        --bs-card-bg: transparent;
+    }
+
+    .card-additem .additem-title {
+        font-size: 24px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        margin-bottom: 16px;
+    }
+
+    .card-additem .additem-price {
+        font-size: 28px;
+        margin-bottom: 0;
+    }
+
+    .card-additem .btn {
+        --bs-btn-padding-x: 16px;
+        --bs-btn-padding-y: 10px;
+        --bs-btn-font-size: 16px;
+        --bs-btn-border-radius: 12px;
+        margin-right: 10px;
+    }
+
+    .section-additional .section-title {
+        font-size: 56px;
+    }
+
+    .modal-additem .card.product-card {
+        --bs-card-spacer-y: 16px;
+    }
+
+    .modal-additem .card.product-card .card-title {
+        font-size: 14px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .modal-additem .card.product-card .card-price {
+        font-size: 21px;
+    }
+
+    .modal-additem .card.product-card .btn {
+        --bs-btn-padding-x: 20px;
+        --bs-btn-padding-y: 6px;
+        --bs-btn-font-size: 14px;
+        --bs-btn-border-radius: 10px;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .card-additem .btn {
+        --bs-btn-padding-x: 20px;
+    }
+}
+
+/*//////////////////////////////////////////////////////////////////
+[ + CTA SECTION ]*/
 
 .cta-title {
     font-size: 38px;
@@ -1489,38 +1800,7 @@ img {
 }
 
 /*//////////////////////////////////////////////////////////////////
-[ MODAL ]*/
-
-.modal {
-    --bs-modal-width: 700px;
-    --bs-modal-padding: 1rem;
-    --bs-modal-header-border-width: 0;
-    --bs-modal-header-padding: 1.5rem;
-    --bs-modal-border-width: 0;
-    --bs-modal-border-radius: 0;
-}
-
-.btn-close:focus {
-    box-shadow: none;
-}
-
-@media (min-width: 992px) {
-
-    .modal-lg,
-    .modal-xl {
-        --bs-modal-width: 900px;
-    }
-}
-
-@media (min-width: 1200px) {
-
-    .modal-xl {
-        --bs-modal-width: 900px;
-    }
-}
-
-/*//////////////////////////////////////////////////////////////////
-[ TESTIMONIAL SECTION ]*/
+[ + TESTIMONIAL SECTION ]*/
 
 .card.card-testimonial {
     --bs-card-spacer-x: 0;
@@ -1605,7 +1885,7 @@ img {
 }
 
 /*//////////////////////////////////////////////////////////////////
-[ PRODUCT CARD ]*/
+[ + PRODUCT CARD ]*/
 
 .card.product-card {
     --bs-card-spacer-y: 18px;
