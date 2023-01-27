@@ -18,11 +18,11 @@
 <body>
 
     <!-- Фон -->
-    <div class="bg-img-main" style="background-image: url(img/fon.png);"></div>
+    <div class="bg-img-main d-none d-lg-block" style="background-image: url(img/fon.png);"></div>
 
     <!-- Шапка -->
-    <header class="header">
-        <div class="top-menu py-3 d-none d-md-block">
+    <header class="header pt-lg-4">
+        <div class="top-menu py-3 mb-3 d-none d-md-block">
             <div class="container">
                 <div class="row align-items-center">
 
@@ -60,10 +60,14 @@
                 </div>
             </div>
         </div>
-        <nav class="navbar navbar-expand-md py-4 py-md-2">
-            <div class="container">
-                <!-- Костыль, повторяющий размеры кнопки бургера, это нужно для того, чтобы логотип был по центру на мобиле -->
-                <div class="d-md-none" style="width: 34px; height: 29px;"></div>
+        <nav class="navbar navbar-expand-md py-3 py-md-2">
+            <div class="container-fluid">
+                <!-- Дубль кнопки-бургера без функционала для того, чтобы логотип был по центру на мобильном экране -->
+                <button class="navbar-toggler collapsed" type="button">
+                    <span class="icon-bar top-bar bg-transparent"></span>
+                    <span class="icon-bar middle-bar bg-transparent"></span>
+                    <span class="icon-bar bottom-bar bg-transparent"></span>
+                </button>
                 <a class="logo d-md-none" href="index.html">
                     <img src="img/logo.svg" alt="Mobile Logo">
                 </a>
@@ -83,16 +87,16 @@
                             <a href="shop.html" class="nav-link">Каталог</a>
                         </li>
                         <li class="nav-item">
-                            <a href="shop.html" class="nav-link">Новинки</a>
+                            <a href="shop2.html" class="nav-link">Новинки</a>
                         </li>
                         <li class="nav-item">
                             <a href="promotion.html" class="nav-link active">Акции</a>
                         </li>
                         <li class="nav-item">
-                            <a href="blog.html" class="nav-link">Почитать</a>
+                            <a href="blog.html" class="nav-link">Новости</a>
                         </li>
                     </ul>
-                    <ul class="navbar-button justify-content-center mt-3 d-md-none">
+                    <ul class="navbar-button justify-content-center mt-3 mb-2 d-md-none">
                         <li class="nav-item">
                             <a class="btn btn-secondary btn-icon me-1" href="cart.html">
                                 <span class="icon icon-cart"></span>
@@ -120,7 +124,7 @@
     <main class="main">
 
         <!-- Хлебные крошки -->
-        <section class="section py-4">
+        <section class="section py-2">
             <div class="container">
                 <nav class="d-flex justify-content-center" aria-label="breadcrumb">
                     <ol class="breadcrumb">
@@ -132,65 +136,65 @@
         </section>
 
         <!-- Контент -->
-        <section class="section py-4">
+        <section class="section py-4 py-lg-5">
             <div class="container">
                 <div class="text-center">
-                    <h1 class="fz-90 mb-4">Акции</h1>
+                    <h1 class="fs-40 fs-md-35 fs-lg-50 mb-4">Акции</h1>
                 </div>
                 <!-- Blog grid -->
-                <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3">
+                <div class="row gy-4 row-cols-1 row-cols-md-3 row-cols-lg-3">
                     <!-- Item -->
                     <div class="col pb-3">
                         <article class="h-100">
                             <a class="hover-shine" href="blog-item.html">
-                                <img class="w-100 b-radius-15 b-radius-md-25" src="img/hero-01.png" alt="">
+                                <img class="w-100 b-radius-15 b-radius-lg-25" src="img/hero-01.png" alt="">
                             </a>
-                            <div class="p-3"><a class="fw-semibold" href="blog-item.html">Оставляй отзыв и выиграй PS5!</a></div>
+                            <div class="px-3 pt-2"><a class="fs-20 fs-md-12 fs-lg-16 fw-semibold" href="blog-item.html">Оставляй отзыв и выиграй PS5!</a></div>
                         </article>
                     </div>
                     <!-- Item -->
                     <div class="col pb-3">
                         <article class="h-100">
                             <a class="hover-shine" href="blog-item.html">
-                                <img class="w-100 b-radius-15 b-radius-md-25" src="img/hero-01.png" alt="">
+                                <img class="w-100 b-radius-15 b-radius-lg-25" src="img/hero-01.png" alt="">
                             </a>
-                            <div class="p-3"><a class="fw-semibold" href="blog-item.html">Оставляй отзыв и выиграй PS5!</a></div>
+                            <div class="px-3 pt-2"><a class="fs-20 fs-md-12 fs-lg-16 fw-semibold" href="blog-item.html">Оставляй отзыв и выиграй PS5!</a></div>
                         </article>
                     </div>
                     <!-- Item -->
                     <div class="col pb-3">
                         <article class="h-100">
                             <a class="hover-shine" href="blog-item.html">
-                                <img class="w-100 b-radius-15 b-radius-md-25" src="img/hero-01.png" alt="">
+                                <img class="w-100 b-radius-15 b-radius-lg-25" src="img/hero-01.png" alt="">
                             </a>
-                            <div class="p-3"><a class="fw-semibold" href="blog-item.html">Оставляй отзыв и выиграй PS5!</a></div>
+                            <div class="px-3 pt-2"><a class="fs-20 fs-md-12 fs-lg-16 fw-semibold" href="blog-item.html">Оставляй отзыв и выиграй PS5!</a></div>
                         </article>
                     </div>
                     <!-- Item -->
                     <div class="col pb-3">
                         <article class="h-100">
                             <a class="hover-shine" href="blog-item.html">
-                                <img class="w-100 b-radius-15 b-radius-md-25" src="img/hero-01.png" alt="">
+                                <img class="w-100 b-radius-15 b-radius-lg-25" src="img/hero-01.png" alt="">
                             </a>
-                            <div class="p-3"><a class="fw-semibold" href="blog-item.html">Оставляй отзыв и выиграй PS5!</a></div>
+                            <div class="px-3 pt-2"><a class="fs-20 fs-md-12 fs-lg-16 fw-semibold" href="blog-item.html">Оставляй отзыв и выиграй PS5!</a></div>
                         </article>
                     </div>
                     <!-- Item -->
                     <div class="col pb-3">
                         <article class="h-100">
                             <a class="hover-shine" href="blog-item.html">
-                                <img class="w-100 b-radius-15 b-radius-md-25" src="img/hero-01.png" alt="">
+                                <img class="w-100 b-radius-15 b-radius-lg-25" src="img/hero-01.png" alt="">
                             </a>
-                            <div class="p-3"><a class="fw-semibold" href="blog-item.html">Оставляй отзыв и выиграй PS5!</a></div>
+                            <div class="px-3 pt-2"><a class="fs-20 fs-md-12 fs-lg-16 fw-semibold" href="blog-item.html">Оставляй отзыв и выиграй PS5!</a></div>
                         </article>
                     </div>
                     <!-- Item -->
                     <div class="col pb-3">
                         <article class="h-100">
                             <a class="hover-shine" href="blog-item.html">
-                                <img class="w-100 b-radius-15 b-radius-md-25" src="img/hero-01.png" alt="">
+                                <img class="w-100 b-radius-15 b-radius-lg-25" src="img/hero-01.png" alt="">
                             </a>
-                            <div class="p-3"><a class="fw-semibold" href="blog-item.html">Оставляй отзыв и выиграй PS5!</a></div>
+                            <div class="px-3 pt-2"><a class="fs-20 fs-md-12 fs-lg-16 fw-semibold" href="blog-item.html">Оставляй отзыв и выиграй PS5!</a></div>
                         </article>
                     </div>
                 </div>
@@ -202,110 +206,149 @@
     <!-- Футер -->
     <footer class="footer bg-color-gray color-white">
         <div class="container">
-            <div class="row gy-4">
+            <div class="row">
 
-                <div class="col-md-4 col-lg-2 order-md-2">
-                    <div class="d-flex d-md-none justify-content-center justify-content-md-start mb-3">
+                <div class="col-md-2 col-lg-2 order-md-2">
+
+                    <div class="footer-widget d-flex d-md-none justify-content-center justify-content-md-start">
                         <img class="logo" src="img/logo-white.svg" alt="">
                     </div>
-                    <ul class="nav flex-row flex-md-column justify-content-center mb-3">
-                        <li class="nav-item">
-                            <a class="nav-link fz-20 px-2 px-lg-0" href="index.html">Главная</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link fz-20 px-2 px-lg-0" href="shop.html">Каталог</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link fz-20 px-2 px-lg-0" href="shop.html">Новинки</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link fz-20 px-2 px-lg-0" href="shop.html">Акции</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link fz-20 px-2 px-lg-0" href="blog.html">Почитать</a>
-                        </li>
-                    </ul>
-                </div>
 
-                <div class="col-md-4 col-lg-3 order-md-3">
-                    <ul class="nav flex-column align-items-center align-items-md-start mb-3">
-                        <li class="nav-item">
-                            <a class="nav-link fz-20" href="tel:+79254011531">+7 (925) 401-15-31</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link fz-20" href="mailto:info@borodist.ru">info@borodist.ru</a>
-                        </li>
-                    </ul>
-                    <ul class="list-inline d-flex justify-content-center justify-content-md-start mb-3">
-                        <li class="list-inline-item">
-                            <a class="fz-32" href="#">
-                                <i class="bx bxl-vk"></i>
-                            </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a class="fz-32" href="#">
-                                <i class="bx bxl-youtube"></i>
-                            </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a class="fz-32" href="#">
-                                <i class="bx bxl-telegram"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="col-md-4 col-lg-3 order-md-4">
-                    <div class="text-center text-md-start">
-                        <p class="fw-medium">ИП Василенко Антон Николаевич<br>
+                    <div class="footer-widget d-md-none text-center color-light-gray">
+                        <p class="footer-inn">ИП Василенко Антон Николаевич<br>
                             ИНН: 501811848703<br>
                             ОГРНИП: 322508100291564
                         </p>
                     </div>
-                    <ul class="list-inline d-none d-md-flex justify-content-center justify-content-md-start mb-3 developer-labels">
-                        <li class="list-inline-item">
-                            <a class="hover-opacity" href="#">
-                                <img class="w-100" src="img/logo-cluborg-white.svg" alt="cluborg">
-                            </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a class="hover-opacity" href="#">
-                                <img class="w-100" src="img/logo-amd.svg" alt="amd">
-                            </a>
-                        </li>
-                    </ul>
+
+                    <div class="footer-widget">
+                        <ul class="footer-main-menu nav flex-row flex-md-column justify-content-center px-5 px-md-0">
+                            <li class="nav-item">
+                                <a class="nav-link px-2 px-lg-0" href="index.html">Главная</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link px-2 px-lg-0" href="shop.html">Каталог</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link px-2 px-lg-0" href="shop.html">Новинки</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link px-2 px-lg-0" href="promotion.html">Акции</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link px-2 px-lg-0" href="blog.html">Новости</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="col-md-3 col-lg-3 order-md-3">
+
+                    <div class="footer-widget">
+                        <div class="footer-widget-title d-none d-md-block">
+                            <p class="mb-1 mb-lg-3">Контакты</p>
+                        </div>
+                        <ul class="footer-contacts nav flex-column align-items-center align-items-md-start">
+                            <li class="nav-item">
+                                <a class="nav-link" href="tel:+79254011531">+7 (925) 401-15-31</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="mailto:info@borodist.ru">info@borodist.ru</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-widget">
+                        <ul class="footer-socials list-inline d-flex justify-content-center justify-content-md-start">
+                            <li class="list-inline-item">
+                                <a class="" href="#">
+                                    <i class="bx bxl-vk"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="" href="#">
+                                    <i class="bx bxl-youtube"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="" href="#">
+                                    <i class="bx bxl-telegram"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="col-md-3 col-lg-3 order-md-4 d-none d-md-block">
+
+                    <div class="footer-widget d-none d-md-block">
+                        <p class="footer-inn">ИП Василенко Антон Николаевич<br>
+                            ИНН: 501811848703<br>
+                            ОГРНИП: 322508100291564
+                        </p>
+                    </div>
+
+                    <div class="footer-widget">
+                        <ul
+                            class="developer-labels d-none d-md-flex list-inline justify-content-center justify-content-md-start">
+                            <li class="list-inline-item">
+                                <a class="hover-opacity" href="#">
+                                    <img src="img/logo-cluborg-white.svg" alt="cluborg">
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="hover-opacity" href="#">
+                                    <img src="img/logo-amd.svg" alt="amd">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
                 </div>
 
                 <div class="col-md-4 col-lg-4 order-md-1">
-                    <div class="d-none d-md-flex justify-content-center justify-content-md-start mb-3">
+
+                    <div class="footer-widget d-none d-md-flex justify-content-center justify-content-md-start">
                         <img class="logo" src="img/logo-white.svg" alt="">
                     </div>
-                    <ul class="nav flex-column align-items-center align-items-md-start mb-3">
-                        <li class="nav-item">
-                            <a class="nav-link" href="policy.html">Политика конфиденциальности</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="dostavka.html">Информация о доставке</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="policy.html">Публичная оферта</a>
-                        </li>
-                    </ul>
-                    <div class="text-center text-md-start">
-                        <p>2022 © Borodist</p>
+
+                    <div class="footer-widget">
+                        <ul
+                            class="footer-law-menu nav flex-column align-items-center align-items-md-start text-center text-md-start">
+                            <li class="nav-item">
+                                <a class="nav-link" href="policy.html">Политика конфиденциальности</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="dostavka.html">Информация о доставке</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="policy.html">Публичная оферта</a>
+                            </li>
+                        </ul>
                     </div>
-                    <ul class="list-inline d-flex d-md-none justify-content-center justify-content-md-start mb-3 developer-labels">
-                        <li class="list-inline-item">
-                            <a class="hover-opacity" href="#">
-                                <img class="w-100" src="img/logo-cluborg-white.svg" alt="cluborg">
-                            </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a class="hover-opacity" href="#">
-                                <img class="w-100" src="img/logo-amd.svg" alt="amd">
-                            </a>
-                        </li>
-                    </ul>
+
+                    <div class="footer-widget text-center text-md-start">
+                        <p class="copyright">2022 © Borodist</p>
+                    </div>
+
+                    <div class="footer-widget">
+                        <ul
+                            class="developer-labels d-flex d-md-none list-inline justify-content-center justify-content-md-start">
+                            <li class="list-inline-item">
+                                <a class="hover-opacity" href="#">
+                                    <img src="img/logo-cluborg-white.svg" alt="cluborg">
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="hover-opacity" href="#">
+                                    <img src="img/logo-amd.svg" alt="amd">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
                 </div>
 
             </div>

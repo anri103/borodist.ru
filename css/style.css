@@ -95,7 +95,7 @@ h6,
 .h6 {
     font-family: var(--ff-title);
     font-weight: var(--fw-medium);
-    line-height: 1.375;
+    line-height: 1;
     text-transform: uppercase;
 }
 
@@ -483,85 +483,93 @@ img {
     border-color: var(--color-gray) !important;
 }
 
-.fz-90 {
+.fs-40 {
     font-size: 40px;
 }
 
-.fz-64 {
-    font-size: 35px;
+.fs-38 {
+    font-size: 38px;
 }
 
-.fz-32 {
-    font-size: 24px;
+.fs-23 {
+    font-size: 23px;
 }
 
-.fz-24 {
-    font-size: 18px;
+.fs-20 {
+    font-size: 20px;
 }
 
-.fz-20 {
-    font-size: 18px;
-}
-
-.fz-18 {
+.fs-16 {
     font-size: 16px;
 }
 
-.fz-16 {
-    font-size: 14px;
+.fs-12 {
+    font-size: 12px;
 }
 
-.fz-12 {
+.fs-10 {
     font-size: 10px;
-}
-
-.fz-10 {
-    font-size: 8px;
 }
 
 @media (min-width: 768px) {
 
-    .fz-90 {
-        font-size: 47px;
+    .fs-md-50 {
+        font-size: 50px;
+    }
+
+    .fs-md-38 {
+        font-size: 38px;
+    }
+
+    .fs-md-35 {
+        font-size: 35px;
+    }
+
+    .fs-md-30 {
+        font-size: 30px;
+    }
+
+    .fs-md-13 {
+        font-size: 13px;
+    }
+
+    .fs-md-12 {
+        font-size: 12px;
+    }
+
+    .fs-md-10 {
+        font-size: 10px;
     }
 }
 
 @media (min-width: 992px) {
 
-    .fz-90 {
+    .fs-lg-90 {
         font-size: 90px;
     }
 
-    .fz-64 {
+    .fs-lg-70 {
+        font-size: 70px;
+    }
+
+    .fs-lg-64 {
         font-size: 64px;
     }
 
-    .fz-32 {
-        font-size: 32px;
+    .fs-lg-56 {
+        font-size: 56px;
     }
 
-    .fz-24 {
+    .fs-lg-50 {
+        font-size: 50px;
+    }
+
+    .fs-lg-24 {
         font-size: 24px;
     }
 
-    .fz-20 {
-        font-size: 20px;
-    }
-
-    .fz-18 {
-        font-size: 18px;
-    }
-
-    .fz-16 {
+    .fs-lg-16 {
         font-size: 16px;
-    }
-
-    .fz-12 {
-        font-size: 12px;
-    }
-
-    .fz-10 {
-        font-size: 10px;
     }
 }
 
@@ -801,7 +809,11 @@ img {
 }
 
 .card.card-blog {
+    --bs-card-spacer-x: 0;
+    --bs-card-spacer-y: 8px;
     --bs-card-border-width: 0;
+    --bs-card-cap-padding-x: 0;
+    --bs-card-cap-padding-y: 0;
 }
 
 .pagination {
@@ -823,8 +835,8 @@ img {
     --bs-pagination-focus-color: var(--bs-link-hover-color);
     --bs-pagination-focus-bg: #e9ecef;
     --bs-pagination-focus-box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
-    --bs-pagination-active-color: #fff;
-    --bs-pagination-active-bg: var(--color-orange);
+    --bs-pagination-active-color: var(--bs-link-color);
+    --bs-pagination-active-bg: var(--color-yellow);
     --bs-pagination-active-border-color: transparent;
     --bs-pagination-disabled-color: #6c757d;
     --bs-pagination-disabled-bg: #fff;
@@ -1175,6 +1187,7 @@ img {
     --bs-nav-link-font-size: 12px;
     --bs-nav-link-padding-x: 0;
     --bs-nav-link-padding-y: 4px;
+    margin-top: -4px;
 }
 
 .footer-widget .footer-contacts {
@@ -1223,7 +1236,6 @@ img {
     }
 
     .footer-widget .footer-inn {
-        padding-top: 4px;
         font-size: 6px;
     }
 
@@ -1232,7 +1244,6 @@ img {
     }
 
     .footer-widget-title {
-        padding-top: 4px;
         font-size: 8px;
     }
 
@@ -1287,16 +1298,15 @@ img {
 
     .footer-widget .footer-inn {
         font-size: 16px;
-        padding-top: 10px;
     }
 
     .footer-widget .footer-main-menu {
         --bs-nav-link-font-size: 20px;
         --bs-nav-link-padding-y: 10px;
+        margin-top: -10px;
     }
 
     .footer-widget-title {
-        padding-top: 10px;
         font-size: 20px;
     }
 
@@ -1395,10 +1405,6 @@ img {
     z-index: 5;
 }
 
-.section-additem .section-title {
-    font-size: 23px;
-}
-
 .card.card-additem {
     --bs-card-spacer-y: 4px;
     --bs-card-spacer-x: 0;
@@ -1440,10 +1446,6 @@ img {
     --bs-btn-border-radius: 4px;
     width: 100%;
     margin-bottom: 4px;
-}
-
-.section-additional .section-title {
-    font-size: 23px;
 }
 
 .modal-additem .card.product-card {
@@ -1489,10 +1491,6 @@ img {
         background-size: 20px;
     }
 
-    .section-additem .section-title {
-        font-size: 39px;
-    }
-
     .card.card-additem {
         --bs-card-spacer-y: 8px;
         --bs-card-spacer-x: 0;
@@ -1531,10 +1529,6 @@ img {
         width: auto;
         margin-bottom: 0;
         margin-right: 6px;
-    }
-
-    .section-additional .section-title {
-        font-size: 31px;
     }
 
     .modal-additem .card.product-card {
@@ -1580,10 +1574,6 @@ img {
         background-size: 30px;
     }
 
-    .section-additem .section-title {
-        font-size: 70px;
-    }
-
     .card.card-additem {
         --bs-card-spacer-y: 8px;
         --bs-card-spacer-x: 30px;
@@ -1615,10 +1605,6 @@ img {
         --bs-btn-font-size: 16px;
         --bs-btn-border-radius: 12px;
         margin-right: 10px;
-    }
-
-    .section-additional .section-title {
-        font-size: 56px;
     }
 
     .modal-additem .card.product-card {
@@ -1655,15 +1641,6 @@ img {
 /*//////////////////////////////////////////////////////////////////
 [ + CTA SECTION ]*/
 
-.cta-title {
-    font-size: 38px;
-}
-
-.cta-subtitle {
-    font-size: 16px;
-    text-transform: lowercase;
-}
-
 .cta-form {
     position: relative;
     padding-bottom: 58px;
@@ -1690,11 +1667,6 @@ img {
 
 @media (min-width: 768px) {
 
-    .cta-title {
-        position: relative;
-        font-size: 35px;
-    }
-
     .cta-title::after {
         content: '';
         position: absolute;
@@ -1704,11 +1676,6 @@ img {
         width: 77px;
         height: 12px;
         background: transparent url(../img/arrow.svg) 50%/77px auto no-repeat;
-    }
-
-    .cta-subtitle {
-        font-size: 13px;
-        font-weight: 600;
     }
 
     .cta-form {
@@ -1749,17 +1716,8 @@ img {
 
 @media (min-width: 992px) {
 
-    .cta-title {
-        font-size: 64px;
-        margin-bottom: 16px;
-    }
-
     .cta-title::after {
         left: 250px;
-    }
-
-    .cta-subtitle {
-        font-size: 24px;
     }
 
     .cta-form .form-control {
@@ -1810,20 +1768,6 @@ img {
     --bs-card-cap-padding-y: 0;
 }
 
-.testimonial-title {
-    font-size: 20px;
-}
-
-.testimonial-text {
-    font-size: 16px;
-    margin-bottom: 0;
-}
-
-.testimonial-date {
-    font-family: var(--ff-title);
-    font-size: 20px;
-}
-
 .testimonial-link {
     margin-left: 20px;
 }
@@ -1832,18 +1776,6 @@ img {
 
     .card.card-testimonial {
         --bs-card-spacer-y: 10px;
-    }
-
-    .testimonial-title {
-        font-size: 12px;
-    }
-
-    .testimonial-text {
-        font-size: 10px;
-    }
-
-    .testimonial-date {
-        font-size: 12px;
     }
 
     .testimonial-link {
@@ -1860,18 +1792,6 @@ img {
 
     .card.card-testimonial {
         --bs-card-spacer-y: 18px;
-    }
-
-    .testimonial-title {
-        font-size: 16px;
-    }
-
-    .testimonial-text {
-        font-size: 16px;
-    }
-
-    .testimonial-date {
-        font-size: 23px;
     }
 
     .testimonial-link {
