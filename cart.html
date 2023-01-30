@@ -143,8 +143,9 @@
                 </div>
 
                 <div class="row gy-4">
+
                     <div class="col-lg-7">
-                        <div class="cart-body">
+                        <div class="cart-body pe-xl-5">
                             <!-- Product-->
                             <div class="card card-cart-item">
                                 <div class="card-body">
@@ -264,7 +265,7 @@
             </div>
         </section>
 
-        <!-- Может пригодиться -->
+        <!-- Рекомендуемые товары -->
         <section class="section py-4 py-lg-5 d-flex align-items-center justify-content-center position-relative">
             <div class="productCardSwiper-prev hover-opacity d-none d-xxl-flex" style="margin-top: 74px;">
                 <img src="img/arrow-suda.svg" alt="">
@@ -535,6 +536,120 @@
             </div>
         </div>
     </footer>
+
+    <!-- Попап "Товар добавлен" -->
+    <div class="modal modal-additem fade" id="addProduct" tabindex="-1" aria-labelledby="eaddProductLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content b-radius-15 b-radius-md-25 bg-img-top-contain"
+                style="background-image: url(img/fon.png);">
+
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                <div class="modal-body">
+
+                    <div class="section-additem">
+                        <div class="text-center">
+                            <p class="ff-title fs-23 fs-md-38 fs-lg-70 mb-1 mb-lg-5">Товар добавлен в корзину</p>
+                        </div>
+                        <article class="card card-additem">
+                            <div class="card-body">
+                                <div class="row g-1 g-md-2 g-lg-3">
+                                    <div class="col-5 col-md-3 col-lg-4">
+                                        <a class="hover-shine" href="shop-item.html">
+                                            <img class="card-img b-radius-15 b-radius-md-20 b-radius-lg-35"
+                                                src="img/item-02.png" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="col-7 col-md-9 col-lg-8">
+                                        <div class="d-flex flex-column justify-content-between h-100">
+                                            <div>
+                                                <p class="additem-title fw-semibold"><a href="shop-item.html">Пудра для
+                                                        прикорневого объёма Borodist "VOLUME BOOSTER"</a></p>
+                                                <p class="additem-price fw-semibold">620 ₽</p>
+                                            </div>
+                                            <div class="button-box">
+                                                <button type="button" class="btn btn-gray"
+                                                    data-bs-dismiss="modal">Продолжить покупки</button>
+                                                <a class="btn btn-primary" href="cart.html">Перейти в корзину</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="section-additional mt-2 mt-md-3 mt-lg-5">
+                        <div class="text-center">
+                            <p class="ff-title fs-23 fs-md-30 fs-lg-56 mb-1 mb-lg-5">Тебе может пригодиться</p>
+                        </div>
+                        <div class="swiper additionalItemsSwiper">
+                            <!-- Если отображать пагинацию, то нужно её раскомментировать и блоку "swiper-wrapper" задать "mb-4" -->
+                            <div class="swiper-wrapper mb-0 mb-md-0">
+                                <div class="swiper-slide h-auto p-1 p-md-2">
+                                    <article class="card product-card h-100">
+                                        <a class="hover-shine" href="shop-item.html">
+                                            <img class="card-img-top b-radius-20 b-radius-lg-40" src="img/item-01.png"
+                                                alt="">
+                                        </a>
+                                        <div class="card-body">
+                                            <a class="card-title fw-semibold" href="shop-item.html">Бальзам для бороды
+                                                Borodist "CITRUS SPLASH"</a>
+                                        </div>
+                                        <div class="card-footer">
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <span class="card-price fw-semibold">1190 ₽</span>
+                                                <button type="button" class="btn btn-primary">В корзину</button>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="swiper-slide h-auto p-1 p-md-2">
+                                    <article class="card product-card h-100">
+                                        <a class="hover-shine" href="shop-item.html">
+                                            <img class="card-img-top b-radius-20 b-radius-lg-40" src="img/item-01.png"
+                                                alt="">
+                                        </a>
+                                        <div class="card-body">
+                                            <a class="card-title fw-semibold" href="shop-item.html">Бальзам для бороды
+                                                Borodist "CITRUS SPLASH"</a>
+                                        </div>
+                                        <div class="card-footer">
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <span class="card-price fw-semibold">1190 ₽</span>
+                                                <button type="button" class="btn btn-primary">В корзину</button>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="swiper-slide h-auto p-1 p-md-2">
+                                    <article class="card product-card h-100">
+                                        <a class="hover-shine" href="shop-item.html">
+                                            <img class="card-img-top b-radius-20 b-radius-lg-40" src="img/item-01.png"
+                                                alt="">
+                                        </a>
+                                        <div class="card-body">
+                                            <a class="card-title fw-semibold" href="shop-item.html">Бальзам для бороды
+                                                Borodist "CITRUS SPLASH"</a>
+                                        </div>
+                                        <div class="card-footer">
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <span class="card-price fw-semibold">1190 ₽</span>
+                                                <button type="button" class="btn btn-primary">В корзину</button>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                            <!-- <div class="swiper-pagination bottom-0 d-md-none"></div> -->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Borodist checkout HTML</title>
+    <title>checkout</title>
 
     <link rel="shortcut icon" href="img/favicon.png" type="image/png">
 
@@ -129,7 +129,8 @@
                 <nav class="d-flex justify-content-center" aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Корзина</li>
+                        <li class="breadcrumb-item"><a href="cart.html">Корзина</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Оформление</li>
                     </ol>
                 </nav>
             </div>
@@ -139,284 +140,328 @@
         <section class="section py-4 py-lg-5">
             <div class="container">
                 <div class="text-center">
-                    <h1 class="fs-40 fs-md-35 fs-lg-50 mb-4">Накидано в корзине</h1>
+                    <h1 class="fs-40 fs-md-35 fs-lg-50 mb-4">Оформляемся</h1>
                 </div>
 
                 <div class="row gy-4">
-                    <div class="col-lg-5 ms-auto order-lg-2">
-                        <div class="sticky-top top-30">
 
-                            <div class="border-bottom">
-                                <!-- Item -->
-                                <div class="d-sm-flex justify-content-between align-items-center mt-3 mb-4 pb-3">
+                    <div class="col-lg-7">
 
-                                    <div class="d-block d-sm-flex align-items-center text-center text-sm-start">
-                                        <a class="d-inline-block flex-shrink-0 mx-auto me-sm-4" href="#">
-                                            <img src="img/small-product.png" width="75" alt="">
-                                        </a>
-                                        <div class="pt-2 pt-lg-0">
-                                            <a href="#">Бальзам для бороды Warrior</a>
+                        <div class="checkout-body pe-xl-5">
+
+                            <p class="fs-16 fs-md-26 fs-lg-24 fw-bold mb-3 mb-md-4">Способ получения</p>
+                            <div class="nav nav-pills checkout-pills bg-color-light-gray2 b-radius-10 b-radius-md-12 mb-3" id="pills-tab" role="tablist">
+                                <div class="col-6 nav-item p-0" role="presentation">
+                                    <button class="nav-link fs-13 fs-md-16 b-radius-10 b-radius-md-12 w-100 active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Доставка в пункт выдачи</button>
+                                </div>
+                                <div class="col-6 nav-item p-0" role="presentation">
+                                    <button class="nav-link fs-13 fs-md-16 b-radius-10 b-radius-md-12 w-100" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Доставка курьером</button>
+                                </div>
+                            </div>
+                            <div class="tab-content" id="pills-tabContent">
+                                <!-- TAB 1 -->
+                                <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                                    <form class="checkout-form-1 needs-validation" action="#" method="post" novalidate>
+
+                                        <!-- Billing details -->
+                                        <div class="row mb-5">
+                                            <div class="col-12">
+                                                <div class="form-group mb-2">
+                                                    <label class="form-label">Страна *</label>
+                                                    <select class="form-select form-control-xl bg-color-light-gray2 border-0 b-radius-10 b-radius-md-12 pe-5">
+                                                        <option value="ru">Россия</option>
+                                                        <option value="new-york">Австралия</option>
+                                                        <option value="los-angeles">Бангладеш</option>
+                                                        <option value="chicago">Босния и Герцеговина</option>
+                                                        <option value="houston">Маршалловы Острова</option>
+                                                        <option value="philadelphia">Папуа — Новая Гвинея</option>
+                                                        <option value="san-diego">Сент-Винсент и Гренадины</option>
+                                                        <option value="miami">Соединённые Штаты Америки</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="form-group mb-4">
+                                                    <label class="form-label">Населенный пункт *</label>
+                                                    <input class="form-control form-control-xl bg-color-light-gray2 border-0 b-radius-10 b-radius-md-12" type="text" placeholder="г Королёв, Московская обл." required="">
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="form-check mb-4">
+                                                    <input type="radio" name="shippping" class="form-check-input">
+                                                    <label class="form-check-label">
+                                                        <div class="row">
+                                                            <div class="col-9">
+                                                                <p class="fz-18 mb-2">Доставка в пункт выдачи Boxberry</p>
+                                                                <p class="fz-12">Выбран пункт: г. Королев, ул. Проспект Королева, д. 10Д</p>
+                                                            </div>
+                                                            <div class="col-3 text-end">
+                                                                <p class="fw-bold">+300 ₽</p>
+                                                            </div>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                                <div class="form-check mb-4">
+                                                    <input type="radio" name="shippping" class="form-check-input">
+                                                    <label class="form-check-label">
+                                                        <div class="row">
+                                                            <div class="col-9">
+                                                                <p class="fz-18 mb-2">Самовывоз</p>
+                                                                <p class="fz-12">Если заказ оформляется после 13.00, срок доставки увеличивается на 1 рабочий день.</p>
+                                                            </div>
+                                                            <div class="col-3 text-end">
+                                                                <p class="fw-bold">+0 Р</p>
+                                                            </div>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                                <div class="form-check mb-4">
+                                                    <input type="radio" name="shippping" class="form-check-input">
+                                                    <label class="form-check-label">
+                                                        <div class="row">
+                                                            <div class="col-9">
+                                                                <p class="fz-18 mb-2">Курьером</p>
+                                                                <p class="fz-12">Если заказ оформляется после 13.00, срок доставки увеличивается на 1 рабочий день.</p>
+                                                            </div>
+                                                            <div class="col-3 text-end">
+                                                                <p class="fw-bold">+506 Р</p>
+                                                            </div>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="form-group mb-4">
+                                                    <label class="form-label">Почтовый индекс *</label>
+                                                    <input class="form-control form-control-xl" type="text" placeholder="111222" required="">
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="form-group mb-4">
+                                                    <label class="form-label">Улица *</label>
+                                                    <input class="form-control form-control-xl" type="text" placeholder="ххх" required="">
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="form-group mb-4">
+                                                    <label class="form-label">Дом *</label>
+                                                    <input class="form-control form-control-xl" type="text" placeholder="1" required="">
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="form-group mb-4">
+                                                    <label class="form-label">Квартира *</label>
+                                                    <input class="form-control form-control-xl" type="text" placeholder="1" required="">
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="form-group mb-4">
+                                                    <label class="form-label">Дата доставки *</label>
+                                                    <select class="form-select form-control-xl pe-5">
+                                                        <option value="02112022">02.11.2022</option>
+                                                        <option value="03112022">03.11.2022</option>
+                                                        <option value="04112022">04.11.2022</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="form-group mb-4">
+                                                    <label class="form-label">Время доставки *</label>
+                                                    <select class="form-select form-control-xl pe-5">
+                                                        <option value="02112022">с 10 до 12</option>
+                                                        <option value="03112022">с 12 до 15</option>
+                                                        <option value="04112022">с 15 до 18</option>
+                                                    </select>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-
-                                    <div class="pt-2 pt-sm-0 ps-sm-3 mx-auto mx-sm-0 text-center text-sm-start">
-                                        <div class="fw-bold">1x1200 Р</div>
-                                    </div>
-                                </div>
-
-                                <!-- Item -->
-                                <div class="d-sm-flex justify-content-between align-items-center mt-3 mb-4 pb-3">
-
-                                    <div class="d-block d-sm-flex align-items-center text-center text-sm-start">
-                                        <a class="d-inline-block flex-shrink-0 mx-auto me-sm-4" href="#">
-                                            <img src="img/small-product.png" width="75" alt="">
-                                        </a>
-                                        <div class="pt-2 pt-lg-0">
-                                            <a href="#">Бальзам для бороды Warrior</a>
+            
+                                        <p class="fs-16 fs-md-13 fs-lg-24 fw-bold mb-5">Покупатель</p>
+                                        <div class="row mb-5">
+                                            <div class="col-12">
+                                                <div class="form-group mb-4">
+                                                    <label class="form-label">Фамилия *</label>
+                                                    <input class="form-control form-control-xl" type="text" placeholder="ххх" required="">
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="form-group mb-4">
+                                                    <label class="form-label">Имя *</label>
+                                                    <input class="form-control form-control-xl" type="text" placeholder="ххх" required="">
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="form-group mb-4">
+                                                    <label class="form-label">Отчество *</label>
+                                                    <input class="form-control form-control-xl" type="text" placeholder="ххх" required="">
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="form-group mb-4">
+                                                    <label class="form-label">Телефон *</label>
+                                                    <input class="form-control form-control-xl" type="text" placeholder="ххх" required="">
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="form-group mb-4">
+                                                    <label class="form-label">Email *</label>
+                                                    <input class="form-control form-control-xl" type="text" placeholder="ххх" required="">
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="form-check mb-4">
+                                                    <input type="checkbox" class="form-check-input">
+                                                    <label class="form-check-label">
+                                                        <div>
+                                                            <p class="mb-2">Стать постоянным покупателем</p>
+                                                            <p class="fz-12">Вы сможете видеть историю заказов, проще делать новые и получать скидки</p>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-
-                                    <div class="pt-2 pt-sm-0 ps-sm-3 mx-auto mx-sm-0 text-center text-sm-start">
-                                        <div class="fw-bold">1x1200 Р</div>
-                                    </div>
+            
+                                        <p class="fs-16 fs-md-13 fs-lg-24 fw-bold mb-5">Способ оплаты</p>
+                                        <div class="col-12">
+                                            <div class="form-check mb-4">
+                                                <input type="radio" name="payment" class="form-check-input">
+                                                <label class="form-check-label">
+                                                    <div>
+                                                        <p class="fz-18 mb-2">Опция</p>
+                                                        <p class="fz-12">Описание опции</p>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                            <div class="form-check mb-4">
+                                                <input type="radio" name="payment" class="form-check-input">
+                                                <label class="form-check-label">
+                                                    <div>
+                                                        <p class="fz-18 mb-2">Опция</p>
+                                                        <p class="fz-12">Описание опции</p>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                            <div class="form-check mb-4">
+                                                <input type="radio" name="payment" class="form-check-input">
+                                                <label class="form-check-label">
+                                                    <div>
+                                                        <p class="fz-18 mb-2">Опция</p>
+                                                        <p class="fz-12">Описание опции</p>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </div>
+            
+                                        <div class="col-12">
+                                            <div class="form-check mb-4">
+                                                <input type="checkbox" class="form-check-input">
+                                                <label class="form-check-label">
+                                                    <span class="fz-12 fw-semibold">Даю свое согласие на <a class="text-decoration-underline" href="#" target="_blank">обработку моих персональных данных</a></span>
+                                                </label>
+                                            </div>
+                                            <div class="form-check mb-4">
+                                                <input type="checkbox" class="form-check-input">
+                                                <label class="form-check-label">
+                                                    <span class="fz-12 fw-semibold">Даю свое согласие на рассылку рекламных и информационных материалов</span>
+                                                </label>
+                                            </div>
+                                        </div>
+            
+                                        <button type="submit" class="btn btn-primary mt-5">
+                                            <span class="fs-16 fs-md-13 fs-lg-24">Подтвердить заказ</span>
+                                        </button>
+            
+                                    </form>
                                 </div>
+                                <!-- TAB 2 -->
+                                <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">2...</div>
                             </div>
 
-                            <div class="d-flex flex-column mt-3 mb-4 pb-3 border-bottom">
-                                <div class="d-flex justify-content-between align-items-center mb-3">
-                                    <div>Сумма по товарам</div>
-                                    <div>2400 Р</div>
-                                </div>
-                                <div class="d-flex justify-content-between align-items-center mb-3">
-                                    <div>Стоимость доставки</div>
-                                    <div>0 Р</div>
-                                </div>
-                            </div>
-
-                            <div class="d-flex justify-content-between align-items-center mt-3 mb-4 pb-3">
-                                <div class="fz-32 fw-bold">Итого:</div>
-                                <div class="fz-32 fw-bold">2400 Р</div>
-                            </div>
 
                         </div>
+
                     </div>
 
-                    <div class="col-lg-6 order-lg-1">
+                    <div class="col-lg-5">
+                        <div class="ms-lg-3">
 
-                        <form class="checkout-form-1 needs-validation" action="#" method="post" novalidate>
-                            <p class="fs-16 fs-md-13 fs-lg-24 fw-bold mb-5">Доставка</p>
-                            <!-- Billing details -->
-                            <div class="row mb-5">
-                                <div class="col-12">
-                                    <div class="form-group mb-4">
-                                        <label class="form-label">Страна *</label>
-                                        <select class="form-select form-control-xl pe-5">
-                                            <option value="ru">Россия</option>
-                                            <option value="new-york">Австралия</option>
-                                            <option value="los-angeles">Бангладеш</option>
-                                            <option value="chicago">Босния и Герцеговина</option>
-                                            <option value="houston">Маршалловы Острова</option>
-                                            <option value="philadelphia">Папуа — Новая Гвинея</option>
-                                            <option value="san-diego">Сент-Винсент и Гренадины</option>
-                                            <option value="miami">Соединённые Штаты Америки</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-group mb-4">
-                                        <label class="form-label">Населенный пункт *</label>
-                                        <input class="form-control form-control-xl" type="text" placeholder="Москва" required="">
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-check mb-4">
-                                        <input type="radio" name="shippping" class="form-check-input">
-                                        <label class="form-check-label">
-                                            <div class="row">
-                                                <div class="col-9">
-                                                    <p class="fz-18 mb-2">Срочная платная  доставка по Москве и М.О.</p>
-                                                    <p class="fz-12">Если заказ оформляется после 13.00, срок доставки увеличивается на 1 рабочий день.</p>
-                                                </div>
-                                                <div class="col-3 text-end">
-                                                    <p class="fw-bold">+0 Р</p>
-                                                </div>
-                                            </div>
-                                        </label>
-                                    </div>
-                                    <div class="form-check mb-4">
-                                        <input type="radio" name="shippping" class="form-check-input">
-                                        <label class="form-check-label">
-                                            <div class="row">
-                                                <div class="col-9">
-                                                    <p class="fz-18 mb-2">Самовывоз</p>
-                                                    <p class="fz-12">Если заказ оформляется после 13.00, срок доставки увеличивается на 1 рабочий день.</p>
-                                                </div>
-                                                <div class="col-3 text-end">
-                                                    <p class="fw-bold">+0 Р</p>
-                                                </div>
-                                            </div>
-                                        </label>
-                                    </div>
-                                    <div class="form-check mb-4">
-                                        <input type="radio" name="shippping" class="form-check-input">
-                                        <label class="form-check-label">
-                                            <div class="row">
-                                                <div class="col-9">
-                                                    <p class="fz-18 mb-2">Курьером</p>
-                                                    <p class="fz-12">Если заказ оформляется после 13.00, срок доставки увеличивается на 1 рабочий день.</p>
-                                                </div>
-                                                <div class="col-3 text-end">
-                                                    <p class="fw-bold">+506 Р</p>
-                                                </div>
-                                            </div>
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-group mb-4">
-                                        <label class="form-label">Почтовый индекс *</label>
-                                        <input class="form-control form-control-xl" type="text" placeholder="111222" required="">
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-group mb-4">
-                                        <label class="form-label">Улица *</label>
-                                        <input class="form-control form-control-xl" type="text" placeholder="ххх" required="">
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="form-group mb-4">
-                                        <label class="form-label">Дом *</label>
-                                        <input class="form-control form-control-xl" type="text" placeholder="1" required="">
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="form-group mb-4">
-                                        <label class="form-label">Квартира *</label>
-                                        <input class="form-control form-control-xl" type="text" placeholder="1" required="">
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-group mb-4">
-                                        <label class="form-label">Дата доставки *</label>
-                                        <select class="form-select form-control-xl pe-5">
-                                            <option value="02112022">02.11.2022</option>
-                                            <option value="03112022">03.11.2022</option>
-                                            <option value="04112022">04.11.2022</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-group mb-4">
-                                        <label class="form-label">Время доставки *</label>
-                                        <select class="form-select form-control-xl pe-5">
-                                            <option value="02112022">с 10 до 12</option>
-                                            <option value="03112022">с 12 до 15</option>
-                                            <option value="04112022">с 15 до 18</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <p class="fs-16 fs-md-13 fs-lg-24 fw-bold mb-5">Покупатель</p>
-                            <div class="row mb-5">
-                                <div class="col-12">
-                                    <div class="form-group mb-4">
-                                        <label class="form-label">Фамилия *</label>
-                                        <input class="form-control form-control-xl" type="text" placeholder="ххх" required="">
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="form-group mb-4">
-                                        <label class="form-label">Имя *</label>
-                                        <input class="form-control form-control-xl" type="text" placeholder="ххх" required="">
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="form-group mb-4">
-                                        <label class="form-label">Отчество *</label>
-                                        <input class="form-control form-control-xl" type="text" placeholder="ххх" required="">
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="form-group mb-4">
-                                        <label class="form-label">Телефон *</label>
-                                        <input class="form-control form-control-xl" type="text" placeholder="ххх" required="">
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="form-group mb-4">
-                                        <label class="form-label">Email *</label>
-                                        <input class="form-control form-control-xl" type="text" placeholder="ххх" required="">
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-check mb-4">
-                                        <input type="checkbox" class="form-check-input">
-                                        <label class="form-check-label">
-                                            <div>
-                                                <p class="mb-2">Стать постоянным покупателем</p>
-                                                <p class="fz-12">Вы сможете видеть историю заказов, проще делать новые и получать скидки</p>
-                                            </div>
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <p class="fs-16 fs-md-13 fs-lg-24 fw-bold mb-5">Способ оплаты</p>
-                            <div class="col-12">
-                                <div class="form-check mb-4">
-                                    <input type="radio" name="payment" class="form-check-input">
-                                    <label class="form-check-label">
-                                        <div>
-                                            <p class="fz-18 mb-2">Опция</p>
-                                            <p class="fz-12">Описание опции</p>
+                            <div class="bg-color-light-gray2 b-radius-15 p-4 px-3 mb-3">
+                                <!-- Product -->
+                                <div class="checkout-product mb-3">
+                                    <div class="row g-3 align-items-center">
+                                        <div class="col-3 col-md-3">
+                                            <a class="hover-shine" href="shop-item.html">
+                                                <img class="card-img" src="img/item-01.png" alt="...">
+                                            </a>
                                         </div>
-                                    </label>
-                                </div>
-                                <div class="form-check mb-4">
-                                    <input type="radio" name="payment" class="form-check-input">
-                                    <label class="form-check-label">
-                                        <div>
-                                            <p class="fz-18 mb-2">Опция</p>
-                                            <p class="fz-12">Описание опции</p>
+                                        <div class="col-6 col-md-6">
+                                            <a class="card-title fs-12 fs-md-16" href="shop-item.html">Бальзам для бороды Borodist "CITRUS SPLASH"</a>
                                         </div>
-                                    </label>
-                                </div>
-                                <div class="form-check mb-4">
-                                    <input type="radio" name="payment" class="form-check-input">
-                                    <label class="form-check-label">
-                                        <div>
-                                            <p class="fz-18 mb-2">Опция</p>
-                                            <p class="fz-12">Описание опции</p>
+                                        <div class="col-3 col-md-3">
+                                            <div class="d-flex flex-column  text-end">
+                                                <span class="fs-12 fs-md-18 fs-lg-16">2 шт.</span>
+                                                <span class="fs-14 fs-md-18 fs-lg-20">1 290 ₽</span>
+                                            </div>
                                         </div>
-                                    </label>
+                                    </div>
+                                </div>
+                                <!-- Product -->
+                                <div class="checkout-product mb-3">
+                                    <div class="row g-3 align-items-center">
+                                        <div class="col-3 col-md-3">
+                                            <a class="hover-shine" href="shop-item.html">
+                                                <img class="card-img" src="img/item-01.png" alt="...">
+                                            </a>
+                                        </div>
+                                        <div class="col-6 col-md-6">
+                                            <a class="card-title fs-12 fs-md-16" href="shop-item.html">Бальзам для бороды Borodist "CITRUS SPLASH"</a>
+                                        </div>
+                                        <div class="col-3 col-md-3">
+                                            <div class="d-flex flex-column  text-end">
+                                                <span class="fs-12 fs-md-18 fs-lg-16">2 шт.</span>
+                                                <span class="fs-14 fs-md-18 fs-lg-20">1 290 ₽</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between mb-3">
+                                    <span class="fs-15 fs-md-22 fw-semibold">Итого</span>
+                                    <span class="fs-19 fs-md-28 fw-semibold">6 900 ₽</span>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <span class="fs-12 fs-md-16">Товары</span>
+                                    <span class="fs-12 fs-md-16">6 600 ₽</span>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <span class="fs-12 fs-md-16">Доставка</span>
+                                    <span class="fs-12 fs-md-16">300 ₽</span>
                                 </div>
                             </div>
 
-                            <hr class="my-3">
-
-                            <div class="col-12">
-                                <div class="form-check mb-4">
-                                    <input type="checkbox" class="form-check-input">
-                                    <label class="form-check-label">
-                                        <span class="fz-12 fw-semibold">Даю свое согласие на <a class="text-decoration-underline" href="#" target="_blank">обработку моих персональных данных</a></span>
-                                    </label>
-                                </div>
-                                <div class="form-check mb-4">
-                                    <input type="checkbox" class="form-check-input">
-                                    <label class="form-check-label">
-                                        <span class="fz-12 fw-semibold">Даю свое согласие на рассылку рекламных и информационных материалов</span>
-                                    </label>
+                            <div class="accordion accordion-promo mb-3" id="accordionPromocode">
+                                <div class="accordion-item">
+                                    <p class="accordion-header" id="headingOne">
+                                        <button class="accordion-button collapsed fs-12 fs-md-16 fw-semibold" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                                            aria-expanded="false" aria-controls="collapseOne">
+                                            Использовать сертификат
+                                        </button>
+                                    </p>
+                                    <div id="collapseOne" class="accordion-collapse collapse"
+                                        aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <form class="position-relative" action="#" method="post">
+                                                <input type="text" class="form-control fs-12 fs-md-16" placeholder="Сертификат">
+                                                <button type="submit" class="btn btn-gray fs-12 fs-md-16">Применить</button>
+                                            </form>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
-                            <button type="submit" class="btn btn-primary mt-5">
-                                <span class="fs-16 fs-md-13 fs-lg-24">Подтвердить заказ</span>
-                            </button>
+                            <a class="btn btn-primary fs-14 fs-md-20 w-100" href="#">Оплатить</a>
 
-                        </form>
-
+                        </div>
                     </div>
                     
                 </div>
