@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Borodist checkout HTML</title>
+    <title>cart</title>
 
     <link rel="shortcut icon" href="img/favicon.png" type="image/png">
 
@@ -146,41 +146,70 @@
                     <div class="col-lg-7">
                         <div class="cart-body">
                             <!-- Product-->
-                            <div class="cart-item">
-                                <div class="row align-items-center text-start text-md-center">
-                                    <div class="col-12 col-md-5">
-                                        <a class="cart-remove close mt-3 d-md-none" href="#"><i class="bx bx-x"></i></a>
-                                        <div class="d-flex align-items-center">
-                                            <a href="shop-item.html">
-                                                <img class="cart-item-img" src="img/item-01.png" alt="...">
+                            <div class="card card-cart-item">
+                                <div class="card-body">
+                                    <div class="row g-3">
+                                        <div class="col-3 col-md-3">
+                                            <a class="hover-shine" href="shop-item.html">
+                                                <img class="card-img" src="img/item-01.png" alt="...">
                                             </a>
-                                            <div class="cart-title text-start">
-                                                <a class="text-dark link-animated" href="shop-item.html"><strong>Skull Tee</strong></a><br><span class="text-muted text-sm">Size: Large</span><br><span class="text-muted text-sm">Colour: Green</span>
+                                        </div>
+                                        <div class="col-6 col-md-6">
+                                            <div class="d-flex flex-column justify-content-between h-100">
+                                                <a class="card-title fs-14 fs-md-16" href="shop-item.html">Бальзам для
+                                                    бороды Borodist "CITRUS SPLASH"</a>
+                                                <div class="number-quantity" data-step="1" data-min="1" data-max="100">
+                                                    <input class="number-text" type="text" name="count" value="1">
+                                                    <span class="number-unit">шт.</span>
+                                                    <a href="#" class="number-minus">-</a>
+                                                    <a href="#" class="number-plus">+</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2 d-none d-md-block text-end">
+                                            <span class="fs-16 fs-md-18 fs-lg-20">1 290 ₽</span>
+                                        </div>
+                                        <div class="col-3 col-md-1 text-end">
+                                            <div class="d-flex flex-column align-items-end justify-content-between h-100">
+                                                <button type="button" class="btn-close"></button>
+                                                <div class="cart-price d-md-none">
+                                                    <span class="fs-14">1 290 ₽</span>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-12 col-md-7 mt-4 mt-md-0">
-                                        <div class="row align-items-center">
-                                            <div class="col-md-3">
-                                                <div class="row">
-                                                    <div class="col-6 d-md-none text-muted">Price per item</div>
-                                                    <div class="col-6 col-md-12 text-end text-md-center">$65.00</div>
+                                </div>
+                            </div>
+                            <!-- Product-->
+                            <div class="card card-cart-item">
+                                <div class="card-body">
+                                    <div class="row g-3">
+                                        <div class="col-3 col-md-3">
+                                            <a class="hover-shine" href="shop-item.html">
+                                                <img class="card-img" src="img/item-01.png" alt="...">
+                                            </a>
+                                        </div>
+                                        <div class="col-6 col-md-6">
+                                            <div class="d-flex flex-column justify-content-between h-100">
+                                                <a class="card-title fs-14 fs-md-16" href="shop-item.html">Бальзам для
+                                                    бороды Borodist "CITRUS SPLASH"</a>
+                                                <div class="number-quantity" data-step="1" data-min="1" data-max="100">
+                                                    <input class="number-text" type="text" name="count" value="1">
+                                                    <span class="number-unit">шт.</span>
+                                                    <a href="#" class="number-minus">-</a>
+                                                    <a href="#" class="number-plus">+</a>
                                                 </div>
                                             </div>
-                                            <div class="col-md-4">
-                                                <div class="row align-items-center">
-                                                    <div class="d-md-none col-7 col-sm-9 text-muted">Quantity</div>
-                                                    <div class="col-5 col-sm-3 col-md-12">
-                                                        <div class="d-flex align-items-center">
-                                                            <div class="btn btn-items btn-items-decrease">-</div>
-                                                            <input class="form-control text-center border-0 border-md input-items" type="text" value="4">
-                                                            <div class="btn btn-items btn-items-increase">+</div>
-                                                        </div>
-                                                    </div>
+                                        </div>
+                                        <div class="col-md-2 d-none d-md-block text-end">
+                                            <span class="fs-16 fs-md-18 fs-lg-20">1 290 ₽</span>
+                                        </div>
+                                        <div class="col-3 col-md-1 text-end">
+                                            <div class="d-flex flex-column align-items-end justify-content-between h-100">
+                                                <button type="button" class="btn-close"></button>
+                                                <div class="cart-price d-md-none">
+                                                    <span class="fs-14">1 290 ₽</span>
                                                 </div>
-                                            </div>
-                                            <div class="col-2 d-none d-md-block text-center">
-                                                <a class="cart-remove close mt-3 d-md-none" href="#"><i class="bx bx-x"></i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -190,9 +219,166 @@
                     </div>
 
                     <div class="col-lg-5">
+                        <div class="ms-lg-3">
+                            <div class="bg-color-light-gray2 b-radius-15 p-4 px-3 mb-3">
+                                <div class="d-flex align-items-center justify-content-between mb-3">
+                                    <span class="fs-15 fs-md-22 fw-semibold">Итого</span>
+                                    <span class="fs-19 fs-md-28 fw-semibold">6 450 ₽</span>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <span class="fs-12 fs-md-16">Всего: 5 товаров</span>
+                                    <span class="fs-12 fs-md-16">6 600 ₽</span>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <span class="fs-12 fs-md-16">Выгода</span>
+                                    <span class="fs-12 fs-md-16">-240 ₽</span>
+                                </div>
+                            </div>
+
+                            <div class="accordion accordion-promo mb-3" id="accordionPromocode">
+                                <div class="accordion-item">
+                                    <p class="accordion-header" id="headingOne">
+                                        <button class="accordion-button collapsed fs-12 fs-md-16 fw-semibold" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                                            aria-expanded="false" aria-controls="collapseOne">
+                                            Использовать сертификат
+                                        </button>
+                                    </p>
+                                    <div id="collapseOne" class="accordion-collapse collapse"
+                                        aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <form class="position-relative" action="#" method="post">
+                                                <input type="text" class="form-control fs-12 fs-md-16" placeholder="Сертификат">
+                                                <button type="submit" class="btn btn-gray fs-12 fs-md-16">Применить</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <a class="btn btn-primary fs-14 fs-md-20 w-100" href="checkout.html">Перейти к оформлению</a>
+                        </div>
                     </div>
 
                 </div>
+            </div>
+        </section>
+
+        <!-- Может пригодиться -->
+        <section class="section py-4 py-lg-5 d-flex align-items-center justify-content-center position-relative">
+            <div class="productCardSwiper-prev hover-opacity d-none d-xxl-flex" style="margin-top: 74px;">
+                <img src="img/arrow-suda.svg" alt="">
+            </div>
+            <div class="container mx-xl-0">
+                <div class="text-center">
+                    <h2 class="fs-40 fs-md-35 fs-lg-50 mb-4">Тебе может пригодиться</h2>
+                </div>
+                <div class="swiper productCardSwiper2">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide h-auto p-2 p-lg-3">
+                            <article class="card product-card h-100">
+                                <a class="hover-shine" href="shop-item.html">
+                                    <img class="card-img-top b-radius-20 b-radius-lg-40" src="img/item-01.png" alt="">
+                                </a>
+                                <div class="card-body">
+                                    <a class="card-title fw-semibold" href="shop-item.html">Бальзам для бороды Borodist
+                                        "CITRUS SPLASH"</a>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <span class="card-price fw-semibold">1190 ₽</span>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#addProduct">В корзину</button>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="swiper-slide h-auto p-2 p-lg-3">
+                            <article class="card product-card h-100">
+                                <a class="hover-shine" href="shop-item.html">
+                                    <img class="card-img-top b-radius-20 b-radius-lg-40" src="img/item-02.png" alt="">
+                                </a>
+                                <div class="card-body">
+                                    <a class="card-title fw-semibold" href="shop-item.html">Пудра для прикорневого
+                                        объёма Borodist "VOLUME BOOSTER"</a>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <span class="card-price fw-semibold">620 ₽</span>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#addProduct">В корзину</button>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="swiper-slide h-auto p-2 p-lg-3">
+                            <article class="card product-card h-100">
+                                <a class="hover-shine" href="shop-item.html">
+                                    <img class="card-img-top b-radius-20 b-radius-lg-40" src="img/item-03.png" alt="">
+                                </a>
+                                <div class="card-body">
+                                    <a class="card-title fw-semibold" href="shop-item.html">Солевой спрей для укладки
+                                        волос Borodist "SURF'S VIBE"</a>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <span class="card-price fw-semibold">620 ₽</span>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#addProduct">В корзину</button>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="swiper-slide h-auto p-2 p-lg-3">
+                            <article class="card product-card h-100">
+                                <a class="hover-shine" href="shop-item.html">
+                                    <img class="card-img-top b-radius-20 b-radius-lg-40" src="img/item-04.png" alt="">
+                                </a>
+                                <div class="card-body">
+                                    <a class="card-title fw-semibold" href="shop-item.html">Бальзам для бороды Borodist
+                                        "CITRUS SPLASH"</a>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <span class="card-price fw-semibold">620 ₽</span>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#addProduct">В корзину</button>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="swiper-slide h-auto p-2 p-lg-3">
+                            <article class="card product-card h-100">
+                                <a class="hover-shine" href="shop-item.html">
+                                    <img class="card-img-top b-radius-20 b-radius-lg-40" src="img/item-02.png" alt="">
+                                </a>
+                                <div class="card-body">
+                                    <a class="card-title fw-semibold" href="shop-item.html">Пудра для прикорневого
+                                        объёма Borodist "VOLUME BOOSTER"</a>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <span class="card-price fw-semibold">620 ₽</span>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#addProduct">В корзину</button>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="d-flex d-xxl-none align-items-center justify-content-center mt-3">
+                        <button type="button" class="btn border-0 px-2 py-0" id="productCardSwiper2-prev1"
+                            style="transform: rotate(180deg);">
+                            <span class="icon icon-arrow"></span>
+                        </button>
+                        <button type="button" class="btn border-0 px-2 py-0" id="productCardSwiper2-next1">
+                            <span class="icon icon-arrow"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="productCardSwiper-next hover-opacity d-none d-xxl-flex" style="margin-top: 74px;">
+                <img src="img/arrow-tuda.svg" alt="">
             </div>
         </section>
 
