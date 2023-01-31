@@ -47,6 +47,7 @@ Version: 1.1
     --color-gray: #495469;
     --color-light-gray: #9AA0AC;
     --color-light-gray2: #F7F7F7;
+    --color-light-gray3: #A1A1A1;
     --color-white: #FFFFFF;
     --color-yellow: #FFD763;
     --color-orange: #F6AF54;
@@ -203,22 +204,59 @@ textarea {
     font-size: 18px;
 }
 
+.form-control-xl {
+    padding: 0.75rem 1.5rem;
+}
+
 .form-select {
     height: auto;
     font-size: 18px;
     color: var(--color-gray);
 }
 
-.form-control-xl {
-    padding: 0.75rem 1.5rem;
+.form-check {
+    padding-left: 25px;
 }
 
-.form-control:focus,
-.form-select:focus {
-    box-shadow: none;
+.form-check .form-check-input {
+    margin-left: -25px;
 }
 
 .form-check-input {
+    width: 16px;
+    height: 16px;
+    margin-top: 4px;
+    border: 2px solid #485368;
+}
+
+.form-check-input:checked {
+    background-color: #fff;
+    border-color: #485368;
+}
+
+.form-check-input:checked[type=radio] {
+    background-image: url(../img/check-radio.svg);
+}
+
+.form-check-input:checked[type=checkbox] {
+    background-image: url(../img/check-input.svg);
+}
+
+.form-check-input:focus {
+    border-color: #485368;
+}
+
+.form-control:focus,
+.form-select:focus,
+.form-check-input:focus {
+    box-shadow: none;
+}
+
+.bg-color-light-gray2.form-control:focus {
+    background-color: var(--color-light-gray2);
+}
+
+.cta-form .form-check-input {
     width: 20px;
     height: 20px;
     margin-right: 10px;
@@ -226,38 +264,38 @@ textarea {
     background-color: transparent;
 }
 
-.form-check-input:checked {
+.cta-form .form-check-input:checked {
     border-color: var(--color-gray);
     background-color: transparent;
 }
 
-.form-check-input[type=checkbox],
-.form-check-input[type=radio] {
+.cta-form .form-check-input[type=checkbox],
+.cta-form .form-check-input[type=radio] {
     border-radius: 8px;
 }
 
-.form-check-input:checked[type=checkbox],
-.form-check-input:checked[type=radio] {
+.cta-form .form-check-input:checked[type=checkbox],
+.cta-form .form-check-input:checked[type=radio] {
     background-image: url(../img/check.svg);
 }
 
-.form-check {
+.cta-form .form-check {
     display: flex;
     padding-left: 0;
 }
 
-.form-check .form-check-input {
+.cta-form .form-check .form-check-input {
     margin-left: 0;
     float: none;
     flex: 0 0 auto;
 }
 
-.form-check-input:focus {
+.cta-form .form-check-input:focus {
     border-color: var(--color-gray);
     box-shadow: none;
 }
 
-.form-check .form-check-label {
+.cta-form .form-check .form-check-label {
     flex: 1 1 auto;
 }
 
@@ -444,6 +482,10 @@ img {
     color: var(--color-light-gray2);
 }
 
+.color-light-gray3 {
+    color: var(--color-light-gray3);
+}
+
 .color-red {
     color: var(--color-red);
 }
@@ -582,6 +624,10 @@ img {
         font-size: 16px;
     }
 
+    .fs-md-14 {
+        font-size: 14px;
+    }
+
     .fs-md-13 {
         font-size: 13px;
     }
@@ -628,6 +674,10 @@ img {
     .fs-lg-16 {
         font-size: 16px;
     }
+
+    .fs-lg-12 {
+        font-size: 12px;
+    }
 }
 
 .fw-light,
@@ -654,6 +704,10 @@ img {
 .fw-bold,
 .fw-700 {
     font-weight: var(--fw-bold);
+}
+
+.b-radius-6 {
+    border-radius: 6px !important;
 }
 
 .b-radius-10 {
@@ -1040,6 +1094,60 @@ img {
     --bs-nav-pills-link-active-bg: #495469;
 }
 
+.payment-item {
+    cursor: pointer;
+}
+
+.payment-item input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+}
+
+.payment-item .payment-body {
+    position: relative;
+    padding: 8px 5px;
+    border: 1px solid transparent;
+}
+
+.payment-item .payment-body img {
+    height: 16px;
+    margin-bottom: 8px;
+}
+
+.payment-item input[type="radio"]:checked+.payment-body {
+    border: 1px solid #485368;
+}
+
+.payment-item input[type="radio"]:checked+.payment-body::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    width: 15px;
+    height: 15px;
+    background: #485368;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    box-shadow: 0px 0px 0px 1px #e9e9e9;
+}
+
+@media (min-width: 768px) {
+
+    .payment-item .payment-body {
+        padding: 13px;
+    }
+
+    .payment-item .payment-body img {
+        height: 24px;
+        margin-bottom: 12px;
+    }
+
+    .payment-item input[type="radio"]:checked+.payment-body::after {
+        top: 8px;
+        right: 8px;
+    }
+}
+
 /*//////////////////////////////////////////////////////////////////
 [ + MEDIA ]*/
 
@@ -1072,7 +1180,7 @@ img {
     .b-radius-md-10 {
         border-radius: 10px !important;
     }
-    
+
     .b-radius-md-12 {
         border-radius: 12px !important;
     }
@@ -1116,7 +1224,7 @@ img {
     .b-radius-lg-10 {
         border-radius: 10px !important;
     }
-    
+
     .b-radius-lg-12 {
         border-radius: 12px !important;
     }
