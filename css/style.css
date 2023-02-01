@@ -24,11 +24,11 @@ Version: 1.1
 + HEADER
 + MENU
 + FOOTER
-+ MODAL
-+ MODAL ADD ITEM
 + CTA SECTION
 + TESTIMONIAL SECTION
 + PRODUCT CARD
++ MODAL
++ MODAL ADD ITEM
 
 -------------------------------------------------------------------*/
 
@@ -60,7 +60,7 @@ Version: 1.1
     --fw-semibold: 600;
     --fw-bold: 700;
     --bs-body-font-family: var(--ff-main);
-    --bs-body-font-size: 1rem;
+    --bs-body-font-size: 16px;
     --bs-body-font-weight: var(--fw-medium);
     --bs-body-line-height: 1.2;
     --bs-body-color: var(--color-gray);
@@ -103,12 +103,12 @@ h6,
 
 h1,
 .h1 {
-    font-size: 32px;
+    font-size: 40px;
 }
 
 h2,
 .h2 {
-    font-size: 28px;
+    font-size: 34px;
 }
 
 h3,
@@ -131,16 +131,49 @@ h6,
     font-size: 18px;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
 
     h1,
     .h1 {
-        font-size: 64px;
+        font-size: 50px;
     }
 
     h2,
     .h2 {
-        font-size: 42px;
+        font-size: 35px;
+    }
+
+    h3,
+    .h3 {
+        font-size: 28px;
+    }
+
+    h4,
+    .h4 {
+        font-size: 26px;
+    }
+
+    h5,
+    .h5 {
+        font-size: 24px;
+    }
+
+    h6,
+    .h6 {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 992px) {
+
+    h1,
+    .h1 {
+        font-size: 90px;
+    }
+
+    h2,
+    .h2 {
+        font-size: 64px;
     }
 
     h3,
@@ -205,7 +238,7 @@ textarea {
 }
 
 .form-control-xl {
-    padding: 0.75rem 1.5rem;
+    padding: 12px 24px;
 }
 
 .form-select {
@@ -303,8 +336,8 @@ textarea {
 [ + BUTTONS ]*/
 
 .btn {
-    --bs-btn-padding-x: 2rem;
-    --bs-btn-padding-y: 0.5rem;
+    --bs-btn-padding-x: 10px;
+    --bs-btn-padding-y: 5px;
     --bs-btn-font-family: var(--ff-main);
     --bs-btn-font-size: 16px;
     --bs-btn-font-weight: var(--fw-semibold);
@@ -313,11 +346,11 @@ textarea {
     --bs-btn-bg: transparent;
     --bs-btn-border-width: 1px;
     --bs-btn-border-color: transparent;
-    --bs-btn-border-radius: 0.75rem;
+    --bs-btn-border-radius: 6px;
     --bs-btn-hover-border-color: transparent;
     --bs-btn-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
     --bs-btn-disabled-opacity: 0.5;
-    --bs-btn-focus-box-shadow: 0 0 0 0.25rem rgba(var(--bs-btn-focus-shadow-rgb), .5);
+    --bs-btn-focus-box-shadow: 0 0 0 4px rgba(var(--bs-btn-focus-shadow-rgb), .5);
 }
 
 .btn-primary {
@@ -391,7 +424,7 @@ textarea {
 }
 
 .btn-icon {
-    --btn-icon-size: 2.5rem;
+    --btn-icon-size: 40px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -544,6 +577,10 @@ img {
 
 .fs-38 {
     font-size: 38px;
+}
+
+.fs-34 {
+    font-size: 34px;
 }
 
 .fs-23 {
@@ -817,8 +854,8 @@ img {
 [ + MAIN CONTENT ]*/
 
 .main {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-top: 16px;
+    padding-bottom: 16px;
 }
 
 .card {
@@ -923,24 +960,24 @@ img {
 }
 
 .pagination {
-    --bs-pagination-item-margin-x: 0.125rem;
+    --bs-pagination-item-margin-x: 2px;
     --bs-pagination-item-margin-y: 0;
-    --bs-pagination-item-width: 2.5rem;
-    --bs-pagination-item-height: 2.5rem;
+    --bs-pagination-item-width: 40px;
+    --bs-pagination-item-height: 40px;
     --bs-pagination-padding-x: 0;
     --bs-pagination-padding-y: 0;
-    --bs-pagination-font-size: 1rem;
+    --bs-pagination-font-size: 16px;
     --bs-pagination-color: var(--bs-link-color);
     --bs-pagination-bg: transparent;
     --bs-pagination-border-width: 0;
     --bs-pagination-border-color: transparent;
-    --bs-pagination-border-radius: 0.375rem;
+    --bs-pagination-border-radius: 6px;
     --bs-pagination-hover-color: var(--bs-link-hover-color);
     --bs-pagination-hover-bg: #e9ecef;
     --bs-pagination-hover-border-color: transparent;
     --bs-pagination-focus-color: var(--bs-link-hover-color);
     --bs-pagination-focus-bg: #e9ecef;
-    --bs-pagination-focus-box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+    --bs-pagination-focus-box-shadow: 0 0 0 4px rgba(13, 110, 253, 0.25);
     --bs-pagination-active-color: var(--bs-link-color);
     --bs-pagination-active-bg: var(--color-yellow);
     --bs-pagination-active-border-color: transparent;
@@ -1050,16 +1087,16 @@ img {
     --bs-accordion-border-width: 0;
     --bs-accordion-border-radius: 15px;
     --bs-accordion-inner-border-radius: 15px;
-    --bs-accordion-btn-padding-x: 1rem;
-    --bs-accordion-btn-padding-y: 1rem;
+    --bs-accordion-btn-padding-x: 16px;
+    --bs-accordion-btn-padding-y: 16px;
     --bs-accordion-btn-color: #485368;
     --bs-accordion-btn-bg: #F7F7F7;
     --bs-accordion-btn-icon: url(../img/accordion-01.svg);
     --bs-accordion-btn-icon-width: 16px;
     --bs-accordion-btn-active-icon: url(../img/accordion-02.svg);
     --bs-accordion-btn-focus-box-shadow: none;
-    --bs-accordion-body-padding-x: 1rem;
-    --bs-accordion-body-padding-y: 1rem;
+    --bs-accordion-body-padding-x: 16px;
+    --bs-accordion-body-padding-y: 16px;
     --bs-accordion-active-color: #485368;
     --bs-accordion-active-bg: #F7F7F7;
 }
@@ -1210,8 +1247,8 @@ img {
     }
 
     .main {
-        padding-top: 1.5rem;
-        padding-bottom: 1.5rem;
+        padding-top: 24px;
+        padding-bottom: 24px;
     }
 }
 
@@ -1254,8 +1291,8 @@ img {
     }
 
     .main {
-        padding-top: 3rem;
-        padding-bottom: 3rem;
+        padding-top: 48px;
+        padding-bottom: 48px;
     }
 }
 
@@ -1335,7 +1372,7 @@ img {
 
 .navbar {
     --bs-navbar-padding-x: 0;
-    --bs-navbar-padding-y: .75rem;
+    --bs-navbar-padding-y: 12px;
     --bs-navbar-color: var(--color-gray);
     --bs-navbar-hover-color: var(--color-red);
     --bs-navbar-disabled-color: rgba(0, 0, 0, 0.3);
@@ -1367,7 +1404,7 @@ img {
     border: none !important;
     outline: 0;
     box-shadow: none !important;
-    padding: 0.25rem 0;
+    padding: 4px 0;
     background: transparent;
 }
 
@@ -1658,295 +1695,6 @@ img {
 }
 
 /*//////////////////////////////////////////////////////////////////
-[ + MODAL ]*/
-
-.modal {
-    --bs-modal-width: 700px;
-    --bs-modal-padding: 1rem;
-    --bs-modal-header-border-width: 0;
-    --bs-modal-header-padding: 1rem;
-    --bs-modal-border-width: 0;
-    --bs-modal-border-radius: 0;
-}
-
-.btn-close:focus {
-    box-shadow: none;
-}
-
-@media (min-width: 992px) {
-
-    .modal-lg,
-    .modal-xl {
-        --bs-modal-width: 900px;
-    }
-}
-
-@media (min-width: 1200px) {
-
-    .modal-xl {
-        --bs-modal-width: 1100px;
-    }
-}
-
-/*//////////////////////////////////////////////////////////////////
-[ + MODAL ADD ITEM ]*/
-
-.modal-additem .modal-xl {
-    --bs-modal-width: 300px;
-}
-
-.modal-additem {
-    --bs-modal-padding: 26px 50px;
-}
-
-.modal-additem .btn-close {
-    position: absolute;
-    top: 16px;
-    right: 16px;
-    width: 12px;
-    height: 12px;
-    background-size: 12px;
-    z-index: 5;
-}
-
-.card.card-additem {
-    --bs-card-spacer-y: 4px;
-    --bs-card-spacer-x: 0;
-    --bs-card-border-width: 0;
-    --bs-card-border-radius: 0;
-    --bs-card-inner-border-radius: 0;
-    --bs-card-cap-padding-y: 0.5rem;
-    --bs-card-cap-padding-x: 0;
-    --bs-card-bg: transparent;
-    padding-bottom: 60px;
-}
-
-.card-additem .additem-title {
-    font-size: 11px;
-    display: -webkit-box;
-    -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    margin-bottom: 5px;
-}
-
-.card-additem .additem-price {
-    font-size: 10px;
-    margin-bottom: 0;
-}
-
-.card-additem .button-box {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-}
-
-.card-additem .btn {
-    --bs-btn-padding-x: 16px;
-    --bs-btn-padding-y: 4px;
-    --bs-btn-font-size: 8px;
-    --bs-btn-border-radius: 4px;
-    width: 100%;
-    margin-bottom: 4px;
-}
-
-.modal-additem .card.product-card {
-    --bs-card-spacer-y: 6px;
-}
-
-.modal-additem .card.product-card .card-title {
-    font-size: 8px;
-    text-transform: uppercase;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-}
-
-.modal-additem .card.product-card .card-price {
-    font-size: 8px;
-}
-
-.modal-additem .card.product-card .btn {
-    --bs-btn-padding-x: 6px;
-    --bs-btn-padding-y: 2px;
-    --bs-btn-font-size: 6px;
-    --bs-btn-border-radius: 4px;
-}
-
-@media (min-width: 768px) {
-
-    .modal-additem .modal-xl {
-        --bs-modal-width: 500px;
-    }
-
-    .modal-additem {
-        --bs-modal-padding: 32px 40px;
-    }
-
-    .modal-additem .btn-close {
-        position: absolute;
-        top: 22px;
-        right: 22px;
-        width: 20px;
-        height: 20px;
-        background-size: 20px;
-    }
-
-    .card.card-additem {
-        --bs-card-spacer-y: 8px;
-        --bs-card-spacer-x: 0;
-        --bs-card-border-width: 0;
-        --bs-card-border-radius: 0;
-        --bs-card-inner-border-radius: 0;
-        --bs-card-cap-padding-y: 0.5rem;
-        --bs-card-cap-padding-x: 0;
-        --bs-card-bg: transparent;
-        padding-bottom: 0;
-    }
-
-    .card-additem .additem-title {
-        font-size: 13px;
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-        margin-bottom: 4px;
-    }
-
-    .card-additem .additem-price {
-        font-size: 16px;
-        margin-bottom: 0;
-    }
-
-    .card-additem .button-box {
-        position: static;
-    }
-
-    .card-additem .btn {
-        --bs-btn-padding-x: 16px;
-        --bs-btn-padding-y: 4px;
-        --bs-btn-font-size: 9px;
-        --bs-btn-border-radius: 6px;
-        width: auto;
-        margin-bottom: 0;
-        margin-right: 6px;
-    }
-
-    .modal-additem .card.product-card {
-        --bs-card-spacer-y: 6px;
-    }
-
-    .modal-additem .card.product-card .card-title {
-        font-size: 8px;
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-    }
-
-    .modal-additem .card.product-card .card-price {
-        font-size: 12px;
-    }
-
-    .modal-additem .card.product-card .btn {
-        --bs-btn-padding-x: 6px;
-        --bs-btn-padding-y: 2px;
-        --bs-btn-font-size: 8px;
-        --bs-btn-border-radius: 6px;
-    }
-
-    .card.card-cart-item .card-title {
-        font-weight: 600;
-    }
-}
-
-@media (min-width: 992px) {
-
-    .modal-additem .modal-xl {
-        --bs-modal-width: 900px;
-    }
-
-    .modal-additem {
-        --bs-modal-padding: 65px 70px;
-    }
-
-    .modal-additem .btn-close {
-        position: absolute;
-        top: 32px;
-        right: 32px;
-        width: 30px;
-        height: 30px;
-        background-size: 30px;
-    }
-
-    .card.card-additem {
-        --bs-card-spacer-y: 8px;
-        --bs-card-spacer-x: 30px;
-        --bs-card-border-width: 0;
-        --bs-card-border-radius: 0;
-        --bs-card-inner-border-radius: 0;
-        --bs-card-cap-padding-y: 0.5rem;
-        --bs-card-cap-padding-x: 0;
-        --bs-card-bg: transparent;
-    }
-
-    .card-additem .additem-title {
-        font-size: 24px;
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-        margin-bottom: 16px;
-    }
-
-    .card-additem .additem-price {
-        font-size: 28px;
-        margin-bottom: 0;
-    }
-
-    .card-additem .btn {
-        --bs-btn-padding-x: 16px;
-        --bs-btn-padding-y: 10px;
-        --bs-btn-font-size: 16px;
-        --bs-btn-border-radius: 12px;
-        margin-right: 10px;
-    }
-
-    .modal-additem .card.product-card {
-        --bs-card-spacer-y: 16px;
-    }
-
-    .modal-additem .card.product-card .card-title {
-        font-size: 14px;
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-    }
-
-    .modal-additem .card.product-card .card-price {
-        font-size: 21px;
-    }
-
-    .modal-additem .card.product-card .btn {
-        --bs-btn-padding-x: 20px;
-        --bs-btn-padding-y: 6px;
-        --bs-btn-font-size: 14px;
-        --bs-btn-border-radius: 10px;
-    }
-}
-
-@media (min-width: 1200px) {
-
-    .card-additem .btn {
-        --bs-btn-padding-x: 20px;
-    }
-}
-
-/*//////////////////////////////////////////////////////////////////
 [ + CTA SECTION ]*/
 
 .cta-form {
@@ -2116,7 +1864,7 @@ img {
 [ + PRODUCT CARD ]*/
 
 .card.product-card {
-    --bs-card-spacer-y: 18px;
+    --bs-card-spacer-y: 8px;
     --bs-card-spacer-x: 0;
     --bs-card-title-spacer-y: 0;
     --bs-card-border-width: 0;
@@ -2139,16 +1887,16 @@ img {
 }
 
 .card.product-card .btn {
-    --bs-btn-padding-x: 17px;
-    --bs-btn-padding-y: 5px;
-    --bs-btn-font-size: 8px;
+    --bs-btn-padding-x: 10px;
+    --bs-btn-padding-y: 4px;
+    --bs-btn-font-size: 12px;
     --bs-btn-border-radius: 6px;
 }
 
 @media (min-width: 768px) {
 
     .card.product-card {
-        --bs-card-spacer-y: 10px;
+        --bs-card-spacer-y: 8px;
     }
 
     .card.product-card .card-title {
@@ -2158,13 +1906,19 @@ img {
     .card.product-card .card-price {
         font-size: 12px;
     }
+
+    .card.product-card .btn {
+        --bs-btn-padding-x: 10px;
+        --bs-btn-padding-y: 4px;
+        --bs-btn-font-size: 12px;
+        --bs-btn-border-radius: 6px;
+    }
 }
 
 @media (min-width: 992px) {
 
     .card.product-card .card-title {
-        font-size: 16px;
-        text-transform: uppercase;
+        font-size: 18px;
     }
 
     .card.product-card .card-price {
@@ -2172,16 +1926,293 @@ img {
     }
 
     .card.product-card .btn {
-        --bs-btn-padding-x: 14px;
+        --bs-btn-padding-x: 26px;
         --bs-btn-padding-y: 9px;
-        --bs-btn-font-size: 16px;
+        --bs-btn-font-size: 18px;
         --bs-btn-border-radius: 12px;
+    }
+}
+
+/*//////////////////////////////////////////////////////////////////
+[ + MODAL ]*/
+
+.modal {
+    --bs-modal-width: 700px;
+    --bs-modal-padding: 16px;
+    --bs-modal-header-border-width: 0;
+    --bs-modal-header-padding: 16px;
+    --bs-modal-border-width: 0;
+    --bs-modal-border-radius: 0;
+}
+
+.btn-close:focus {
+    box-shadow: none;
+}
+
+@media (min-width: 992px) {
+
+    .modal-lg,
+    .modal-xl {
+        --bs-modal-width: 900px;
     }
 }
 
 @media (min-width: 1200px) {
 
-    .card.product-card .btn {
-        --bs-btn-padding-x: 26px;
+    .modal-xl {
+        --bs-modal-width: 1100px;
+    }
+}
+
+/*//////////////////////////////////////////////////////////////////
+[ + MODAL ADD ITEM ]*/
+
+.modal-additem .modal-xl {
+    --bs-modal-width: 300px;
+}
+
+.modal-additem {
+    --bs-modal-padding: 30px 10px;
+}
+
+.modal-additem .btn-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 12px;
+    height: 12px;
+    background-size: 12px;
+    z-index: 5;
+}
+
+.card.card-additem {
+    --bs-card-spacer-y: 4px;
+    --bs-card-spacer-x: 0;
+    --bs-card-border-width: 0;
+    --bs-card-border-radius: 0;
+    --bs-card-inner-border-radius: 0;
+    --bs-card-cap-padding-y: 8px;
+    --bs-card-cap-padding-x: 0;
+    --bs-card-bg: transparent;
+    padding-bottom: 80px;
+}
+
+.card-additem .additem-title {
+    font-size: 12px;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+
+.card-additem .additem-price {
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+.card-additem .button-box {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+
+.card-additem .btn {
+    --bs-btn-padding-x: 16px;
+    --bs-btn-padding-y: 6px;
+    --bs-btn-font-size: 12px;
+    --bs-btn-border-radius: 4px;
+    width: 100%;
+    margin-bottom: 4px;
+}
+
+.modal-additem .card.product-card {
+    --bs-card-spacer-y: 6px;
+}
+
+.modal-additem .card.product-card .card-title {
+    font-size: 12px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.modal-additem .card.product-card .card-price {
+    font-size: 12px;
+}
+
+.modal-additem .card.product-card .btn {
+    --bs-btn-padding-x: 10px;
+    --bs-btn-padding-y: 4px;
+    --bs-btn-font-size: 12px;
+    --bs-btn-border-radius: 6px;
+}
+
+@media (min-width: 768px) {
+
+    .modal-additem .modal-xl {
+        --bs-modal-width: 500px;
+    }
+
+    .modal-additem {
+        --bs-modal-padding: 30px 24px;
+    }
+
+    .modal-additem .btn-close {
+        position: absolute;
+        top: 22px;
+        right: 22px;
+        width: 20px;
+        height: 20px;
+        background-size: 20px;
+    }
+
+    .card.card-additem {
+        --bs-card-spacer-y: 8px;
+        --bs-card-spacer-x: 32px;
+        --bs-card-border-width: 0;
+        --bs-card-border-radius: 0;
+        --bs-card-inner-border-radius: 0;
+        --bs-card-cap-padding-y: 8px;
+        --bs-card-cap-padding-x: 0;
+        --bs-card-bg: transparent;
+        padding-bottom: 0;
+    }
+
+    .card-additem .additem-title {
+        font-size: 16px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        margin-bottom: 4px;
+    }
+
+    .card-additem .additem-price {
+        font-size: 16px;
+        margin-bottom: 0;
+    }
+
+    .card-additem .button-box {
+        position: static;
+        margin-top: 8px;
+    }
+
+    .card-additem .btn {
+        --bs-btn-padding-x: 16px;
+        --bs-btn-padding-y: 6px;
+        --bs-btn-font-size: 12px;
+        --bs-btn-border-radius: 6px;
+    }
+
+    .modal-additem .card.product-card {
+        --bs-card-spacer-y: 6px;
+    }
+
+    .modal-additem .card.product-card .card-title {
+        font-size: 12px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .modal-additem .card.product-card .card-price {
+        font-size: 12px;
+    }
+
+    .modal-additem .card.product-card .btn {
+        --bs-btn-padding-x: 10px;
+        --bs-btn-padding-y: 4px;
+        --bs-btn-font-size: 12px;
+        --bs-btn-border-radius: 6px;
+    }
+
+    .card.card-cart-item .card-title {
+        font-weight: 600;
+    }
+}
+
+@media (min-width: 992px) {
+
+    .modal-additem .modal-xl {
+        --bs-modal-width: 900px;
+    }
+
+    .modal-additem {
+        --bs-modal-padding: 65px 70px;
+    }
+
+    .modal-additem .btn-close {
+        position: absolute;
+        top: 32px;
+        right: 32px;
+        width: 30px;
+        height: 30px;
+        background-size: 30px;
+    }
+
+    .card.card-additem {
+        --bs-card-spacer-y: 8px;
+        --bs-card-spacer-x: 8px;
+        --bs-card-border-width: 0;
+        --bs-card-border-radius: 0;
+        --bs-card-inner-border-radius: 0;
+        --bs-card-cap-padding-y: 8px;
+        --bs-card-cap-padding-x: 0;
+        --bs-card-bg: transparent;
+    }
+
+    .card-additem .additem-title {
+        font-size: 24px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        margin-bottom: 16px;
+    }
+
+    .card-additem .additem-price {
+        font-size: 28px;
+        margin-bottom: 0;
+    }
+
+    .card-additem .btn {
+        --bs-btn-padding-x: 16px;
+        --bs-btn-padding-y: 8px;
+        --bs-btn-font-size: 18px;
+        --bs-btn-border-radius: 12px;
+        width: auto;
+        margin-bottom: 0;
+    }
+
+    .card-additem .btn+.btn {
+        margin-left: 16px;
+    }
+
+    .modal-additem .card.product-card {
+        --bs-card-spacer-y: 16px;
+    }
+
+    .modal-additem .card.product-card .card-title {
+        font-size: 18px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .modal-additem .card.product-card .card-price {
+        font-size: 24px;
+    }
+
+    .modal-additem .card.product-card .btn {
+        --bs-btn-padding-x: 16px;
+        --bs-btn-padding-y: 8px;
+        --bs-btn-font-size: 18px;
+        --bs-btn-border-radius: 10px;
     }
 }
