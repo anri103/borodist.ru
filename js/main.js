@@ -126,6 +126,10 @@ const productCardSwiper = new Swiper('.productCardSwiper', {
 const productCardSwiper2 = new Swiper('.productCardSwiper2', {
     slidesPerView: 2,
     grabCursor: true,
+    grid: {
+        fill: 'row',
+        rows: 2,
+    },
     autoplay: {
         delay: 3500,
         disableOnInteraction: false,
@@ -138,9 +142,15 @@ const productCardSwiper2 = new Swiper('.productCardSwiper2', {
     breakpoints: {
         768: {
             slidesPerView: 4,
+            grid: {
+                rows: 1,
+            },
         },
         992: {
             slidesPerView: 4,
+            grid: {
+                rows: 1,
+            },
         },
     },
 });
