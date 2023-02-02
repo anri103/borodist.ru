@@ -211,6 +211,15 @@ const additionalItemsSwiper = new Swiper('.additionalItemsSwiper', {
 });
 
 // На shop-item.html
+const thumbsSwiper = new Swiper('.thumbsSwiper', {
+    spaceBetween: 8,
+    slidesPerView: 5,
+    breakpoints: {
+        992: {
+            spaceBetween: 20,
+        },
+    },
+});
 const productItemSwiper = new Swiper('.productItemSwiper', {
     slidesPerView: 1,
     spaceBetween: 30,
@@ -223,6 +232,9 @@ const productItemSwiper = new Swiper('.productItemSwiper', {
         el: '.swiper-pagination',
         clickable: true,
     },
+    thumbs: {
+        swiper: thumbsSwiper,
+    },
 });
 
 /*//////////////////////////////////////////////////////////////////
@@ -232,6 +244,6 @@ const lightboxProduct = GLightbox({
     selector: '.glightbox2'
 });
 
-const lightboxVideo = GLightbox({
-    selector: '.glightbox3'
+const lightboxProductVideo = GLightbox({
+    selector: '.glightbox-ProductVideo'
 });
