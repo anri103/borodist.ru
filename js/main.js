@@ -247,3 +247,16 @@ const lightboxProduct = GLightbox({
 const lightboxProductVideo = GLightbox({
     selector: '.glightbox-ProductVideo'
 });
+
+/*//////////////////////////////////////////////////////////////////
+[ Glightbox ]*/
+
+function toggleTextBox() {
+    var userRegisterCheck = document.getElementById('userRegisterCheck');
+    var userRegisterFields = document.getElementById('userRegisterFields');
+    if (userRegisterCheck.checked == true) {
+        userRegisterFields.style.display = 'block';
+    } else {
+        userRegisterFields.style.display = 'none';
+    }
+}
