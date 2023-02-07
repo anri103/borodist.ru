@@ -249,7 +249,7 @@ const lightboxProductVideo = GLightbox({
 });
 
 /*//////////////////////////////////////////////////////////////////
-[ Glightbox ]*/
+[ toggle box in checkout.html ]*/
 
 function toggleTextBox() {
     var userRegisterCheck = document.getElementById('userRegisterCheck');

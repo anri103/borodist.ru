@@ -1135,7 +1135,7 @@ img {
 
 .form-promo .form-control {
     padding: 13px 16px;
-    color: #BFC2C9;
+    color: #495469;
     background-color: #F7F7F7;
     border-color: #E3E3E3;
     border-radius: 11px;
@@ -2192,7 +2192,7 @@ img {
 .card-additem .additem-title {
     font-size: 12px;
     display: -webkit-box;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
     margin-bottom: 5px;
@@ -2276,10 +2276,6 @@ img {
 
     .card-additem .additem-title {
         font-size: 16px;
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
         margin-bottom: 4px;
     }
 
@@ -2360,10 +2356,6 @@ img {
 
     .card-additem .additem-title {
         font-size: 24px;
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
         margin-bottom: 16px;
     }
 
