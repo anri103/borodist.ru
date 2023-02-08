@@ -1,27 +1,16 @@
 (function ($) {
     'use strict';
 
-    // $(document).ready(function () {
-    //     $('.quantity-input .button-minus').click(function () {
-    //         var $input = $(this).parent().find('#cont');
-    //         var count = parseInt($input.val()) - 1;
-    //         count = count < 1 ? 1 : count;
-    //         $input.val(count);
-    //         $input.change();
-    //         return false;
-    //     });
-    //     $('.quantity-input .button-plus').click(function () {
-    //         var $input = $(this).parent().find('#cont');
-    //         $input.val(parseInt($input.val()) + 1);
-    //         $input.change();
-    //         return false;
-    //     });
-    // });
-
     $(document).ready(function () {
-        $('body').on('click', '.number-minus, .number-plus', function () {
+
+        $('.buy-button').click(function () {
+            $('.number-quantity').addClass('show');
+            $(this).hide();
+        })
+
+        $('.number-minus, .number-plus').click(function () {
             var $row = $(this).closest('.number-quantity');
-            var $input = $row.find('.number-text');
+            var $input = $row.find('.number-input');
             var step = $row.data('step');
             var val = parseFloat($input.val());
             if ($(this).hasClass('number-minus')) {
@@ -34,7 +23,7 @@
             return false;
         });
 
-        $('body').on('change', '.number-text', function () {
+        $('.number-input').on('change', function () {
             var $input = $(this);
             var $row = $input.closest('.number-quantity');
             var step = $row.data('step');
@@ -50,24 +39,33 @@
             }
             $input.val(val);
         });
-    });
 
-    $('#productCardSwiper-prev1').click(function (e) {
-        e.preventDefault()
-        productCardSwiper.slidePrev()
-    });
-    $('#productCardSwiper-next1').click(function (e) {
-        e.preventDefault()
-        productCardSwiper.slideNext()
-    });
+        // $('.number-input').on('change', function () {
+        //     if ($(this).val() < 0) {
+        //         $('number-quantity').removeClass('show');
+        //         $('buy-button').show();
+        //     }
+        // });
 
-    $('#productCardSwiper2-prev1').click(function (e) {
-        e.preventDefault()
-        productCardSwiper2.slidePrev()
-    });
-    $('#productCardSwiper2-next1').click(function (e) {
-        e.preventDefault()
-        productCardSwiper2.slideNext()
+        $('#productCardSwiper-prev1').click(function (e) {
+            e.preventDefault()
+            productCardSwiper.slidePrev()
+        });
+
+        $('#productCardSwiper-next1').click(function (e) {
+            e.preventDefault()
+            productCardSwiper.slideNext()
+        });
+
+        $('#productCardSwiper2-prev1').click(function (e) {
+            e.preventDefault()
+            productCardSwiper2.slidePrev()
+        });
+
+        $('#productCardSwiper2-next1').click(function (e) {
+            e.preventDefault()
+            productCardSwiper2.slideNext()
+        });
     });
 
 })(jQuery);
@@ -126,10 +124,6 @@ const productCardSwiper = new Swiper('.productCardSwiper', {
 const productCardSwiper2 = new Swiper('.productCardSwiper2', {
     slidesPerView: 2,
     grabCursor: true,
-    grid: {
-        fill: 'row',
-        rows: 2,
-    },
     autoplay: {
         delay: 3500,
         disableOnInteraction: false,
@@ -142,15 +136,9 @@ const productCardSwiper2 = new Swiper('.productCardSwiper2', {
     breakpoints: {
         768: {
             slidesPerView: 4,
-            grid: {
-                rows: 1,
-            },
         },
         992: {
             slidesPerView: 4,
-            grid: {
-                rows: 1,
-            },
         },
     },
 });

@@ -1049,70 +1049,6 @@ img {
     margin-top: -1px;
 }
 
-.number-quantity {
-    user-select: none;
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    width: 123px;
-    height: 26px;
-    margin-top: 8px;
-}
-
-.number-text {
-    display: inline-block;
-    font-size: 16px;
-    width: 100%;
-    height: 16px;
-    padding: 0 38px;
-    background: #fff;
-    outline: none;
-    border: none;
-}
-
-.number-unit {
-    position: absolute;
-    right: 36px;
-    display: inline-block;
-    font-size: 16px;
-}
-
-.number-minus,
-.number-plus {
-    position: absolute;
-    top: 0;
-    display: block;
-    width: 26px;
-    height: 26px;
-    border-radius: 8px;
-    font-size: 18px;
-    line-height: 26px;
-    text-align: center;
-    text-decoration: none;
-    background-color: var(--color-yellow);
-    z-index: 5;
-}
-
-.number-minus {
-    left: 0;
-    right: auto;
-}
-
-.number-plus {
-    right: 0;
-    left: auto;
-}
-
-.number-minus:hover,
-.number-plus:hover {
-    background-color: var(--color-orange);
-}
-
-.number-minus:active,
-.number-plus:active {
-    background-color: var(--color-orange);
-}
-
 .accordion.accordion-promo {
     --bs-accordion-color: #485368;
     --bs-accordion-bg: #F7F7F7;
@@ -1996,9 +1932,85 @@ img {
     color: #989EAA;
 }
 
-.product-buttons .btn-primary {
-    flex: 1 1 auto;
-    margin-right: 8px;
+.button-toggle-box {
+    --button-toggle-box-height: 42px;
+    --number-input-padding: 10px;
+    --number-unit-right: 10px;
+    width: 145px;
+    height: var(--button-toggle-box-height);
+    flex: 0 0 auto;
+}
+
+.buy-button {
+    height: var(--button-toggle-box-height);
+}
+
+.number-quantity {
+    user-select: none;
+    position: relative;
+    display: none;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.number-quantity.show {
+    display: inline-flex;
+}
+
+.number-input {
+    display: inline-block;
+    font-size: 16px;
+    width: 100%;
+    height: 100%;
+    padding: 0 calc(var(--button-toggle-box-height) + var(--number-input-padding));
+    background: #fff;
+    outline: none;
+    border: none;
+}
+
+.number-unit {
+    position: absolute;
+    right: calc(var(--button-toggle-box-height) + var(--number-unit-right));
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 1px;
+}
+
+.number-minus,
+.number-plus {
+    position: absolute;
+    top: 0;
+    display: block;
+    width: var(--button-toggle-box-height);
+    height: 100%;
+    padding: 0;
+    border-radius: 8px;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    background-color: var(--color-yellow);
+    z-index: 5;
+}
+
+.number-minus {
+    left: 0;
+    right: auto;
+}
+
+.number-plus {
+    right: 0;
+    left: auto;
+}
+
+.number-minus:hover,
+.number-plus:hover {
+    background-color: var(--color-orange);
+}
+
+.number-minus:active,
+.number-plus:active {
+    background-color: var(--color-orange);
 }
 
 .product-buttons .btn-icon {
@@ -2061,9 +2073,12 @@ img {
 
 @media (min-width: 768px) {
 
-    .product-buttons .btn-primary {
+    .button-toggle-box {
+        --button-toggle-box-height: 36px;
+        --number-input-padding: 10px;
+        --number-unit-right: 10px;
+        width: 140px;
         flex: 0 0 auto;
-        margin-right: 6px;
     }
     
     .product-buttons .btn-icon {
@@ -2078,8 +2093,11 @@ img {
 
 @media (min-width: 992px) {
 
-    .product-buttons .btn-primary {
-        --bs-btn-padding-x: 32px;
+    .button-toggle-box {
+        --button-toggle-box-height: 46px;
+        --number-input-padding: 15px;
+        --number-unit-right: 15px;
+        width: 175px;
     }
     
     .product-buttons .btn-icon {
