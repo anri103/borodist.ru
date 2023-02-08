@@ -1936,7 +1936,7 @@ img {
     --button-toggle-box-height: 42px;
     --number-input-padding: 10px;
     --number-unit-right: 10px;
-    width: 145px;
+    width: 150px;
     height: var(--button-toggle-box-height);
     flex: 0 0 auto;
 }
@@ -2097,7 +2097,7 @@ img {
         --button-toggle-box-height: 46px;
         --number-input-padding: 15px;
         --number-unit-right: 15px;
-        width: 175px;
+        width: 170px;
     }
     
     .product-buttons .btn-icon {

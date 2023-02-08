@@ -18,6 +18,10 @@
             } else {
                 val += step;
             }
+            if( val < 1 ) {
+                $('.buy-button').show();
+                $('.number-quantity').removeClass('show');
+            }
             $input.val(val);
             $input.change();
             return false;
@@ -36,6 +40,10 @@
                 val = min;
             } else if (max && val > max) {
                 val = max;
+            }
+            if( val < 1 ) {
+                $('.buy-button').show();
+                $('.number-quantity').removeClass('show');
             }
             $input.val(val);
         });
