@@ -48,13 +48,6 @@
             $input.val(val);
         });
 
-        // $('.number-input').on('change', function () {
-        //     if ($(this).val() < 0) {
-        //         $('number-quantity').removeClass('show');
-        //         $('buy-button').show();
-        //     }
-        // });
-
         $('#productCardSwiper-prev1').click(function (e) {
             e.preventDefault()
             productCardSwiper.slidePrev()
