@@ -1049,6 +1049,13 @@ img {
     margin-top: -1px;
 }
 
+.card.card-cart-item .button-toggle-box {
+    --button-toggle-box-height: 26px;
+    --number-input-padding: 10px;
+    --number-unit-right: 10px;
+    width: 120px;
+}
+
 .accordion.accordion-promo {
     --bs-accordion-color: #485368;
     --bs-accordion-bg: #F7F7F7;
