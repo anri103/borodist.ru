@@ -19,8 +19,8 @@
                 val += step;
             }
             if( val < 1 ) {
-                $('.buy-button').show();
-                $('.number-quantity').removeClass('show');
+                $('.product-details .buy-button').show();
+                $('.product-details .number-quantity').removeClass('show');
             }
             $input.val(val);
             $input.change();
@@ -42,8 +42,8 @@
                 val = max;
             }
             if( val < 1 ) {
-                $('.buy-button').show();
-                $('.number-quantity').removeClass('show');
+                $('.product-details .buy-button').show();
+                $('.product-details .number-quantity').removeClass('show');
             }
             $input.val(val);
         });
