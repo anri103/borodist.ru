@@ -1056,6 +1056,10 @@ img {
     width: 120px;
 }
 
+.card.card-cart-item .number-quantity {
+    display: flex;
+}
+
 .accordion.accordion-promo {
     --bs-accordion-color: #485368;
     --bs-accordion-bg: #F7F7F7;
@@ -1881,11 +1885,12 @@ img {
     font-size: 12px;
 }
 
-.card.product-card .btn {
-    --bs-btn-padding-x: 10px;
-    --bs-btn-padding-y: 4px;
-    --bs-btn-font-size: 12px;
-    --bs-btn-border-radius: 6px;
+.card.product-card .btn-primary {
+    font-size: 12px;
+    border-radius: 6px;
+    width: 87px;
+    height: 23px;
+    padding: 0;
 }
 
 @media (min-width: 768px) {
@@ -1902,11 +1907,11 @@ img {
         font-size: 12px;
     }
 
-    .card.product-card .btn {
-        --bs-btn-padding-x: 10px;
-        --bs-btn-padding-y: 4px;
-        --bs-btn-font-size: 12px;
-        --bs-btn-border-radius: 6px;
+    .card.product-card .btn-primary {
+        font-size: 12px;
+        border-radius: 6px;
+        width: 87px;
+        height: 23px;
     }
 }
 
@@ -1920,11 +1925,11 @@ img {
         font-size: 24px;
     }
 
-    .card.product-card .btn {
-        --bs-btn-padding-x: 26px;
-        --bs-btn-padding-y: 9px;
-        --bs-btn-font-size: 18px;
-        --bs-btn-border-radius: 12px;
+    .card.product-card .btn-primary {
+        font-size: 18px;
+        border-radius: 12px;
+        width: 151px;
+        height: 44px;
     }
 }
 
@@ -1943,80 +1948,58 @@ img {
     --button-toggle-box-height: 42px;
     --number-input-padding: 10px;
     --number-unit-right: 10px;
-    width: 150px;
-    height: var(--button-toggle-box-height);
-    flex: 0 0 auto;
 }
 
-.buy-button {
-    height: var(--button-toggle-box-height);
-}
-
-.number-quantity {
+.button-toggle-box .number-quantity {
     user-select: none;
     position: relative;
     display: none;
     align-items: center;
-    width: 100%;
-    height: 100%;
+    width: 87px;
+    height: 23px;
 }
 
-.number-quantity.show {
-    display: inline-flex;
+.button-toggle-box .number-quantity.active {
+    display: flex;
 }
 
-.number-input {
+.button-toggle-box .number-input {
     display: inline-block;
     font-size: 16px;
     width: 100%;
     height: 100%;
-    padding: 0 calc(var(--button-toggle-box-height) + var(--number-input-padding));
+    padding: 0;
     background: #fff;
     outline: none;
     border: none;
 }
 
-.number-unit {
+.button-toggle-box .number-unit {
     position: absolute;
-    right: calc(var(--button-toggle-box-height) + var(--number-unit-right));
+    right: 10px;
     display: inline-block;
     font-size: 16px;
     margin-top: 1px;
 }
 
-.number-minus,
-.number-plus {
-    position: absolute;
-    top: 0;
-    display: block;
-    width: var(--button-toggle-box-height);
+.button-toggle-box .number-minus,
+.button-toggle-box .number-plus {
+    flex-shrink: 0;
+    width: 23px;
     height: 100%;
     padding: 0;
-    border-radius: 8px;
-    font-size: 18px;
-    text-align: center;
-    text-decoration: none;
+    border-radius: 6px;
+    font-size: 12px;
     background-color: var(--color-yellow);
-    z-index: 5;
 }
 
-.number-minus {
-    left: 0;
-    right: auto;
-}
-
-.number-plus {
-    right: 0;
-    left: auto;
-}
-
-.number-minus:hover,
-.number-plus:hover {
+.button-toggle-box .number-minus:hover,
+.button-toggle-box .number-plus:hover {
     background-color: var(--color-orange);
 }
 
-.number-minus:active,
-.number-plus:active {
+.button-toggle-box .number-minus:active,
+.button-toggle-box .number-plus:active {
     background-color: var(--color-orange);
 }
 
@@ -2084,8 +2067,18 @@ img {
         --button-toggle-box-height: 36px;
         --number-input-padding: 10px;
         --number-unit-right: 10px;
-        width: 140px;
-        flex: 0 0 auto;
+    }
+
+    .button-toggle-box .number-quantity {
+        width: 87px;
+        height: 23px;
+    }
+
+    .button-toggle-box .number-minus,
+    .button-toggle-box .number-plus {
+        font-size: 12px;
+        border-radius: 6px;
+        width: 23px;
     }
     
     .product-buttons .btn-icon {
@@ -2104,7 +2097,18 @@ img {
         --button-toggle-box-height: 46px;
         --number-input-padding: 15px;
         --number-unit-right: 15px;
-        width: 170px;
+    }
+
+    .button-toggle-box .number-quantity {
+        width: 151px;
+        height: 44px;
+    }
+
+    .button-toggle-box .number-minus,
+    .button-toggle-box .number-plus {
+        font-size: 18px;
+        border-radius: 12px;
+        width: 44px;
     }
     
     .product-buttons .btn-icon {
@@ -2261,7 +2265,7 @@ img {
     font-size: 12px;
 }
 
-.modal-additem .card.product-card .btn {
+.modal-additem .card.product-card .btn-primary {
     --bs-btn-padding-x: 10px;
     --bs-btn-padding-y: 4px;
     --bs-btn-font-size: 12px;
@@ -2337,7 +2341,7 @@ img {
         font-size: 12px;
     }
 
-    .modal-additem .card.product-card .btn {
+    .modal-additem .card.product-card .btn-primary {
         --bs-btn-padding-x: 10px;
         --bs-btn-padding-y: 4px;
         --bs-btn-font-size: 12px;
@@ -2418,7 +2422,7 @@ img {
         font-size: 24px;
     }
 
-    .modal-additem .card.product-card .btn {
+    .modal-additem .card.product-card .btn-primary {
         --bs-btn-padding-x: 16px;
         --bs-btn-padding-y: 8px;
         --bs-btn-font-size: 18px;

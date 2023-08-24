@@ -1,75 +1,4 @@
-(function ($) {
-    'use strict';
-
-    $(document).ready(function () {
-
-        $('.buy-button').click(function () {
-            $('.number-quantity').addClass('show');
-            $(this).hide();
-        })
-
-        $('.number-minus, .number-plus').click(function () {
-            var $row = $(this).closest('.number-quantity');
-            var $input = $row.find('.number-input');
-            var step = $row.data('step');
-            var val = parseFloat($input.val());
-            if ($(this).hasClass('number-minus')) {
-                val -= step;
-            } else {
-                val += step;
-            }
-            if( val < 1 ) {
-                $('.product-details .buy-button').show();
-                $('.product-details .number-quantity').removeClass('show');
-            }
-            $input.val(val);
-            $input.change();
-            return false;
-        });
-
-        $('.number-input').on('change', function () {
-            var $input = $(this);
-            var $row = $input.closest('.number-quantity');
-            var step = $row.data('step');
-            var min = parseInt($row.data('min'));
-            var max = parseInt($row.data('max'));
-            var val = parseFloat($input.val());
-            if (isNaN(val)) {
-                val = step;
-            } else if (min && val < min) {
-                val = min;
-            } else if (max && val > max) {
-                val = max;
-            }
-            if( val < 1 ) {
-                $('.product-details .buy-button').show();
-                $('.product-details .number-quantity').removeClass('show');
-            }
-            $input.val(val);
-        });
-
-        $('#productCardSwiper-prev1').click(function (e) {
-            e.preventDefault()
-            productCardSwiper.slidePrev()
-        });
-
-        $('#productCardSwiper-next1').click(function (e) {
-            e.preventDefault()
-            productCardSwiper.slideNext()
-        });
-
-        $('#productCardSwiper2-prev1').click(function (e) {
-            e.preventDefault()
-            productCardSwiper2.slidePrev()
-        });
-
-        $('#productCardSwiper2-next1').click(function (e) {
-            e.preventDefault()
-            productCardSwiper2.slideNext()
-        });
-    });
-
-})(jQuery);
+'use strict';
 
 /*//////////////////////////////////////////////////////////////////
 [ SLIDER ]*/
@@ -249,3 +178,78 @@ function toggleTextBox() {
         userRegisterFields.style.display = 'none';
     }
 }
+
+/*//////////////////////////////////////////////////////////////////
+[ Кнопки как на Ozon ]*/
+
+(function ($) {
+
+    $(document).ready(function () {
+
+        $('.buy-button').click(function () {
+            $(this).next('.number-quantity').addClass('active');
+            $(this).hide();
+        })
+
+        $('.number-minus, .number-plus').click(function () {
+            var $row = $(this).parent('.number-quantity');
+            var $input = $row.find('.number-input');
+            var step = $row.data('step');
+            var val = parseFloat($input.val());
+            if ($(this).hasClass('number-minus')) {
+                val -= step;
+            } else {
+                val += step;
+            }
+            if( val < 1 ) {
+                $(this).parentsUntil('.button-toggle-box').siblings('.buy-button').show();
+                $(this).parent('.number-quantity').removeClass('active');
+            }
+            $input.val(val);
+            $input.change();
+            return false;
+        });
+
+        $('.number-input').on('change', function () {
+            var $input = $(this);
+            var $row = $input.parent('.number-quantity');
+            var step = $row.data('step');
+            var min = parseInt($row.data('min'));
+            var max = parseInt($row.data('max'));
+            var val = parseFloat($input.val());
+            if (isNaN(val)) {
+                val = step;
+            } else if (min && val < min) {
+                val = min;
+            } else if (max && val > max) {
+                val = max;
+            }
+            if( val < 1 ) {
+                $(this).parentsUntil('.button-toggle-box').siblings('.buy-button').show();
+                $(this).parent('.number-quantity').removeClass('active');
+            }
+            $input.val(val);
+        });
+
+        $('#productCardSwiper-prev1').click(function (e) {
+            e.preventDefault()
+            productCardSwiper.slidePrev()
+        });
+
+        $('#productCardSwiper-next1').click(function (e) {
+            e.preventDefault()
+            productCardSwiper.slideNext()
+        });
+
+        $('#productCardSwiper2-prev1').click(function (e) {
+            e.preventDefault()
+            productCardSwiper2.slidePrev()
+        });
+
+        $('#productCardSwiper2-next1').click(function (e) {
+            e.preventDefault()
+            productCardSwiper2.slideNext()
+        });
+    });
+
+})(jQuery);
