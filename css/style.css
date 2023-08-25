@@ -1049,15 +1049,16 @@ img {
     margin-top: -1px;
 }
 
-.card.card-cart-item .button-toggle-box {
-    --button-toggle-box-height: 26px;
-    --number-input-padding: 10px;
-    --number-unit-right: 10px;
-    width: 120px;
+.card.card-cart-item .button-toggle-box .quantity-container {
+    display: flex !important;
+    width: 113px;
+    height: 26px;
 }
 
-.card.card-cart-item .number-quantity {
-    display: flex;
+.card.card-cart-item .button-toggle-box .quantity-container .btn {
+    font-size: 16px;
+    border-radius: 6px;
+    width: 26px;
 }
 
 .accordion.accordion-promo {
@@ -1885,14 +1886,6 @@ img {
     font-size: 12px;
 }
 
-.card.product-card .btn-primary {
-    font-size: 12px;
-    border-radius: 6px;
-    width: 87px;
-    height: 23px;
-    padding: 0;
-}
-
 @media (min-width: 768px) {
 
     .card.product-card {
@@ -1906,13 +1899,6 @@ img {
     .card.product-card .card-price {
         font-size: 12px;
     }
-
-    .card.product-card .btn-primary {
-        font-size: 12px;
-        border-radius: 6px;
-        width: 87px;
-        height: 23px;
-    }
 }
 
 @media (min-width: 992px) {
@@ -1923,13 +1909,6 @@ img {
 
     .card.product-card .card-price {
         font-size: 24px;
-    }
-
-    .card.product-card .btn-primary {
-        font-size: 18px;
-        border-radius: 12px;
-        width: 151px;
-        height: 44px;
     }
 }
 
@@ -1944,13 +1923,15 @@ img {
     color: #989EAA;
 }
 
-.button-toggle-box {
-    --button-toggle-box-height: 42px;
-    --number-input-padding: 10px;
-    --number-unit-right: 10px;
+.button-toggle-box > .btn-primary {
+    font-size: 12px;
+    border-radius: 6px;
+    width: 87px;
+    height: 23px;
+    padding: 0;
 }
 
-.button-toggle-box .number-quantity {
+.button-toggle-box .quantity-container {
     user-select: none;
     position: relative;
     display: none;
@@ -1959,31 +1940,20 @@ img {
     height: 23px;
 }
 
-.button-toggle-box .number-quantity.active {
+.button-toggle-box .quantity-container.active {
     display: flex;
 }
 
-.button-toggle-box .number-input {
-    display: inline-block;
-    font-size: 16px;
+.button-toggle-box .quantity-input {
     width: 100%;
     height: 100%;
     padding: 0;
-    background: #fff;
-    outline: none;
+    text-align: center;
+    font-size: 16px;
     border: none;
 }
 
-.button-toggle-box .number-unit {
-    position: absolute;
-    right: 10px;
-    display: inline-block;
-    font-size: 16px;
-    margin-top: 1px;
-}
-
-.button-toggle-box .number-minus,
-.button-toggle-box .number-plus {
+.button-toggle-box .quantity-container .btn {
     flex-shrink: 0;
     width: 23px;
     height: 100%;
@@ -1993,17 +1963,35 @@ img {
     background-color: var(--color-yellow);
 }
 
-.button-toggle-box .number-minus:hover,
-.button-toggle-box .number-plus:hover {
+.button-toggle-box .quantity-container .btn:hover,
+.button-toggle-box .quantity-container .btn:active {
     background-color: var(--color-orange);
 }
 
-.button-toggle-box .number-minus:active,
-.button-toggle-box .number-plus:active {
-    background-color: var(--color-orange);
+.product-buttons .button-toggle-box {
+    flex: 1 1 auto;
+}
+
+.product-buttons .button-toggle-box > .btn-primary {
+    font-size: 16px;
+    border-radius: 10px;
+    width: 100%;
+    height: 48px;
+}
+
+.product-buttons .button-toggle-box .quantity-container {
+    width: 100%;
+    height: 48px;
+}
+
+.product-buttons .button-toggle-box .quantity-container .btn {
+    width: 48px;
+    border-radius: 10px;
+    font-size: 18px;
 }
 
 .product-buttons .btn-icon {
+    flex-shrink: 0;
     --btn-icon-size: 42px;
     --icon-square-size: 28px;
 }
@@ -2063,22 +2051,44 @@ img {
 
 @media (min-width: 768px) {
 
-    .button-toggle-box {
-        --button-toggle-box-height: 36px;
-        --number-input-padding: 10px;
-        --number-unit-right: 10px;
-    }
-
-    .button-toggle-box .number-quantity {
+    .button-toggle-box > .btn-primary {
+        font-size: 12px;
+        border-radius: 6px;
         width: 87px;
         height: 23px;
     }
 
-    .button-toggle-box .number-minus,
-    .button-toggle-box .number-plus {
+    .button-toggle-box .quantity-container {
+        width: 87px;
+        height: 23px;
+    }
+
+    .button-toggle-box .quantity-container .btn {
         font-size: 12px;
         border-radius: 6px;
         width: 23px;
+    }
+
+    .product-buttons .button-toggle-box {
+        flex: 0 0 auto;
+    }
+    
+    .product-buttons .button-toggle-box > .btn-primary {
+        font-size: 14px;
+        border-radius: 10px;
+        width: 140px;
+        height: 36px;
+    }
+
+    .product-buttons .button-toggle-box .quantity-container {
+        width: 140px;
+        height: 36px;
+    }
+    
+    .product-buttons .button-toggle-box .quantity-container .btn {
+        width: 36px;
+        border-radius: 10px;
+        font-size: 16px;
     }
     
     .product-buttons .btn-icon {
@@ -2093,27 +2103,45 @@ img {
 
 @media (min-width: 992px) {
 
-    .button-toggle-box {
-        --button-toggle-box-height: 46px;
-        --number-input-padding: 15px;
-        --number-unit-right: 15px;
-    }
-
-    .button-toggle-box .number-quantity {
+    .button-toggle-box > .btn-primary {
+        font-size: 18px;
+        border-radius: 12px;
         width: 151px;
         height: 44px;
     }
 
-    .button-toggle-box .number-minus,
-    .button-toggle-box .number-plus {
+    .button-toggle-box .quantity-container {
+        width: 151px;
+        height: 44px;
+    }
+
+    .button-toggle-box .quantity-container .btn {
         font-size: 18px;
         border-radius: 12px;
         width: 44px;
     }
+
+    .product-buttons .button-toggle-box > .btn-primary {
+        font-size: 24px;
+        border-radius: 18px;
+        width: 210px;
+        height: 56px;
+    }
+
+    .product-buttons .button-toggle-box .quantity-container {
+        width: 210px;
+        height: 56px;
+    }
+    
+    .product-buttons .button-toggle-box .quantity-container .btn {
+        width: 56px;
+        border-radius: 18px;
+        font-size: 24px;
+    }
     
     .product-buttons .btn-icon {
-        --btn-icon-size: 46px;
-        --icon-square-size: 32px;
+        --btn-icon-size: 56px;
+        --icon-square-size: 40px;
     }
 
     .product-pills .nav-item+.nav-item {
@@ -2265,13 +2293,6 @@ img {
     font-size: 12px;
 }
 
-.modal-additem .card.product-card .btn-primary {
-    --bs-btn-padding-x: 10px;
-    --bs-btn-padding-y: 4px;
-    --bs-btn-font-size: 12px;
-    --bs-btn-border-radius: 6px;
-}
-
 @media (min-width: 768px) {
 
     .modal-additem .modal-xl {
@@ -2339,13 +2360,6 @@ img {
 
     .modal-additem .card.product-card .card-price {
         font-size: 12px;
-    }
-
-    .modal-additem .card.product-card .btn-primary {
-        --bs-btn-padding-x: 10px;
-        --bs-btn-padding-y: 4px;
-        --bs-btn-font-size: 12px;
-        --bs-btn-border-radius: 6px;
     }
 
     .card.card-cart-item .card-title {
@@ -2420,12 +2434,5 @@ img {
 
     .modal-additem .card.product-card .card-price {
         font-size: 24px;
-    }
-
-    .modal-additem .card.product-card .btn-primary {
-        --bs-btn-padding-x: 16px;
-        --bs-btn-padding-y: 8px;
-        --bs-btn-font-size: 18px;
-        --bs-btn-border-radius: 10px;
     }
 }

@@ -187,32 +187,32 @@ function toggleTextBox() {
     $(document).ready(function () {
 
         $('.buy-button').click(function () {
-            $(this).next('.number-quantity').addClass('active');
+            $(this).next('.quantity-container').addClass('active');
             $(this).hide();
         })
 
-        $('.number-minus, .number-plus').click(function () {
-            var $row = $(this).parent('.number-quantity');
-            var $input = $row.find('.number-input');
+        $('.quantity-btn-minus, .quantity-btn-plus').click(function () {
+            var $row = $(this).parent('.quantity-container');
+            var $input = $row.find('.quantity-input');
             var step = $row.data('step');
             var val = parseFloat($input.val());
-            if ($(this).hasClass('number-minus')) {
+            if ($(this).hasClass('quantity-btn-minus')) {
                 val -= step;
             } else {
                 val += step;
             }
             if( val < 1 ) {
                 $(this).parentsUntil('.button-toggle-box').siblings('.buy-button').show();
-                $(this).parent('.number-quantity').removeClass('active');
+                $(this).parent('.quantity-container').removeClass('active');
             }
             $input.val(val);
             $input.change();
             return false;
         });
 
-        $('.number-input').on('change', function () {
+        $('.quantity-input').on('change', function () {
             var $input = $(this);
-            var $row = $input.parent('.number-quantity');
+            var $row = $input.parent('.quantity-container');
             var step = $row.data('step');
             var min = parseInt($row.data('min'));
             var max = parseInt($row.data('max'));
@@ -226,7 +226,7 @@ function toggleTextBox() {
             }
             if( val < 1 ) {
                 $(this).parentsUntil('.button-toggle-box').siblings('.buy-button').show();
-                $(this).parent('.number-quantity').removeClass('active');
+                $(this).parent('.quantity-container').removeClass('active');
             }
             $input.val(val);
         });
